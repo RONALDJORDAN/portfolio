@@ -19,8 +19,8 @@
   <meta property="og:description" content="Engenharia de software de alta performance, automação inteligente e ecossistemas digitais modernos.">
   <meta property="og:image" content="assets/profile.jpg">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/icons/asterisk.svg">
+  <!-- Favicon com Emblema Geométrico (Triângulo Amarelo, Círculo Vermelho, Quadrado Branco) -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/personal-emblem.svg">
 
   <!-- Google Fonts Preconnect & Optimized Load -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,15 +78,20 @@
   <header class="cv-top-bar sticky top-0 left-0 right-0 z-50 px-6 lg:px-12 py-4 bg-[#111111]/80 backdrop-blur-md border-b border-white/10">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       
-      <a href="index.html" class="inline-flex items-center gap-3 text-white/80 hover:text-white font-space text-xs uppercase tracking-widest transition-colors duration-200 group">
-        <div class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center group-hover:border-white/50 group-hover:-translate-x-1 transition-all duration-200">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="19" y1="12" x2="5" y2="12"></line>
-            <polyline points="12 19 5 12 12 5"></polyline>
-          </svg>
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="inline-flex items-center gap-3 text-white/80 hover:text-white font-space text-xs uppercase tracking-widest transition-colors duration-200 group">
+          <div class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center group-hover:border-white/50 group-hover:-translate-x-1 transition-all duration-200">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </div>
+          <span>Voltar ao Portfólio</span>
+        </a>
+        <div class="hidden md:flex items-center gap-2 pl-3 border-l border-white/10">
+          <img src="assets/icons/personal-emblem.svg" alt="Jordan Ronald - Minimal Emblem" class="h-5 w-auto object-contain drop-shadow-[0_0_8px_rgba(251,191,36,0.3)]">
         </div>
-        <span>Voltar ao Portfólio</span>
-      </a>
+      </div>
 
       
       <div class="flex items-center gap-3">
@@ -142,7 +147,7 @@
         <div class="flex-1 min-w-0">
           <div class="flex flex-wrap items-center justify-between gap-3 mb-2">
             <div class="cv-section-tag mb-0">
-              <img src="assets/icons/asterisk.svg" alt="asterisk" class="w-3.5 h-3.5 animate-spin">
+              <img src="assets/icons/personal-emblem.svg" alt="Jordan Ronald - Minimal Emblem" class="h-3.5 w-auto object-contain">
               <span>Currículo Profissional // Nível Pleno</span>
             </div>
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[11px] font-space text-emerald-400">
@@ -614,69 +619,273 @@
     </section>
 
     
-    <footer class="site-bento-footer mt-12">
-      <div class="bento-footer-wrapper rounded-[32px] lg:rounded-[40px] p-6 sm:p-10">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-          
-          
-          <div class="lg:col-span-6 bento-card rounded-[24px] p-6 sm:p-8 flex flex-col justify-between min-h-[200px]">
-            <div>
-              <span class="font-space text-[11px] font-bold uppercase tracking-[0.25em] text-[#666666] block mb-2">VAMOS CONVERSAR?</span>
-              <h3 class="font-inter text-xl sm:text-2xl font-normal text-[#111111] leading-snug">
-                Interessado no meu perfil para sua equipe ou projeto?
-              </h3>
+    <!-- Footer Unificado: Blocos Quadrados Conectados -->
+    <footer class="site-bento-footer w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 pb-16 lg:pb-24 mt-20 lg:mt-32 relative z-20">
+      <div class="footer-connected-wrapper">
+        
+        <!-- Header do Rodapé -->
+        <div class="p-6 sm:p-8 lg:p-10 border-b border-white/[0.08] flex flex-col lg:flex-row lg:items-center justify-between gap-6 bg-[#0a0c11]">
+          <div>
+            <div class="flex items-center gap-2.5 mb-2">
+              <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span class="font-space text-[11px] font-bold uppercase tracking-[0.25em] text-white/60">ECOSSISTEMA &amp; NAVEGAÇÃO GLOBAL</span>
             </div>
-            <div class="mt-6 flex items-center gap-3">
-              <a href="mailto:ronaldjordan.dev@gmail.com" class="bento-btn-gradient inline-flex items-center gap-2 rounded-full px-6 py-3 font-space text-xs font-bold uppercase tracking-wider">
-                <span>ENVIAR E-MAIL</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-              <a href="index.html" class="bento-btn-silver inline-flex items-center gap-2 rounded-full px-5 py-3 font-space text-xs font-bold uppercase tracking-wider">
-                <span>PORTFÓLIO COMPLETO</span>
-              </a>
-            </div>
+            <h3 class="font-inter text-2xl sm:text-3xl font-semibold text-white tracking-tight">
+              Arquitetura &amp; Páginas do Portfólio
+            </h3>
+            <p class="font-inter text-xs sm:text-sm text-white/60 mt-1 max-w-2xl">
+              Navegue pelos sistemas em produção, ficha curricular executiva e soluções de software desenvolvidas por Jordan Ronald.
+            </p>
           </div>
-
           
-          <div class="lg:col-span-6 bento-card rounded-[24px] p-6 sm:p-8 flex flex-col justify-between min-h-[200px]">
-            <div>
-              <span class="font-space text-[11px] font-bold uppercase tracking-[0.25em] text-[#666666] block mb-2">REDES PROFISSIONAIS</span>
-              <div class="flex flex-wrap items-center gap-4 text-sm font-space text-[#111111] font-semibold">
-                <a href="https://linkedin.com/in/ronald-jordan-dev" target="_blank" class="hover:text-emerald-700 transition-colors">LinkedIn ↗</a>
-                <a href="https://github.com/RONALDJORDAN" target="_blank" class="hover:text-emerald-700 transition-colors">GitHub ↗</a>
-                <a href="assets/curriculo.pdf" download="Curriculo-Jordan-Ronald.pdf" class="hover:text-emerald-700 transition-colors">Download PDF ↗</a>
+          <div class="flex flex-wrap items-center gap-3">
+            <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/[0.04] border border-white/10 text-xs font-space text-white/80">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span>Disponível para Contratação</span>
+            </div>
+            <a href="mailto:ronaldjordan.dev@gmail.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-black font-space text-xs font-bold uppercase tracking-wider hover:bg-emerald-400 transition-all hover:scale-105">
+              <span>Iniciar Conversa</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Grid de Blocos Quadrados Conectados -->
+        <div class="footer-connected-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          
+          <!-- Bloco 1: Home / Visão Geral -->
+          <a href="index.html" class="footer-square-block bento-card group" style="--block-glow: rgba(16, 185, 129, 0.2);">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span class="font-space text-[10px] font-bold uppercase tracking-[0.2em] text-emerald-400">01 • HUB PRINCIPAL</span>
+              </div>
+              <div class="block-arrow w-7 h-7 rounded-full border border-white/10 flex items-center justify-center text-white/50 group-hover:text-white transition-all">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
               </div>
             </div>
-
-            <div class="mt-8 pt-4 border-t border-[#cccccc] flex items-center justify-between">
-              
-              <div class="personal-emblem-wrap" title="Jordan Ronald - Minimal Emblem">
-                <svg width="60" height="24" viewBox="0 0 72 32" fill="none" class="text-[#111111]">
-                  <defs>
-                    <mask id="footer-tri-mask-cv">
-                      <rect width="72" height="32" fill="white" />
-                      <circle cx="36" cy="16" r="11" stroke="black" stroke-width="5" fill="none" />
-                      <path d="M 18 24 L 27 27" stroke="white" stroke-width="6" stroke-linecap="round" />
-                    </mask>
-                    <mask id="footer-circ-mask-cv">
-                      <rect width="72" height="32" fill="white" />
-                      <path d="M 45 5 L 53 5" stroke="black" stroke-width="5" stroke-linecap="round" />
-                      <path d="M 47 3 L 47 13" stroke="black" stroke-width="5" stroke-linecap="round" />
-                    </mask>
-                  </defs>
-                  <g stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                    <polygon points="14,5 25,27 3,27" fill="none" mask="url(#footer-tri-mask-cv)" />
-                    <circle cx="36" cy="16" r="11" fill="none" mask="url(#footer-circ-mask-cv)" />
-                    <rect x="47" y="5" width="22" height="22" rx="3" fill="none" />
-                  </g>
-                </svg>
-              </div>
-
-              <span class="font-space text-xs text-[#666666]">© 2026 Jordan Ronald</span>
+            <div class="my-auto py-2">
+              <h4 class="block-title font-inter text-[19px] sm:text-[20px] font-bold text-white/90 group-hover:text-white transition-colors leading-tight">
+                Visão Geral &amp; Hub
+              </h4>
+              <p class="font-space text-[11px] text-white/50 tracking-wide mt-1">
+                Shader 3D • Stack Core • Bio
+              </p>
             </div>
-          </div>
+            <div class="pt-3 border-t border-white/[0.06]">
+              <p class="font-inter text-xs text-white/60 leading-relaxed line-clamp-2">
+                Página principal com animação interativa Three.js, habilidades e catálogo de projetos.
+              </p>
+            </div>
+          </a>
+
+          <!-- Bloco 2: Currículo Web -->
+          <a href="curriculo.html" class="footer-square-block bento-card group" style="--block-glow: rgba(56, 189, 248, 0.2);">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+                <span class="font-space text-[10px] font-bold uppercase tracking-[0.2em] text-sky-400">02 • CURRÍCULO</span>
+              </div>
+              <div class="block-arrow w-7 h-7 rounded-full border border-white/10 flex items-center justify-center text-white/50 group-hover:text-white transition-all">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </div>
+            </div>
+            <div class="my-auto py-2">
+              <h4 class="block-title font-inter text-[19px] sm:text-[20px] font-bold text-white/90 group-hover:text-white transition-colors leading-tight">
+                Currículo Executivo
+              </h4>
+              <p class="font-space text-[11px] text-white/50 tracking-wide mt-1">
+                Trajetória • Skills • PDF
+              </p>
+            </div>
+            <div class="pt-3 border-t border-white/[0.06]">
+              <p class="font-inter text-xs text-white/60 leading-relaxed line-clamp-2">
+                Ficha profissional pronta para recrutadores, histórico empresarial e download em PDF.
+              </p>
+            </div>
+          </a>
+
+          <!-- Bloco 3: INNOVRPA -->
+          <a href="innovrpa.html" class="footer-square-block bento-card group" style="--block-glow: rgba(52, 211, 153, 0.2);">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span class="font-space text-[10px] font-bold uppercase tracking-[0.2em] text-emerald-400">03 • RPA ENGINE</span>
+              </div>
+              <div class="block-arrow w-7 h-7 rounded-full border border-white/10 flex items-center justify-center text-white/50 group-hover:text-white transition-all">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </div>
+            </div>
+            <div class="my-auto py-2">
+              <h4 class="block-title font-inter text-[19px] sm:text-[20px] font-bold text-white/90 group-hover:text-white transition-colors leading-tight">
+                INNOVRPA
+              </h4>
+              <p class="font-space text-[11px] text-white/50 tracking-wide mt-1">
+                Pure C • C# .NET 8 • Vision7
+              </p>
+            </div>
+            <div class="pt-3 border-t border-white/[0.06]">
+              <p class="font-inter text-xs text-white/60 leading-relaxed line-clamp-2">
+                Motor híbrido de automação crítica, gestão de memória nativa sem vazamentos e visão computacional.
+              </p>
+            </div>
+          </a>
+
+          <!-- Bloco 4: INNOVSTOCK -->
+          <a href="innovstock.html" class="footer-square-block bento-card group" style="--block-glow: rgba(6, 182, 212, 0.2);">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+                <span class="font-space text-[10px] font-bold uppercase tracking-[0.2em] text-cyan-400">04 • CLOUD PWA</span>
+              </div>
+              <div class="block-arrow w-7 h-7 rounded-full border border-white/10 flex items-center justify-center text-white/50 group-hover:text-white transition-all">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </div>
+            </div>
+            <div class="my-auto py-2">
+              <h4 class="block-title font-inter text-[19px] sm:text-[20px] font-bold text-white/90 group-hover:text-white transition-colors leading-tight">
+                INNOVSTOCK
+              </h4>
+              <p class="font-space text-[11px] text-white/50 tracking-wide mt-1">
+                React 18 • Firebase • PWA
+              </p>
+            </div>
+            <div class="pt-3 border-t border-white/[0.06]">
+              <p class="font-inter text-xs text-white/60 leading-relaxed line-clamp-2">
+                Gestão de estoque em tempo real, sincronização offline, leitor de código de barras e relatórios.
+              </p>
+            </div>
+          </a>
+
+          <!-- Bloco 5: LAGOINHA SMC -->
+          <a href="lagoinha-smc.html" class="footer-square-block bento-card group" style="--block-glow: rgba(129, 140, 248, 0.2);">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+                <span class="font-space text-[10px] font-bold uppercase tracking-[0.2em] text-indigo-400">05 • GESTÃO ERP</span>
+              </div>
+              <div class="block-arrow w-7 h-7 rounded-full border border-white/10 flex items-center justify-center text-white/50 group-hover:text-white transition-all">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </div>
+            </div>
+            <div class="my-auto py-2">
+              <h4 class="block-title font-inter text-[19px] sm:text-[20px] font-bold text-white/90 group-hover:text-white transition-colors leading-tight">
+                Lagoinha SMC
+              </h4>
+              <p class="font-space text-[11px] text-white/50 tracking-wide mt-1">
+                Next.js 14 • PostgreSQL
+              </p>
+            </div>
+            <div class="pt-3 border-t border-white/[0.06]">
+              <p class="font-inter text-xs text-white/60 leading-relaxed line-clamp-2">
+                Governança eclesiástica unificada, balancetes financeiros em tempo real e controle de membros.
+              </p>
+            </div>
+          </a>
+
+          <!-- Bloco 6: INNOVCORE TI -->
+          <a href="innovcore-ti.html" class="footer-square-block bento-card group" style="--block-glow: rgba(167, 139, 250, 0.2);">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+                <span class="font-space text-[10px] font-bold uppercase tracking-[0.2em] text-purple-400">06 • TELEMETRIA</span>
+              </div>
+              <div class="block-arrow w-7 h-7 rounded-full border border-white/10 flex items-center justify-center text-white/50 group-hover:text-white transition-all">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </div>
+            </div>
+            <div class="my-auto py-2">
+              <h4 class="block-title font-inter text-[19px] sm:text-[20px] font-bold text-white/90 group-hover:text-white transition-colors leading-tight">
+                INNOVCORE TI
+              </h4>
+              <p class="font-space text-[11px] text-white/50 tracking-wide mt-1">
+                C# .NET 8 • WMI • Agents
+              </p>
+            </div>
+            <div class="pt-3 border-t border-white/[0.06]">
+              <p class="font-inter text-xs text-white/60 leading-relaxed line-clamp-2">
+                Agente de telemetria de hardware, monitoramento preventivo de ativos e governança de TI.
+              </p>
+            </div>
+          </a>
+
+          <!-- Bloco 7: PROJETOS INNOV -->
+          <a href="projetos-innov.html" class="footer-square-block bento-card group" style="--block-glow: rgba(244, 114, 182, 0.2);">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-pink-400"></span>
+                <span class="font-space text-[10px] font-bold uppercase tracking-[0.2em] text-pink-400">07 • MONOREPO</span>
+              </div>
+              <div class="block-arrow w-7 h-7 rounded-full border border-white/10 flex items-center justify-center text-white/50 group-hover:text-white transition-all">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </div>
+            </div>
+            <div class="my-auto py-2">
+              <h4 class="block-title font-inter text-[19px] sm:text-[20px] font-bold text-white/90 group-hover:text-white transition-colors leading-tight">
+                Projetos Innov
+              </h4>
+              <p class="font-space text-[11px] text-white/50 tracking-wide mt-1">
+                Turborepo • CI/CD • Design System
+              </p>
+            </div>
+            <div class="pt-3 border-t border-white/[0.06]">
+              <p class="font-inter text-xs text-white/60 leading-relaxed line-clamp-2">
+                Infraestrutura monorepo empresarial, compartilhamento de tokens e esteiras de integração contínua.
+              </p>
+            </div>
+          </a>
+
+          <!-- Bloco 8: Contato & Conexões -->
+          <a href="mailto:ronaldjordan.dev@gmail.com" class="footer-square-block bento-card group" style="--block-glow: rgba(251, 191, 36, 0.2);">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                <span class="font-space text-[10px] font-bold uppercase tracking-[0.2em] text-amber-400">08 • CONTATO DIRETO</span>
+              </div>
+              <div class="block-arrow w-7 h-7 rounded-full border border-white/10 flex items-center justify-center text-white/50 group-hover:text-white transition-all">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </div>
+            </div>
+            <div class="my-auto py-2">
+              <h4 class="block-title font-inter text-[19px] sm:text-[20px] font-bold text-white/90 group-hover:text-white transition-colors leading-tight">
+                Falar com Jordan
+              </h4>
+              <p class="font-space text-[11px] text-white/50 tracking-wide mt-1">
+                ronaldjordan.dev@gmail.com
+              </p>
+            </div>
+            <div class="pt-3 border-t border-white/[0.06]">
+              <p class="font-inter text-xs text-white/60 leading-relaxed line-clamp-2">
+                Aberto para contratações Full Stack, consultoria de RPA de alta escala e projetos complexos.
+              </p>
+            </div>
+          </a>
 
         </div>
+
+        <!-- Sub-Barra Inferior -->
+        <div class="p-6 sm:p-8 border-t border-white/[0.08] flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-space text-white/50 bg-[#0a0c11]">
+          <div class="flex items-center gap-3">
+            <div class="personal-emblem-wrap flex items-center justify-center group cursor-pointer transition-transform duration-300 hover:scale-105" title="Jordan Ronald - Minimal Emblem (Amarelo, Vermelho, Branco)">
+              <img src="assets/icons/personal-emblem.svg" alt="Jordan Ronald - Minimal Emblem" class="h-6 w-auto object-contain transition-transform group-hover:scale-110 drop-shadow-[0_0_8px_rgba(251,191,36,0.3)]">
+            </div>
+            <span class="text-white/70 font-medium">Jordan Ronald</span>
+            <span class="text-white/30">•</span>
+            <span>Engenheiro de Software &amp; Full Stack</span>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-center gap-5 text-white/60">
+            <a href="curriculo.html" class="hover:text-white transition-colors">Currículo Web</a>
+            <a href="assets/curriculo.pdf" download="Curriculo-Jordan-Ronald.pdf" class="hover:text-white transition-colors">Download PDF</a>
+            <a href="https://github.com/RONALDJORDAN" target="_blank" class="hover:text-white transition-colors">GitHub</a>
+            <a href="https://linkedin.com/in/ronald-jordan-dev" target="_blank" class="hover:text-white transition-colors">LinkedIn</a>
+            <button type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="inline-flex items-center gap-1.5 hover:text-white transition-colors text-emerald-400 pl-2 cursor-pointer">
+              <span>Voltar ao Topo</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+            </button>
+          </div>
+        </div>
+
       </div>
     </footer>
 
