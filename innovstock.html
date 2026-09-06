@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="lenis lenis-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="only light">
+
+  <!-- Primary Meta Tags -->
+  <title>INNOVSTOCK — Plataforma PWA Cloud de Inventário | Jordan Ronald</title>
+  <meta name="title" content="INNOVSTOCK — Plataforma PWA Cloud de Inventário | Jordan Ronald">
+  <meta name="description" content="Plataforma PWA Cloud de rastreamento de estoque e inventário com Firebase Realtime Database, scanner de QR Code pela câmera e termos jurídicos automatizados.">
+  <meta name="author" content="Jordan Ronald">
+  <meta name="theme-color" content="#111111">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="INNOVSTOCK — Plataforma PWA Cloud de Inventário | Jordan Ronald">
+  <meta property="og:description" content="Sincronização em tempo real (<100ms), suporte offline e scanner móvel integrado.">
+  <meta property="og:image" content="assets/projects/innovstock.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/asterisk.svg">
+
+  <!-- Fonts & Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@200;300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/tailwind.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/project.css">
+
+  <style>
+    :root {
+      --project-accent: #38bdf8;
+      --project-accent-glow: rgba(56, 189, 248, 0.25);
+      --project-accent-border: rgba(56, 189, 248, 0.4);
+    }
+    @media (min-width: 769px) {
+      * {
+        cursor: none !important;
+      }
+    }
+    @media (max-width: 768px) {
+      * {
+        cursor: auto !important;
+      }
+      .cursor-main, .cursor-dot, .cursor-trail {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-[#111111] text-white min-h-screen overflow-x-hidden">
+
+  <!-- Three.js Canvas Background -->
+  <canvas id="webgl-canvas" class="fixed top-0 left-0 w-full h-full z-0 pointer-events-none opacity-30"></canvas>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-trail"></div>
+  <div class="cursor-trail"></div>
+  <div class="cursor-trail"></div>
+  <div class="cursor-trail"></div>
+  <div class="cursor-trail"></div>
+  <div class="cursor-main"><span></span></div>
+  <div class="cursor-dot"></div>
+
+  <!-- Toast Notification -->
+  <div id="toast-notification">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 6L9 17l-5-5"/>
+    </svg>
+    <span id="toast-message">Link copiado!</span>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="sticky top-0 left-0 right-0 z-50 px-6 lg:px-12 py-4 bg-[#111111]/80 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="inline-flex items-center gap-3 text-white/80 hover:text-white font-space text-xs uppercase tracking-widest transition-colors duration-200 group">
+        <div class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center group-hover:border-white/50 group-hover:-translate-x-1 transition-all duration-200">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </div>
+        <span>Voltar ao Portfólio</span>
+      </a>
+
+      <div class="flex items-center gap-4">
+        <span class="font-space text-xs text-white/40 font-mono hidden sm:inline-block">PROJETO 02 // 05</span>
+        <a href="curriculo.html" class="project-pill text-xs">
+          <span>Currículo Web</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="relative z-10 project-container">
+
+    <!-- Top Hero Section: Title & Subtitle -->
+    <section class="mb-10 lg:mb-14">
+      <div class="project-tag">
+        <img src="assets/icons/asterisk.svg" alt="asterisk" class="w-4 h-4 animate-spin">
+        <span>Estudo de Caso // Cloud SaaS Platform &amp; Mobility</span>
+      </div>
+
+      <!-- Titulo no Topo -->
+      <h1 class="font-syne text-[40px] sm:text-[60px] lg:text-[76px] font-extrabold uppercase leading-[1.02] tracking-tight text-white mb-3">
+        INNOVSTOCK
+      </h1>
+
+      <!-- Subtítulo Abaixo -->
+      <p class="font-space text-lg sm:text-2xl text-sky-400 font-medium tracking-tight mb-6 max-w-4xl">
+        Plataforma PWA Cloud de Inventário &amp; Telemetria em Tempo Real com Leitor QR Integrado
+      </p>
+
+      <!-- Metadata & CTAs -->
+      <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-white/10">
+        <div class="flex flex-wrap items-center gap-2.5">
+          <span class="project-pill project-pill-accent">● Em Produção</span>
+          <span class="project-pill">Ano: 2024</span>
+          <span class="project-pill">PWA / Offline-First</span>
+          <span class="project-pill">&lt;100ms Sincronização</span>
+          <span class="project-pill">Zero Planilhas Manuais</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="https://github.com/RONALDJORDAN/InnovStock" target="_blank" class="project-btn-primary">
+            <span>Acessar Repositório</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+            </svg>
+          </a>
+          <button onclick="copyToClipboard(window.location.href, 'Link do projeto copiado!')" class="project-btn-secondary" title="Compartilhar Link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+            <span>Compartilhar</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeria Visual: Foto Principal e Menores ao Lado -->
+    <section class="mb-14">
+      <div class="gallery-grid">
+        <!-- Foto Principal em Destaque -->
+        <div class="gallery-main-wrap group">
+          <img id="main-gallery-img" src="assets/projects/innovstock.jpg" alt="INNOVSTOCK - Plataforma Cloud de Estoque" class="gallery-main-img">
+          <div class="absolute top-4 left-4 z-20">
+            <span id="main-gallery-tag" class="px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/20 text-xs font-space text-sky-400">
+              01 // Visão Geral da Plataforma PWA
+            </span>
+          </div>
+          <div class="absolute bottom-4 left-4 right-4 z-20 flex items-center justify-between pointer-events-none">
+            <p id="main-gallery-caption" class="text-xs sm:text-sm font-space text-white/90 bg-black/80 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10 max-w-xl">
+              Arquitetura cloud-native com sincronização em tempo real: interface desktop e mobile com atualização instantânea de ativos físicos.
+            </p>
+          </div>
+        </div>
+
+        <!-- Fotos Menores ao Lado -->
+        <div class="gallery-side-grid">
+          <!-- Thumbnail 1: Overview -->
+          <div class="gallery-thumb-wrap active" onclick="switchGallery('assets/projects/innovstock.jpg', '01 // Visão Geral da Plataforma PWA', 'Arquitetura cloud-native com sincronização em tempo real: interface desktop e mobile com atualização instantânea de ativos físicos.', this)">
+            <img src="assets/projects/innovstock.jpg" alt="INNOVSTOCK Overview" class="gallery-thumb-img">
+            <div class="gallery-thumb-caption">
+              <span>Overview do Sistema</span>
+              <span class="text-sky-400">01</span>
+            </div>
+          </div>
+
+          <!-- Thumbnail 2: Mobile Scanner PWA -->
+          <div class="gallery-thumb-wrap" onclick="switchGallery('assets/projects/innovstock-mobile.jpg', '02 // Scanner Mobile PWA Integrado', 'Leitura ultra-rápida de código de barras e QR Code via câmera nativa do smartphone com feedback sonoro e háptico instantâneo.', this)">
+            <img src="assets/projects/innovstock-mobile.jpg" alt="INNOVSTOCK Mobile Scanner" class="gallery-thumb-img">
+            <div class="gallery-thumb-caption">
+              <span>Scanner QR &amp; Barcode PWA</span>
+              <span class="text-sky-400">02</span>
+            </div>
+          </div>
+
+          <!-- Thumbnail 3: Realtime Dashboard -->
+          <div class="gallery-thumb-wrap" onclick="switchGallery('assets/projects/innovstock-realtime.jpg', '03 // Dashboard &amp; Custódia Jurídica', 'Tabela de conferência sincronizada via Firebase Realtime Database e emissão automática de termos de responsabilidade com assinatura digital.', this)">
+            <img src="assets/projects/innovstock-realtime.jpg" alt="INNOVSTOCK Dashboard" class="gallery-thumb-img">
+            <div class="gallery-thumb-caption">
+              <span>Dashboard &amp; Termos Jurídicos</span>
+              <span class="text-sky-400">03</span>
+            </div>
+          </div>
+
+          <!-- Thumbnail 4: Offline-First & Logistics -->
+          <div class="gallery-thumb-wrap" onclick="switchGallery('assets/projects/innovstock.jpg', '04 // Logística &amp; Operação Offline', 'Fila resiliente de sincronização com persistência local em IndexedDB para operação em armazéns sem sinal.', this)">
+            <img src="assets/projects/innovstock.jpg" alt="INNOVSTOCK Offline Sync" class="gallery-thumb-img">
+            <div class="gallery-thumb-caption">
+              <span>Operação Offline-First</span>
+              <span class="text-sky-400">04</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Linguagens & Tecnologias Usadas para Criar o Sistema -->
+    <section class="mb-14">
+      <div class="project-tag">
+        <span>01 // STACK TÉCNICA</span>
+      </div>
+      <h2 class="font-syne text-2xl sm:text-3xl font-bold uppercase text-white mb-2">
+        O Que Foi Usado Para Construir o Sistema
+      </h2>
+      <p class="font-inter text-sm text-white/60 mb-6 max-w-2xl">
+        Stack moderna orientada a mobilidade, conectividade contínua e tolerância a falhas em armazéns físicos:
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="tech-box">
+          <div class="tech-icon text-sky-400">RT</div>
+          <h3 class="font-syne text-base font-bold text-white mb-1">React 18 &amp; TypeScript</h3>
+          <p class="font-inter text-xs text-white/70 leading-relaxed">
+            Frontend tipado de ponta a ponta com renderização concorrente, hooks customizados para escuta de streams em tempo real e controle absoluto de estado.
+          </p>
+        </div>
+
+        <div class="tech-box">
+          <div class="tech-icon text-amber-400">DB</div>
+          <h3 class="font-syne text-base font-bold text-white mb-1">Firebase Realtime Database</h3>
+          <p class="font-inter text-xs text-white/70 leading-relaxed">
+            Banco NoSQL com sincronização baseada em WebSockets de baixa latência (&lt;100ms), propagando alterações de estoque para todos os operadores simultaneamente.
+          </p>
+        </div>
+
+        <div class="tech-box">
+          <div class="tech-icon text-emerald-400">PWA</div>
+          <h3 class="font-syne text-base font-bold text-white mb-1">Progressive Web App (PWA)</h3>
+          <p class="font-inter text-xs text-white/70 leading-relaxed">
+            Service Workers para cache agressivo de ativos e persistência offline com IndexedDB, permitindo operação mesmo em zonas de armazém sem sinal de internet.
+          </p>
+        </div>
+
+        <div class="tech-box">
+          <div class="tech-icon text-indigo-400">CAM</div>
+          <h3 class="font-syne text-base font-bold text-white mb-1">HTML5 Barcode Detection API</h3>
+          <p class="font-inter text-xs text-white/70 leading-relaxed">
+            Acesso nativo à câmera de dispositivos móveis com aceleração de hardware para decodificação instantânea de códigos EAN, UPC e QR Codes.
+          </p>
+        </div>
+
+        <div class="tech-box">
+          <div class="tech-icon text-cyan-400">CSS</div>
+          <h3 class="font-syne text-base font-bold text-white mb-1">Tailwind CSS &amp; Micro-interações</h3>
+          <p class="font-inter text-xs text-white/70 leading-relaxed">
+            Design system responsivo focado em usabilidade com uma mão em ambiente de galpão, com botões amplos, contrastes fortes e feedback háptico.
+          </p>
+        </div>
+
+        <div class="tech-box">
+          <div class="tech-icon text-purple-400">DOC</div>
+          <h3 class="font-syne text-base font-bold text-white mb-1">Canvas Digital Signature &amp; PDF</h3>
+          <p class="font-inter text-xs text-white/70 leading-relaxed">
+            Coleta de assinaturas vetoriais na tela touch do dispositivo e compilação instantânea em documentos jurídicos de custódia com hash criptográfico.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Usadas no Projeto -->
+    <section class="mb-14">
+      <div class="project-tag">
+        <span>02 // COMPETÊNCIAS TÉCNICAS</span>
+      </div>
+      <h2 class="font-syne text-2xl sm:text-3xl font-bold uppercase text-white mb-2">
+        Habilidades de Engenharia Aplicadas
+      </h2>
+      <p class="font-inter text-sm text-white/60 mb-6 max-w-2xl">
+        Técnicas de engenharia de software empregadas para assegurar integridade de dados e alta performance móvel:
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="project-card p-5">
+          <div class="w-2 h-2 rounded-full bg-sky-400 mb-3 animate-pulse"></div>
+          <h4 class="font-syne text-sm font-bold text-white uppercase mb-2">Sync de Baixa Latência</h4>
+          <p class="font-inter text-xs text-white/70 leading-relaxed">
+            Arquitetura de dados orientada a eventos com delta updates em tempo real em menos de 100ms entre dispositivos distantes.
+          </p>
+        </div>
+
+        <div class="project-card p-5">
+          <div class="w-2 h-2 rounded-full bg-emerald-400 mb-3 animate-pulse"></div>
+          <h4 class="font-syne text-sm font-bold text-white uppercase mb-2">Offline-First &amp; Cache</h4>
+          <p class="font-inter text-xs text-white/70 leading-relaxed">
+            Fila de sincronização resiliente que armazena leituras offline e realiza conciliação automática assim que a conexão é restaurada.
+          </p>
+        </div>
+
+        <div class="project-card p-5">
+          <div class="w-2 h-2 rounded-full bg-indigo-400 mb-3 animate-pulse"></div>
+          <h4 class="font-syne text-sm font-bold text-white uppercase mb-2">Modelagem NoSQL</h4>
+          <p class="font-inter text-xs text-white/70 leading-relaxed">
+            Estrutura desnormalizada e indexada especificamente para buscas instantâneas por número de série, localização física e colaborador.
+          </p>
+        </div>
+
+        <div class="project-card p-5">
+          <div class="w-2 h-2 rounded-full bg-purple-400 mb-3 animate-pulse"></div>
+          <h4 class="font-syne text-sm font-bold text-white uppercase mb-2">Governança Jurídica</h4>
+          <p class="font-inter text-xs text-white/70 leading-relaxed">
+            Emissão imutável de termos de responsabilidade com registro temporal, IP e assinatura do custodiante para fins de conformidade legal.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resumo do que é a ferramenta e para o que ela é usada -->
+    <section class="mb-16">
+      <div class="project-tag">
+        <span>03 // VISÃO GERAL &amp; CASOS DE USO</span>
+      </div>
+      <h2 class="font-syne text-2xl sm:text-3xl font-bold uppercase text-white mb-6">
+        O Que É a Ferramenta e Para o Que Ela É Usada
+      </h2>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- O que é a ferramenta -->
+        <article class="project-card p-7 sm:p-9 border-sky-500/20">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 font-bold font-space">
+              01
+            </div>
+            <h3 class="font-syne text-xl font-bold uppercase text-white">O Que É a Ferramenta</h3>
+          </div>
+          <div class="space-y-4 font-inter text-sm text-white/80 leading-relaxed">
+            <p>
+              O <strong>INNOVSTOCK</strong> é uma plataforma corporativa em nuvem desenvolvida como Progressive Web App (PWA) de controle de ativos patrimoniais e telemetria de estoques. Ele foi criado com o propósito de extinguir de vez o uso de planilhas de Excel compartilhadas e registros manuais em pranchetas, que frequentemente geram perdas financeiras, dados duplicados e descontrole de ativos entre filiais.
+            </p>
+            <p>
+              A ferramenta combina a versatilidade de um app móvel com a força de um sistema corporativo completo, permitindo que qualquer colaborador com um smartphone realize inventários completos utilizando a câmera do aparelho como leitor biométrico de códigos.
+            </p>
+          </div>
+        </article>
+
+        <!-- Para o que ela é usada -->
+        <article class="project-card p-7 sm:p-9 border-sky-500/20">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 font-bold font-space">
+              02
+            </div>
+            <h3 class="font-syne text-xl font-bold uppercase text-white">Para o Que Ela É Usada</h3>
+          </div>
+          <div class="space-y-4 font-inter text-sm text-white/80 leading-relaxed">
+            <p>
+              O sistema é empregado diariamente em operações logísticas, setores de TI e controle de ativos corporativos:
+            </p>
+            <div class="space-y-3 pt-1">
+              <div class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-sky-500/20 text-sky-400 flex items-center justify-center text-xs mt-0.5 font-bold">✓</div>
+                <div>
+                  <h5 class="text-white font-semibold text-xs sm:text-sm">Conferência Ultrarrápida de Galpão:</h5>
+                  <p class="text-white/60 text-xs">Inventário físico em segundos apontando a câmera do celular para caixas, paletes e equipamentos individuais.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-sky-500/20 text-sky-400 flex items-center justify-center text-xs mt-0.5 font-bold">✓</div>
+                <div>
+                  <h5 class="text-white font-semibold text-xs sm:text-sm">Assinatura de Termos de Entrega:</h5>
+                  <p class="text-white/60 text-xs">Quando um funcionário recebe um notebook ou ferramenta, ele assina o termo de custódia diretamente na tela do smartphone.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-sky-500/20 text-sky-400 flex items-center justify-center text-xs mt-0.5 font-bold">✓</div>
+                <div>
+                  <h5 class="text-white font-semibold text-xs sm:text-sm">Gestão Multi-filial Centralizada:</h5>
+                  <p class="text-white/60 text-xs">Acompanhamento em tempo real pelo time executivo de onde cada item está alocado e seu histórico de transferências.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Métricas de Impacto -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+        <div class="tech-box text-center p-6">
+          <span class="font-space text-3xl sm:text-4xl font-bold text-sky-400 mb-1 block">&lt;100ms</span>
+          <span class="font-inter text-xs text-white/60 uppercase tracking-wider">Sync Firebase RTDB</span>
+        </div>
+        <div class="tech-box text-center p-6">
+          <span class="font-space text-3xl sm:text-4xl font-bold text-white mb-1 block">100%</span>
+          <span class="font-inter text-xs text-white/60 uppercase tracking-wider">Mobile &amp; Desktop PWA</span>
+        </div>
+        <div class="tech-box text-center p-6">
+          <span class="font-space text-3xl sm:text-4xl font-bold text-emerald-400 mb-1 block">0 min</span>
+          <span class="font-inter text-xs text-white/60 uppercase tracking-wider">Instalação sem App Store</span>
+        </div>
+        <div class="tech-box text-center p-6">
+          <span class="font-space text-3xl sm:text-4xl font-bold text-purple-400 mb-1 block">Auditável</span>
+          <span class="font-inter text-xs text-white/60 uppercase tracking-wider">Conformidade Jurídica</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Navigation Bar Between Projects -->
+    <section class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <a href="innovrpa.html" class="project-btn-secondary text-xs w-full sm:w-auto justify-center">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        <span>Projeto Anterior (Inno-RPA)</span>
+      </a>
+
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="font-space text-xs uppercase tracking-widest text-white/60 hover:text-white transition-colors">Portfólio</a>
+        <span class="text-white/20">•</span>
+        <a href="curriculo.html" class="font-space text-xs uppercase tracking-widest text-white/60 hover:text-white transition-colors">Currículo</a>
+      </div>
+
+      <a href="lagoinha-smc.html" class="project-btn-primary text-xs w-full sm:w-auto justify-center">
+        <span>Próximo Projeto (Lagoinha SMC)</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Vendor Scripts -->
+  <script src="./js/libs/three.min.js"></script>
+  <script src="./js/libs/gsap.min.js"></script>
+  <script src="./js/libs/lenis.min.js"></script>
+
+  <!-- Interactive Gallery & Page Logic -->
+  <script>
+    function switchGallery(imageSrc, tagText, captionText, thumbElement) {
+      const mainImg = document.getElementById('main-gallery-img');
+      const mainTag = document.getElementById('main-gallery-tag');
+      const mainCaption = document.getElementById('main-gallery-caption');
+
+      if (mainImg) {
+        mainImg.style.opacity = '0';
+        setTimeout(() => {
+          mainImg.src = imageSrc;
+          if (mainTag) mainTag.textContent = tagText;
+          if (mainCaption) mainCaption.textContent = captionText;
+          mainImg.style.opacity = '1';
+        }, 150);
+      }
+
+      document.querySelectorAll('.gallery-thumb-wrap').forEach(el => el.classList.remove('active'));
+      if (thumbElement) thumbElement.classList.add('active');
+    }
+
+    function copyToClipboard(text, msg) {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast(msg);
+        });
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast-notification');
+      const toastMsg = document.getElementById('toast-message');
+      if (toast && toastMsg) {
+        toastMsg.textContent = msg;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2500);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Lenis Smooth Scroll
+      if (typeof Lenis !== 'undefined') {
+        const lenis = new Lenis({ duration: 1.2, smoothWheel: true });
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+      }
+
+      // Cursor System
+      const cursorMain = document.querySelector('.cursor-main');
+      const cursorDot = document.querySelector('.cursor-dot');
+      const cursorTrails = document.querySelectorAll('.cursor-trail');
+      let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+      let curX = mouseX, curY = mouseY;
+      const trailHistory = Array(5).fill({ x: mouseX, y: mouseY });
+
+      window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+
+      function renderCursor() {
+        curX += (mouseX - curX) * 0.18;
+        curY += (mouseY - curY) * 0.18;
+
+        if (cursorDot) cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+        if (cursorMain) cursorMain.style.transform = `translate(${curX}px, ${curY}px) translate(-50%, -50%)`;
+
+        trailHistory.unshift({ x: curX, y: curY });
+        trailHistory.pop();
+
+        cursorTrails.forEach((trail, i) => {
+          const pt = trailHistory[i] || { x: curX, y: curY };
+          trail.style.transform = `translate(${pt.x}px, ${pt.y}px) translate(-50%, -50%)`;
+        });
+
+        requestAnimationFrame(renderCursor);
+      }
+      requestAnimationFrame(renderCursor);
+
+      // WebGL Ambient Shader
+      const canvas = document.getElementById('webgl-canvas');
+      if (canvas && typeof THREE !== 'undefined') {
+        try {
+          const scene = new THREE.Scene();
+          const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+          const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: false });
+          function resize() {
+            renderer.setSize(window.innerWidth, window.innerHeight, false);
+          }
+          resize();
+          window.addEventListener('resize', resize, { passive: true });
+
+          const material = new THREE.ShaderMaterial({
+            uniforms: { u_time: { value: 0 } },
+            vertexShader: `varying vec2 vUv; void main() { vUv = uv; gl_Position = vec4(position, 1.0); }`,
+            fragmentShader: `
+              uniform float u_time;
+              varying vec2 vUv;
+              void main() {
+                vec2 st = vUv;
+                float color = 0.04 + 0.02 * sin(st.x * 2.0 + u_time * 0.2) + 0.02 * cos(st.y * 3.0 - u_time * 0.15);
+                gl_FragColor = vec4(vec3(color), 0.15);
+              }
+            `,
+            transparent: true
+          });
+
+          scene.add(new THREE.Mesh(new THREE.PlaneGeometry(2, 2), material));
+          function render() {
+            requestAnimationFrame(render);
+            material.uniforms.u_time.value += 0.01;
+            renderer.render(scene, camera);
+          }
+          render();
+        } catch(e) {}
+      }
+    });
+  </script>
+</body>
+</html>

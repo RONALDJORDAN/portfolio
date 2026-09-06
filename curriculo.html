@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="lenis lenis-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="only light">
+
+  <!-- Primary Meta Tags -->
+  <title>Jordan Ronald - Currículo Profissional | Software Architect &amp; Full-Stack Engineer</title>
+  <meta name="title" content="Jordan Ronald - Currículo Profissional | Software Architect &amp; Full-Stack Engineer">
+  <meta name="description" content="Currículo de Jordan Ronald - Engenheiro Full-Stack Pleno e Especialista em RPA com 3 anos de experiência em Pure C, C# .NET 8, React, Next.js, Cloud &amp; Visão Computacional.">
+  <meta name="author" content="Jordan Ronald">
+  <meta name="keywords" content="Jordan Ronald, Currículo, Resume, CV, Full-Stack, C#, .NET 8, Pure C, RPA, Visão Computacional, React, Next.js, TypeScript">
+  <meta name="theme-color" content="#111111">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jordan Ronald - Currículo Profissional | Software Architect &amp; Full-Stack Engineer">
+  <meta property="og:description" content="Engenharia de software de alta performance, automação inteligente e ecossistemas digitais modernos.">
+  <meta property="og:image" content="assets/profile.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/asterisk.svg">
+
+  <!-- Google Fonts Preconnect & Optimized Load -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@100;200;300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/tailwind.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/curriculo.css">
+
+  <style>
+    @media (min-width: 769px) {
+      * {
+        cursor: none !important;
+      }
+    }
+    @media (max-width: 768px) {
+      * {
+        cursor: auto !important;
+      }
+      .cursor-main,
+      .cursor-dot,
+      .cursor-trail {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-[#111111] text-white min-h-screen overflow-x-hidden">
+
+  
+  <canvas id="webgl-canvas" class="fixed top-0 left-0 w-full h-full z-0 pointer-events-none opacity-40"></canvas>
+
+  
+  <div class="cursor-trail"></div>
+  <div class="cursor-trail"></div>
+  <div class="cursor-trail"></div>
+  <div class="cursor-trail"></div>
+  <div class="cursor-trail"></div>
+  <div class="cursor-main"><span></span></div>
+  <div class="cursor-dot"></div>
+
+  
+  <div id="toast-notification">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 6L9 17l-5-5"/>
+    </svg>
+    <span id="toast-message">Copiado para a área de transferência!</span>
+  </div>
+
+  
+  <header class="cv-top-bar sticky top-0 left-0 right-0 z-50 px-6 lg:px-12 py-4 bg-[#111111]/80 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <a href="index.html" class="inline-flex items-center gap-3 text-white/80 hover:text-white font-space text-xs uppercase tracking-widest transition-colors duration-200 group">
+        <div class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center group-hover:border-white/50 group-hover:-translate-x-1 transition-all duration-200">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </div>
+        <span>Voltar ao Portfólio</span>
+      </a>
+
+      
+      <div class="flex items-center gap-3">
+        
+        <button onclick="window.print()" class="cv-btn-secondary py-2 px-4 text-[11px]" title="Imprimir ou Salvar em PDF (Ctrl + P)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+          </svg>
+          <span class="hidden sm:inline">Imprimir</span>
+        </button>
+
+        
+        <a href="assets/curriculo.pdf" download="Curriculo-Jordan-Ronald.pdf" class="cv-btn-primary py-2 px-5 text-[11px]" title="Baixar arquivo PDF">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Baixar PDF</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  
+  <main class="relative z-10 cv-container">
+
+    
+    <section class="cv-card p-6 sm:p-8 lg:p-12 mb-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        
+        
+        <div class="lg:col-span-4 flex flex-col items-center sm:items-start">
+          <div class="relative w-full max-w-[280px] sm:max-w-[320px] mx-auto sm:mx-0">
+            <div class="cv-photo-glow"></div>
+            <div class="cv-photo-frame aspect-square w-full">
+              <img src="assets/profile.jpg" alt="Jordan Ronald - Software Architect" loading="eager">
+            </div>
+            
+            
+            <div class="absolute bottom-4 left-4 right-4 bg-[#111111]/90 backdrop-blur-md border border-white/15 rounded-xl px-4 py-2.5 flex items-center justify-between">
+              <span class="font-space text-[10px] uppercase font-bold tracking-wider text-white/70">ARQUITETURA &amp; FULL-STACK</span>
+              <div class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></div>
+            </div>
+          </div>
+
+          
+          <div class="w-full max-w-[280px] sm:max-w-[320px] mt-5 pt-4 border-t border-white/10 flex flex-col gap-2.5">
+            <div class="flex items-center gap-2.5">
+              <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+              </span>
+              <span class="font-space text-xs uppercase font-bold text-emerald-400 tracking-wider">Disponível para Contratação</span>
+            </div>
+            <p class="font-inter text-xs text-white/60">
+              Aberto a oportunidades: <strong class="text-white">Remoto</strong> ou <strong class="text-white">Híbrido</strong> • Brasil / Internacional.
+            </p>
+          </div>
+        </div>
+
+        
+        <div class="lg:col-span-8 flex flex-col justify-between">
+          <div>
+            
+            <div class="cv-section-tag mb-3">
+              <img src="assets/icons/asterisk.svg" alt="asterisk" class="w-4 h-4 animate-spin">
+              <span>Currículo Profissional // Nível Pleno</span>
+            </div>
+
+            
+            <h1 class="font-syne text-[36px] sm:text-[46px] lg:text-[54px] font-extrabold uppercase leading-[1.05] tracking-tight text-white mb-2">
+              Jordan Ronald
+            </h1>
+            <h2 class="font-space text-lg sm:text-xl font-medium text-emerald-400 uppercase tracking-wide mb-4">
+              Software Architect &amp; Full-Stack Engineer
+            </h2>
+
+            
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="cv-pill active-pill">● 3 Anos de Experiência</span>
+              <span class="cv-pill">Baseado no Brasil</span>
+              <span class="cv-pill">Inglês Técnico Avançado</span>
+              <span class="cv-pill">InnovCore-TI</span>
+              <span class="cv-pill">Pure C &amp; .NET 8</span>
+            </div>
+
+            
+            <p class="font-inter text-sm sm:text-base text-white/80 leading-relaxed max-w-2xl mb-8">
+              Engenheiro de Software com sólida atuação no desenvolvimento de sistemas corporativos de alta fidelidade e automação inteligente. Especialista em unir <strong>controle cirúrgico de memória e ponteiros em Pure C</strong> com a robustez e concorrência assíncrona do <strong>C# .NET 8 (WPF/MVVM)</strong>, algoritmos de <strong>Visão Computacional (OpenCV / Vision7)</strong> e ecossistemas web reativos em <strong>React 18, Next.js e TypeScript</strong>. Foco em arquiteturas sem vazamentos de memória (<em>zero-leak</em>), tempos de resposta em milissegundos e código limpo desacoplado.
+            </p>
+          </div>
+
+          
+          <div class="pt-6 border-t border-white/10 flex flex-wrap items-center gap-3">
+            
+            <button onclick="copyToClipboard('ronaldjordan.dev@gmail.com', 'E-mail copiado para a área de transferência!')" class="cv-btn-secondary text-xs" title="Clique para copiar o email">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              <span>ronaldjordan.dev@gmail.com</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="opacity-60">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+
+            
+            <a href="https://linkedin.com/in/ronald-jordan-dev" target="_blank" class="cv-btn-secondary text-xs">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+
+            
+            <a href="https://github.com/RONALDJORDAN" target="_blank" class="cv-btn-secondary text-xs">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    
+    <section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+      <div class="cv-card p-6 flex flex-col items-center text-center">
+        <span class="font-space text-3xl sm:text-4xl font-bold text-white mb-1">3+ Anos</span>
+        <span class="font-inter text-xs text-white/60 uppercase tracking-wider">Experiência Contínua</span>
+      </div>
+      <div class="cv-card p-6 flex flex-col items-center text-center">
+        <span class="font-space text-3xl sm:text-4xl font-bold text-emerald-400 mb-1">0% Leak</span>
+        <span class="font-inter text-xs text-white/60 uppercase tracking-wider">Engenharia de Memória em C</span>
+      </div>
+      <div class="cv-card p-6 flex flex-col items-center text-center">
+        <span class="font-space text-3xl sm:text-4xl font-bold text-sky-400 mb-1">5 Sistemas</span>
+        <span class="font-inter text-xs text-white/60 uppercase tracking-wider">Projetos de Produção</span>
+      </div>
+      <div class="cv-card p-6 flex flex-col items-center text-center">
+        <span class="font-space text-3xl sm:text-4xl font-bold text-purple-400 mb-1">60 FPS</span>
+        <span class="font-inter text-xs text-white/60 uppercase tracking-wider">Fluidez &amp; Web Vitals</span>
+      </div>
+    </section>
+
+    
+    <section class="mb-12">
+      <div class="cv-section-tag">
+        <span>01 // Filosofia de Engenharia</span>
+      </div>
+      <h2 class="cv-section-heading mb-6">Pilares da Prática de Desenvolvimento</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="cv-card p-6 sm:p-8">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-5">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <h3 class="font-syne text-lg font-bold text-white mb-2 uppercase">Baixo Nível &amp; Eficiência de Memória</h3>
+          <p class="font-inter text-xs sm:text-sm text-white/70 leading-relaxed">
+            Domínio aprofundado em manipulação direta de ponteiros, alocação e desalocação de memória manual em Pure C. Capacidade de identificar e mitigar vazamentos, controlar estruturas de dados contíguas e garantir execução em escala de microssegundos em tarefas críticas de automação.
+          </p>
+        </div>
+
+        
+        <div class="cv-card p-6 sm:p-8">
+          <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 mb-5">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          </div>
+          <h3 class="font-syne text-lg font-bold text-white mb-2 uppercase">Arquitetura Corporativa &amp; Concorrência</h3>
+          <p class="font-inter text-xs sm:text-sm text-white/70 leading-relaxed">
+            Construção de aplicações desktop corporativas com C# .NET 8 e WPF adotando padrão MVVM estrito, injeção de dependência e paralelismo com Task Parallel Library. Interfaces que permanecem instantaneamente responsivas mesmo sob processamento em lote pesado.
+          </p>
+        </div>
+
+        
+        <div class="cv-card p-6 sm:p-8">
+          <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-5">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          </div>
+          <h3 class="font-syne text-lg font-bold text-white mb-2 uppercase">Frontend Reativo &amp; Nuvem em Tempo Real</h3>
+          <p class="font-inter text-xs sm:text-sm text-white/70 leading-relaxed">
+            Ecossistemas web modernos com Next.js, React 18 e TypeScript. Modelagem de dados distribuídos com Firebase Realtime Database para sincronização em milissegundos, micro-animações a 60 FPS com GSAP e foco contínuo em Core Web Vitals e UX de padrão internacional.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="mb-12">
+      <div class="cv-section-tag">
+        <span>02 // Matriz de Habilidades</span>
+      </div>
+      <h2 class="cv-section-heading mb-6">Domínio Técnico &amp; Tecnologias</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="cv-card p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-syne text-base font-bold uppercase text-white">Baixo Nível &amp; Pure C</h3>
+              <span class="font-space text-[10px] text-amber-400 font-bold uppercase tracking-wider bg-amber-400/10 px-2 py-0.5 rounded">Avançado</span>
+            </div>
+            <p class="font-inter text-xs text-white/60 mb-4">Manipulação de memória física, ponteiros, buffers contíguos e controle de ciclo de vida.</p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-3 border-t border-white/5">
+            <span class="cv-pill text-[10px]">Pure C</span>
+            <span class="cv-pill text-[10px]">Pointers</span>
+            <span class="cv-pill text-[10px]">malloc / free</span>
+            <span class="cv-pill text-[10px]">Zero-Leak</span>
+            <span class="cv-pill text-[10px]">Microssegundos</span>
+          </div>
+        </div>
+        <div class="cv-card p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-syne text-base font-bold uppercase text-white">C# .NET 8 &amp; Enterprise</h3>
+              <span class="font-space text-[10px] text-sky-400 font-bold uppercase tracking-wider bg-sky-400/10 px-2 py-0.5 rounded">Avançado</span>
+            </div>
+            <p class="font-inter text-xs text-white/60 mb-4">Sistemas desktop industriais, concorrência assíncrona e arquitetura em camadas.</p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-3 border-t border-white/5">
+            <span class="cv-pill text-[10px]">C#</span>
+            <span class="cv-pill text-[10px]">.NET 8</span>
+            <span class="cv-pill text-[10px]">WPF</span>
+            <span class="cv-pill text-[10px]">MVVM</span>
+            <span class="cv-pill text-[10px]">Async / Await</span>
+            <span class="cv-pill text-[10px]">Multi-threading</span>
+          </div>
+        </div>
+        <div class="cv-card p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-syne text-base font-bold uppercase text-white">RPA &amp; Visão Computacional</h3>
+              <span class="font-space text-[10px] text-emerald-400 font-bold uppercase tracking-wider bg-emerald-400/10 px-2 py-0.5 rounded">Especialista</span>
+            </div>
+            <p class="font-inter text-xs text-white/60 mb-4">Robôs autônomos para redução massiva de retrabalho manual e reconhecimento visual de tela.</p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-3 border-t border-white/5">
+            <span class="cv-pill text-[10px]">Autonomous RPA</span>
+            <span class="cv-pill text-[10px]">Computer Vision</span>
+            <span class="cv-pill text-[10px]">Vision7</span>
+            <span class="cv-pill text-[10px]">OpenCV</span>
+            <span class="cv-pill text-[10px]">OCR</span>
+          </div>
+        </div>
+        <div class="cv-card p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-syne text-base font-bold uppercase text-white">Frontend Reativo</h3>
+              <span class="font-space text-[10px] text-purple-400 font-bold uppercase tracking-wider bg-purple-400/10 px-2 py-0.5 rounded">Avançado</span>
+            </div>
+            <p class="font-inter text-xs text-white/60 mb-4">Aplicações web modernas, interfaces complexas, gerenciamento de estado e animações.</p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-3 border-t border-white/5">
+            <span class="cv-pill text-[10px]">React 18</span>
+            <span class="cv-pill text-[10px]">Next.js</span>
+            <span class="cv-pill text-[10px]">TypeScript</span>
+            <span class="cv-pill text-[10px]">TailwindCSS</span>
+            <span class="cv-pill text-[10px]">GSAP</span>
+            <span class="cv-pill text-[10px]">WebGL / Three.js</span>
+          </div>
+        </div>
+        <div class="cv-card p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-syne text-base font-bold uppercase text-white">Cloud &amp; APIs Distribuídas</h3>
+              <span class="font-space text-[10px] text-pink-400 font-bold uppercase tracking-wider bg-pink-400/10 px-2 py-0.5 rounded">Pleno</span>
+            </div>
+            <p class="font-inter text-xs text-white/60 mb-4">Arquitetura de microsserviços, sincronização de dados distribuídos e autenticação segura.</p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-3 border-t border-white/5">
+            <span class="cv-pill text-[10px]">Firebase RTDB</span>
+            <span class="cv-pill text-[10px]">Cloud Functions</span>
+            <span class="cv-pill text-[10px]">RESTful APIs</span>
+            <span class="cv-pill text-[10px]">JWT</span>
+            <span class="cv-pill text-[10px]">Microservices</span>
+          </div>
+        </div>
+        <div class="cv-card p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-syne text-base font-bold uppercase text-white">Metodologias &amp; DevOps</h3>
+              <span class="font-space text-[10px] text-teal-400 font-bold uppercase tracking-wider bg-teal-400/10 px-2 py-0.5 rounded">Prática Diária</span>
+            </div>
+            <p class="font-inter text-xs text-white/60 mb-4">Padrões de design, esteiras CI/CD automatizadas, profiling e governança de código.</p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-3 border-t border-white/5">
+            <span class="cv-pill text-[10px]">Clean Architecture</span>
+            <span class="cv-pill text-[10px]">SOLID</span>
+            <span class="cv-pill text-[10px]">Git / GitHub</span>
+            <span class="cv-pill text-[10px]">CI/CD</span>
+            <span class="cv-pill text-[10px]">Profiling</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    
+    <section class="mb-12">
+      <div class="cv-section-tag">
+        <span>03 // Trajetória &amp; Projetos</span>
+      </div>
+      <h2 class="cv-section-heading mb-6">Histórico Técnico de Projetos Entregues</h2>
+
+      <div class="flex flex-col gap-6">
+        <article class="cv-card p-6 sm:p-8">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+            <div>
+              <span class="font-space text-xs font-bold text-emerald-400 uppercase tracking-widest">2025 // ROBOTICS &amp; COMPUTER VISION</span>
+              <h3 class="font-syne text-2xl font-bold text-white">INNOVRPA — Motor Híbrido Zero-Leak de RPA</h3>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="cv-pill active-pill">Produção</span>
+              <a href="innovrpa.html" class="cv-btn-secondary py-1.5 px-3.5 text-[10px] text-emerald-400 border-emerald-500/30 hover:border-emerald-400">
+                <span>Estudo de Caso</span>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="https://github.com/RONALDJORDAN/Inno-RPA" target="_blank" class="cv-btn-secondary py-1.5 px-3.5 text-[10px]">
+                <span>Repositório</span>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+          <p class="font-inter text-sm text-white/80 leading-relaxed mb-4">
+            Engenharia de um motor robótico híbrido para automação autônoma de alta frequência. O desafio principal consistia em executar automações ininterruptas sem que o Garbage Collection do runtime gerenciado causasse picos de latência ou retenção excessiva de memória. A solução integrou rotinas críticas em <strong>Pure C</strong> via P/Invoke para processamento de baixo nível com a interface rica do <strong>C# WPF (.NET 8)</strong> e pipelines de visão computacional <strong>Vision7/OpenCV</strong>.
+          </p>
+          <ul class="font-inter text-xs text-white/70 space-y-1.5 mb-5 list-disc list-inside">
+            <li><strong>Zero Vazamento de Memória:</strong> Ciclo contínuo de 72+ horas sem degradação ou estouro de RAM.</li>
+            <li><strong>Latência Ultra-baixa:</strong> Reconhecimento de elementos e disparo de eventos em escala sub-milissegundo.</li>
+            <li><strong>Arquitetura Desacoplada:</strong> MVVM com isolamento completo da camada nativa de hardware.</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 pt-3 border-t border-white/5">
+            <span class="cv-pill text-[10px]">Pure C</span>
+            <span class="cv-pill text-[10px]">C# .NET 8</span>
+            <span class="cv-pill text-[10px]">WPF</span>
+            <span class="cv-pill text-[10px]">Vision7 / OpenCV</span>
+            <span class="cv-pill text-[10px]">Raw Pointers</span>
+          </div>
+        </article>
+        <article class="cv-card p-6 sm:p-8">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+            <div>
+              <span class="font-space text-xs font-bold text-sky-400 uppercase tracking-widest">2024 // CLOUD SAAS &amp; MOBILITY</span>
+              <h3 class="font-syne text-2xl font-bold text-white">INNOVSTOCK — Plataforma PWA Cloud de Inventário</h3>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="cv-pill active-pill">Produção</span>
+              <a href="innovstock.html" class="cv-btn-secondary py-1.5 px-3.5 text-[10px] text-sky-400 border-sky-500/30 hover:border-sky-400">
+                <span>Estudo de Caso</span>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="https://github.com/RONALDJORDAN/InnovStock" target="_blank" class="cv-btn-secondary py-1.5 px-3.5 text-[10px]">
+                <span>Repositório</span>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+          <p class="font-inter text-sm text-white/80 leading-relaxed mb-4">
+            Plataforma Progressive Web App (PWA) de gerenciamento e telemetria de inventário corporativo. Soluciona o problema de latência e conferência manual em armazéns físicos através de sincronização instantânea em tempo real com o <strong>Firebase Realtime Database</strong>, integração de leitor de QR Code/código de barras via câmera do dispositivo móvel e emissão de termos jurídicos de custódia com assinatura digital.
+          </p>
+          <ul class="font-inter text-xs text-white/70 space-y-1.5 mb-5 list-disc list-inside">
+            <li><strong>Sincronização em Tempo Real:</strong> Atualização de status e transferências entre filiais em menos de 100ms.</li>
+            <li><strong>Compatibilidade Total:</strong> Suporte offline e instalação PWA em dispositivos iOS, Android e Desktop.</li>
+            <li><strong>Auditoria Jurídica Automatizada:</strong> Geração instantânea de termos e histórico imutável de movimentações.</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 pt-3 border-t border-white/5">
+            <span class="cv-pill text-[10px]">Firebase Realtime Database</span>
+            <span class="cv-pill text-[10px]">PWA</span>
+            <span class="cv-pill text-[10px]">React</span>
+            <span class="cv-pill text-[10px]">QR Code Scanner</span>
+            <span class="cv-pill text-[10px]">Cloud Functions</span>
+          </div>
+        </article>
+        <article class="cv-card p-6 sm:p-8">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+            <div>
+              <span class="font-space text-xs font-bold text-indigo-400 uppercase tracking-widest">2024 // FULL-STACK WEB CRM</span>
+              <h3 class="font-syne text-2xl font-bold text-white">LAGOINHA SMC — Ecossistema Web de Gestão</h3>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="cv-pill active-pill">Produção</span>
+              <a href="lagoinha-smc.html" class="cv-btn-secondary py-1.5 px-3.5 text-[10px] text-indigo-400 border-indigo-500/30 hover:border-indigo-400">
+                <span>Estudo de Caso</span>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="https://github.com/RONALDJORDAN/Lagoinha-SMC" target="_blank" class="cv-btn-secondary py-1.5 px-3.5 text-[10px]">
+                <span>Repositório</span>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+          <p class="font-inter text-sm text-white/80 leading-relaxed mb-4">
+            Sistema completo de gerenciamento congregacional e CRM comunitário, estruturado para centralizar dados de milhares de membros, controle financeiro de múltiplos departamentos e orquestração de eventos em larga escala. Interface com permissões granulares por cargo, relatórios analíticos em PDF e controle de frequência.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-3 border-t border-white/5">
+            <span class="cv-pill text-[10px]">Next.js</span>
+            <span class="cv-pill text-[10px]">React</span>
+            <span class="cv-pill text-[10px]">TypeScript</span>
+            <span class="cv-pill text-[10px]">TailwindCSS</span>
+            <span class="cv-pill text-[10px]">Gestão Financeira</span>
+          </div>
+        </article>
+        <article class="cv-card p-6 sm:p-8">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+            <div>
+              <span class="font-space text-xs font-bold text-purple-400 uppercase tracking-widest">2023 // ENTERPRISE GOVERNANCE</span>
+              <h3 class="font-syne text-2xl font-bold text-white">INNOVCORE TI — Governança de TI &amp; Telemetria</h3>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="cv-pill active-pill">Produção</span>
+              <a href="innovcore-ti.html" class="cv-btn-secondary py-1.5 px-3.5 text-[10px] text-purple-400 border-purple-500/30 hover:border-purple-400">
+                <span>Estudo de Caso</span>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="https://github.com/RONALDJORDAN/InnovCore-TI" target="_blank" class="cv-btn-secondary py-1.5 px-3.5 text-[10px]">
+                <span>Repositório</span>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+          <p class="font-inter text-sm text-white/80 leading-relaxed mb-4">
+            Suíte corporativa para governança unificada de infraestrutura e ativos de hardware corporativo. Inclui monitoramento de ciclo de vida de máquinas, auditoria em tempo real de alocação de equipamentos e dashboards executivos de depreciação e manutenção preventiva.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-3 border-t border-white/5">
+            <span class="cv-pill text-[10px]">C# .NET</span>
+            <span class="cv-pill text-[10px]">Hardware Telemetry</span>
+            <span class="cv-pill text-[10px]">Auditoria de Ativos</span>
+            <span class="cv-pill text-[10px]">SQL</span>
+          </div>
+        </article>
+        <article class="cv-card p-6 sm:p-8">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+            <div>
+              <span class="font-space text-xs font-bold text-pink-400 uppercase tracking-widest">2023 // MONOREPO &amp; ARCHITECTURE</span>
+              <h3 class="font-syne text-2xl font-bold text-white">PROJETOS INNOV — Monorepo &amp; Arquitetura Distribuída</h3>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="cv-pill active-pill">Produção</span>
+              <a href="projetos-innov.html" class="cv-btn-secondary py-1.5 px-3.5 text-[10px] text-pink-400 border-pink-500/30 hover:border-pink-400">
+                <span>Estudo de Caso</span>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="https://github.com/RONALDJORDAN/Projetos-Innov" target="_blank" class="cv-btn-secondary py-1.5 px-3.5 text-[10px]">
+                <span>Repositório</span>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+          <p class="font-inter text-sm text-white/80 leading-relaxed mb-4">
+            Estrutura central de monorepo corporativo governando bibliotecas compartilhadas, componentes de UI desacoplados, contratos de API entre microsserviços e esteiras automatizadas de CI/CD para garantia de qualidade contínua.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-3 border-t border-white/5">
+            <span class="cv-pill text-[10px]">Monorepo</span>
+            <span class="cv-pill text-[10px]">CI/CD</span>
+            <span class="cv-pill text-[10px]">Microservices</span>
+            <span class="cv-pill text-[10px]">Shared UI</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+      
+      <div class="cv-card p-6 sm:p-8">
+        <div class="cv-section-tag">
+          <span>04 // Formação</span>
+        </div>
+        <h3 class="font-syne text-xl font-bold text-white mb-4 uppercase">Educação &amp; Aperfeiçoamento</h3>
+        <div class="space-y-4">
+          <div class="border-l-2 border-emerald-500 pl-4">
+            <h4 class="font-inter font-bold text-sm text-white">Análise e Desenvolvimento de Sistemas / Engenharia de Software</h4>
+            <span class="font-space text-xs text-white/50 block mb-1">Formação Técnica e Superior Contínua</span>
+            <p class="font-inter text-xs text-white/70">
+              Estudo contínuo e aprofundado em estruturas de dados, complexidade assintótica de algoritmos (Big O), sistemas operacionais e arquitetura de computadores.
+            </p>
+          </div>
+          <div class="border-l-2 border-sky-500 pl-4">
+            <h4 class="font-inter font-bold text-sm text-white">Especializações Autodidatas em Baixo Nível &amp; RPA</h4>
+            <span class="font-space text-xs text-white/50 block mb-1">Engenharia Aplicada</span>
+            <p class="font-inter text-xs text-white/70">
+              Centenas de horas de prática com gerenciamento de memória em Pure C, pipelines com OpenCV e arquitetura assíncrona em C# .NET 8.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="cv-card p-6 sm:p-8">
+        <div class="cv-section-tag">
+          <span>05 // Idiomas &amp; Diferenciais</span>
+        </div>
+        <h3 class="font-syne text-xl font-bold text-white mb-4 uppercase">Comunicação &amp; Diferenciais</h3>
+        <div class="space-y-4">
+          <div>
+            <div class="flex items-center justify-between text-xs mb-1">
+              <span class="font-inter font-bold text-white">Português (Nativo)</span>
+              <span class="font-space text-emerald-400">Fluente / Nativo</span>
+            </div>
+            <div class="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
+              <div class="bg-emerald-500 h-full w-full"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between text-xs mb-1">
+              <span class="font-inter font-bold text-white">Inglês Técnico</span>
+              <span class="font-space text-sky-400">Avançado (Leitura, Escrita &amp; Docs)</span>
+            </div>
+            <div class="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
+              <div class="bg-sky-500 h-full w-[85%]"></div>
+            </div>
+          </div>
+          <div class="pt-3 border-t border-white/10">
+            <h4 class="font-inter font-bold text-xs uppercase text-white/90 mb-1.5">Diferencial para Empresas:</h4>
+            <p class="font-inter text-xs text-white/70 leading-relaxed">
+              Visão ponta a ponta: capacidade de conversar com especialistas de infraestrutura sobre alocação de memória e simultaneamente desenhar interfaces modernas e agradáveis para o usuário final. Autonomia para liderar módulos complexos do zero até o deploy em produção.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <footer class="site-bento-footer mt-12">
+      <div class="bento-footer-wrapper rounded-[32px] lg:rounded-[40px] p-6 sm:p-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          
+          
+          <div class="lg:col-span-6 bento-card rounded-[24px] p-6 sm:p-8 flex flex-col justify-between min-h-[200px]">
+            <div>
+              <span class="font-space text-[11px] font-bold uppercase tracking-[0.25em] text-[#666666] block mb-2">VAMOS CONVERSAR?</span>
+              <h3 class="font-inter text-xl sm:text-2xl font-normal text-[#111111] leading-snug">
+                Interessado no meu perfil para sua equipe ou projeto?
+              </h3>
+            </div>
+            <div class="mt-6 flex items-center gap-3">
+              <a href="mailto:ronaldjordan.dev@gmail.com" class="bento-btn-gradient inline-flex items-center gap-2 rounded-full px-6 py-3 font-space text-xs font-bold uppercase tracking-wider">
+                <span>ENVIAR E-MAIL</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="index.html" class="bento-btn-silver inline-flex items-center gap-2 rounded-full px-5 py-3 font-space text-xs font-bold uppercase tracking-wider">
+                <span>PORTFÓLIO COMPLETO</span>
+              </a>
+            </div>
+          </div>
+
+          
+          <div class="lg:col-span-6 bento-card rounded-[24px] p-6 sm:p-8 flex flex-col justify-between min-h-[200px]">
+            <div>
+              <span class="font-space text-[11px] font-bold uppercase tracking-[0.25em] text-[#666666] block mb-2">REDES PROFISSIONAIS</span>
+              <div class="flex flex-wrap items-center gap-4 text-sm font-space text-[#111111] font-semibold">
+                <a href="https://linkedin.com/in/ronald-jordan-dev" target="_blank" class="hover:text-emerald-700 transition-colors">LinkedIn ↗</a>
+                <a href="https://github.com/RONALDJORDAN" target="_blank" class="hover:text-emerald-700 transition-colors">GitHub ↗</a>
+                <a href="assets/curriculo.pdf" download="Curriculo-Jordan-Ronald.pdf" class="hover:text-emerald-700 transition-colors">Download PDF ↗</a>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-[#cccccc] flex items-center justify-between">
+              
+              <div class="personal-emblem-wrap" title="Jordan Ronald - Minimal Emblem">
+                <svg width="60" height="24" viewBox="0 0 72 32" fill="none" class="text-[#111111]">
+                  <defs>
+                    <mask id="footer-tri-mask-cv">
+                      <rect width="72" height="32" fill="white" />
+                      <circle cx="36" cy="16" r="11" stroke="black" stroke-width="5" fill="none" />
+                      <path d="M 18 24 L 27 27" stroke="white" stroke-width="6" stroke-linecap="round" />
+                    </mask>
+                    <mask id="footer-circ-mask-cv">
+                      <rect width="72" height="32" fill="white" />
+                      <path d="M 45 5 L 53 5" stroke="black" stroke-width="5" stroke-linecap="round" />
+                      <path d="M 47 3 L 47 13" stroke="black" stroke-width="5" stroke-linecap="round" />
+                    </mask>
+                  </defs>
+                  <g stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="14,5 25,27 3,27" fill="none" mask="url(#footer-tri-mask-cv)" />
+                    <circle cx="36" cy="16" r="11" fill="none" mask="url(#footer-circ-mask-cv)" />
+                    <rect x="47" y="5" width="22" height="22" rx="3" fill="none" />
+                  </g>
+                </svg>
+              </div>
+
+              <span class="font-space text-xs text-[#666666]">© 2026 Jordan Ronald</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  
+  <script src="./js/libs/three.min.js"></script>
+  <script src="./js/libs/gsap.min.js"></script>
+  <script src="./js/libs/lenis.min.js"></script>
+  
+  <script>
+    // Copy to clipboard with toast notification feedback
+    function copyToClipboard(text, message) {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast(message || 'Copiado para a área de transferência!');
+        }).catch(() => {
+          fallbackCopy(text, message);
+        });
+      } else {
+        fallbackCopy(text, message);
+      }
+    }
+
+    function fallbackCopy(text, message) {
+      const el = document.createElement('textarea');
+      el.value = text;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+      showToast(message || 'Copiado para a área de transferência!');
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast-notification');
+      const msgSpan = document.getElementById('toast-message');
+      if (toast && msgSpan) {
+        msgSpan.textContent = msg;
+        toast.classList.add('show');
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 2800);
+      }
+    }
+
+    // Lenis Smooth Scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof Lenis !== 'undefined') {
+        const lenis = new Lenis({
+          duration: 1.1,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          orientation: 'vertical',
+          smoothWheel: true
+        });
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+      }
+
+      // 60fps / 144fps GPU Custom Cursor
+      if (window.innerWidth >= 768) {
+        const trails = Array.from(document.querySelectorAll('.cursor-trail'));
+        const cursorMain = document.querySelector('.cursor-main');
+        const cursorDot = document.querySelector('.cursor-dot');
+        
+        if (cursorMain && cursorDot) {
+          let mouseX = window.innerWidth / 2;
+          let mouseY = window.innerHeight / 2;
+          let dotX = mouseX, dotY = mouseY;
+          let mainX = mouseX, mainY = mouseY;
+          const trailsPos = trails.map(() => ({ x: mouseX, y: mouseY }));
+          let isVisible = false;
+
+          window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            if (!isVisible) {
+              isVisible = true;
+              cursorMain.style.opacity = '1';
+              cursorDot.style.opacity = '1';
+              trails.forEach((t, i) => t.style.opacity = `${0.18 - i * 0.03}`);
+            }
+          }, { passive: true });
+
+          document.addEventListener('mouseleave', () => {
+            isVisible = false;
+            cursorMain.style.opacity = '0';
+            cursorDot.style.opacity = '0';
+            trails.forEach(t => t.style.opacity = '0');
+          });
+
+          document.addEventListener('mouseenter', () => {
+            isVisible = true;
+            cursorMain.style.opacity = '1';
+            cursorDot.style.opacity = '1';
+          });
+
+          function renderCursor() {
+            if (isVisible) {
+              dotX += (mouseX - dotX) * 0.75;
+              dotY += (mouseY - dotY) * 0.75;
+              cursorDot.style.transform = `translate3d(${dotX}px, ${dotY}px, 0) translate(-50%, -50%)`;
+
+              mainX += (mouseX - mainX) * 0.22;
+              mainY += (mouseY - mainY) * 0.22;
+              cursorMain.style.transform = `translate3d(${mainX}px, ${mainY}px, 0) translate(-50%, -50%)`;
+
+              let prevX = mainX, prevY = mainY;
+              for (let i = 0; i < trails.length; i++) {
+                const factor = 0.28 - (i * 0.035);
+                trailsPos[i].x += (prevX - trailsPos[i].x) * factor;
+                trailsPos[i].y += (prevY - trailsPos[i].y) * factor;
+                trails[i].style.transform = `translate3d(${trailsPos[i].x}px, ${trailsPos[i].y}px, 0) translate(-50%, -50%)`;
+                prevX = trailsPos[i].x;
+                prevY = trailsPos[i].y;
+              }
+            }
+            requestAnimationFrame(renderCursor);
+          }
+          requestAnimationFrame(renderCursor);
+
+          // Cursor interactive hover difference
+          document.querySelectorAll('a, button, .cv-card, .cv-pill').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+              if (typeof gsap !== 'undefined') {
+                gsap.to(cursorMain, {
+                  scale: 1.5,
+                  backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                  borderColor: '#ffffff',
+                  mixBlendMode: 'difference',
+                  duration: 0.25,
+                  ease: 'power2.out',
+                  overwrite: 'auto'
+                });
+                gsap.to(cursorDot, { scale: 0, duration: 0.2, overwrite: 'auto' });
+              }
+            });
+
+            el.addEventListener('mouseleave', () => {
+              if (typeof gsap !== 'undefined') {
+                gsap.to(cursorMain, {
+                  scale: 1,
+                  backgroundColor: 'transparent',
+                  borderColor: 'rgba(244, 244, 244, 0.8)',
+                  mixBlendMode: 'normal',
+                  duration: 0.25,
+                  ease: 'power2.out',
+                  overwrite: 'auto'
+                });
+                gsap.to(cursorDot, { scale: 1, duration: 0.2, overwrite: 'auto' });
+              }
+            });
+          });
+        }
+      }
+
+      // Three.js Shader BG
+      const canvas = document.getElementById('webgl-canvas');
+      if (canvas && typeof THREE !== 'undefined') {
+        try {
+          const scene = new THREE.Scene();
+          const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+          const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: false });
+          
+          function resize() {
+            renderer.setSize(window.innerWidth, window.innerHeight, false);
+          }
+          resize();
+          window.addEventListener('resize', resize, { passive: true });
+
+          const uniforms = {
+            u_time: { value: 0 },
+            u_resolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) }
+          };
+
+          const material = new THREE.ShaderMaterial({
+            uniforms: uniforms,
+            vertexShader: `varying vec2 vUv; void main() { vUv = uv; gl_Position = vec4(position, 1.0); }`,
+            fragmentShader: `
+              uniform float u_time;
+              varying vec2 vUv;
+              void main() {
+                vec2 st = vUv;
+                float color = 0.05 + 0.03 * sin(st.x * 2.0 + u_time * 0.2) + 0.02 * cos(st.y * 3.0 - u_time * 0.15);
+                gl_FragColor = vec4(vec3(color), 0.12);
+              }
+            `,
+            transparent: true
+          });
+
+          scene.add(new THREE.Mesh(new THREE.PlaneGeometry(2, 2), material));
+          function render() {
+            requestAnimationFrame(render);
+            uniforms.u_time.value += 0.01;
+            renderer.render(scene, camera);
+          }
+          render();
+        } catch(e) {}
+      }
+    });
+  </script>
+</body>
+</html>
