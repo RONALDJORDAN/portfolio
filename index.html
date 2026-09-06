@@ -310,450 +310,703 @@
     </section>
 
     <div id="portfolio-section"></div>
+    <div id="works"></div>
 
-    <!-- Works -->
-    <section
-      class="projects-split px-[30px] lg:px-[60px] py-[100px] lg:py-[150px] pb-[50px] lg:pb-[100px] relative z-10">
+    <!-- Selected Works - Bento 3D Flip Grid Gallery -->
+    <section id="projects" class="projects-split px-[20px] sm:px-[30px] lg:px-[60px] py-[80px] lg:py-[130px] relative z-10">
+      <!-- Top Progress Bar -->
       <div class="fixed top-0 left-0 right-0 h-1 bg-white/5 z-50">
         <div
-          class="h-full bg-gradient-to-r from-emerald-500 via-blue-500 to-purple-500 transition-all duration-500 ease-out"
-          style="width: 20%;"></div>
+          class="h-full bg-gradient-to-r from-emerald-500 via-sky-500 via-indigo-500 via-purple-500 to-pink-500 transition-all duration-500 ease-out"
+          style="width: 100%;"></div>
       </div>
 
-      <div class="projects-split-grid split-layout">
-        <div class="split-left-sticky split-left-col">
-          <div class="split-title flex items-center gap-[10px] mb-8 lg:mb-12">
+      <!-- Section Header -->
+      <div
+        class="max-w-[1400px] mx-auto mb-10 lg:mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-8">
+        <div>
+          <div class="flex items-center gap-2.5 mb-3">
             <img src="./assets/icons/asterisk.svg" alt="asterisk"
               class="object-contain animate-spin w-5 h-5 lg:w-6 lg:h-6" loading="lazy">
-            <h2 class="uppercase text-white font-light text-[14px] lg:text-[18px] ml-2">Selected works</h2>
+            <span class="uppercase text-emerald-400 font-mono font-semibold text-xs tracking-widest">Galeria
+              Interativa</span>
           </div>
-          <div class="mb-6 lg:mb-8 flex items-baseline gap-2">
-            <span
-              class="project-number text-[50px] lg:text-[60px] font-bold text-white/20 font-mono leading-none will-change-transform">01</span>
-            <span class="text-white/20 text-xl font-light">/</span>
-            <span class="text-white/20 text-xl font-light">05</span>
-          </div>
-          <div class="split-nav-list space-y-2">
-            <!-- Item 0: INNOVRPA -->
-            <div
-              class="split-project-item block group py-3 border-l-2 pl-4 lg:pl-5 transition-all duration-300 opacity-100 border-emerald-500 active cursor-pointer rounded-r-xl hover:bg-white/[0.02]"
-              data-project-idx="0">
-              <div class="flex items-center justify-between gap-2 mb-1">
-                <div class="flex items-center gap-2">
-                  <span class="text-white/40 text-[11px] font-mono tracking-wider">2025</span>
-                  <div class="w-2 h-2 rounded-full animate-pulse" style="background-color: rgb(16, 185, 129);"></div>
-                  <span class="text-white/40 text-[11px] uppercase tracking-wider font-mono">Robotics &amp; Vision</span>
-                </div>
-                <span class="text-white/30 text-xs font-mono font-bold">01</span>
-              </div>
-              <div class="flex items-center justify-between gap-3">
-                <h3
-                  class="text-sm lg:text-base font-bold text-white tracking-wide leading-snug transform transition-transform duration-300 group-hover:translate-x-1.5">
-                  INNOVRPA</h3>
-                <a href="innovrpa.html"
-                  class="direct-case-study-link text-[11px] font-space text-white/60 hover:text-emerald-300 bg-white/5 hover:bg-emerald-500/15 border border-white/10 hover:border-emerald-500/40 px-2.5 py-1 rounded-full transition-all duration-200 flex items-center gap-1 shrink-0"
-                  title="Abrir estudo de caso de INNOVRPA">
-                  <span>Estudo de Caso</span>
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </a>
+          <h2 class="uppercase text-white font-bold text-3xl sm:text-4xl lg:text-5xl font-syne tracking-wide">Selected
+            Works</h2>
+        </div>
+      </div>
+
+      <!-- Bento Grid Container (Clean Square Photo Tiles with 3D Flip & Reactive Spotlight) -->
+      <div class="bento-projects-grid grid grid-cols-12 gap-4 max-w-[1400px] mx-auto">
+
+        <!-- CARD 1: INNOVRPA (Retângulo Horizontal Largo) -->
+        <div data-category="robotics" class="bento-flip-card group [perspective:1000px] col-span-12 lg:col-span-8 h-[340px]">
+          <div class="bento-flip-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] rounded-none shadow-2xl">
+            <!-- Front (Pure Project Photo) -->
+            <div class="bento-flip-front absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] border border-white/10 bg-[#090b10]">
+              <img src="assets/projects/innovrpa.jpg" alt="INNOVRPA System" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute top-3 right-3 z-10">
+                <span class="px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/15 text-emerald-400 font-mono text-[10px] flex items-center gap-1 shadow-lg">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  <span>Girar 3D</span>
+                </span>
               </div>
             </div>
-
-            <!-- Item 1: INNOVSTOCK -->
-            <div
-              class="split-project-item block group py-3 border-l-2 pl-4 lg:pl-5 transition-all duration-300 opacity-40 border-transparent cursor-pointer rounded-r-xl hover:opacity-80 hover:bg-white/[0.02]"
-              data-project-idx="1">
-              <div class="flex items-center justify-between gap-2 mb-1">
-                <div class="flex items-center gap-2">
-                  <span class="text-white/40 text-[11px] font-mono tracking-wider">2024</span>
-                  <div class="w-2 h-2 rounded-full animate-pulse" style="background-color: rgb(56, 189, 248);"></div>
-                  <span class="text-white/40 text-[11px] uppercase tracking-wider font-mono">Cloud SaaS Platform</span>
+            <!-- Back (3D Details) -->
+            <div class="bento-flip-back absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] [transform:rotateY(180deg)] border border-emerald-500/40 bg-[#0c1017]/95 backdrop-blur-2xl p-6 flex flex-col justify-between shadow-[0_0_40px_rgba(16,185,129,0.25)]">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-mono text-[10px] font-bold uppercase">INNOVRPA</span>
+                  <span class="text-white/40 font-mono text-xs">2025</span>
                 </div>
-                <span class="text-white/30 text-xs font-mono font-bold">02</span>
+                <h4 class="text-lg font-bold text-white mb-2 font-syne">Motor Robótico Zero-Leak</h4>
+                <p class="text-white/80 text-xs leading-relaxed mb-3 font-inter">
+                  Motor robótico em C puro com C# WPF e visão computacional Vision7 para execução contínua de 72h.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 font-mono text-[10px]">Pure C</span>
+                  <span class="px-2 py-0.5 rounded-full bg-white/5 text-white/80 font-mono text-[10px]">C# WPF</span>
+                  <span class="px-2 py-0.5 rounded-full bg-white/5 text-white/80 font-mono text-[10px]">Vision7</span>
+                </div>
               </div>
-              <div class="flex items-center justify-between gap-3">
-                <h3
-                  class="text-sm lg:text-base font-bold text-white tracking-wide leading-snug transform transition-transform duration-300 group-hover:translate-x-1.5">
-                  INNOVSTOCK</h3>
-                <a href="innovstock.html"
-                  class="direct-case-study-link text-[11px] font-space text-white/60 hover:text-sky-300 bg-white/5 hover:bg-sky-500/15 border border-white/10 hover:border-sky-500/40 px-2.5 py-1 rounded-full transition-all duration-200 flex items-center gap-1 shrink-0"
-                  title="Abrir estudo de caso de INNOVSTOCK">
+              <div class="flex items-center gap-2 pt-3 border-t border-white/10">
+                <a href="innovrpa.html" class="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-full bg-emerald-400 text-black font-space text-xs font-bold hover:brightness-110 transition-all">
                   <span>Estudo de Caso</span>
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </a>
-              </div>
-            </div>
-
-            <!-- Item 2: LAGOINHA SMC -->
-            <div
-              class="split-project-item block group py-3 border-l-2 pl-4 lg:pl-5 transition-all duration-300 opacity-40 border-transparent cursor-pointer rounded-r-xl hover:opacity-80 hover:bg-white/[0.02]"
-              data-project-idx="2">
-              <div class="flex items-center justify-between gap-2 mb-1">
-                <div class="flex items-center gap-2">
-                  <span class="text-white/40 text-[11px] font-mono tracking-wider">2024</span>
-                  <div class="w-2 h-2 rounded-full animate-pulse" style="background-color: rgb(99, 102, 241);"></div>
-                  <span class="text-white/40 text-[11px] uppercase tracking-wider font-mono">Web Platform &amp; CRM</span>
-                </div>
-                <span class="text-white/30 text-xs font-mono font-bold">03</span>
-              </div>
-              <div class="flex items-center justify-between gap-3">
-                <h3
-                  class="text-sm lg:text-base font-bold text-white tracking-wide leading-snug transform transition-transform duration-300 group-hover:translate-x-1.5">
-                  LAGOINHA SMC</h3>
-                <a href="lagoinha-smc.html"
-                  class="direct-case-study-link text-[11px] font-space text-white/60 hover:text-indigo-300 bg-white/5 hover:bg-indigo-500/15 border border-white/10 hover:border-indigo-500/40 px-2.5 py-1 rounded-full transition-all duration-200 flex items-center gap-1 shrink-0"
-                  title="Abrir estudo de caso de LAGOINHA SMC">
-                  <span>Estudo de Caso</span>
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- Item 3: INNOVCORE TI -->
-            <div
-              class="split-project-item block group py-3 border-l-2 pl-4 lg:pl-5 transition-all duration-300 opacity-40 border-transparent cursor-pointer rounded-r-xl hover:opacity-80 hover:bg-white/[0.02]"
-              data-project-idx="3">
-              <div class="flex items-center justify-between gap-2 mb-1">
-                <div class="flex items-center gap-2">
-                  <span class="text-white/40 text-[11px] font-mono tracking-wider">2023</span>
-                  <div class="w-2 h-2 rounded-full animate-pulse" style="background-color: rgb(139, 92, 246);"></div>
-                  <span class="text-white/40 text-[11px] uppercase tracking-wider font-mono">Enterprise System</span>
-                </div>
-                <span class="text-white/30 text-xs font-mono font-bold">04</span>
-              </div>
-              <div class="flex items-center justify-between gap-3">
-                <h3
-                  class="text-sm lg:text-base font-bold text-white tracking-wide leading-snug transform transition-transform duration-300 group-hover:translate-x-1.5">
-                  INNOVCORE TI</h3>
-                <a href="innovcore-ti.html"
-                  class="direct-case-study-link text-[11px] font-space text-white/60 hover:text-purple-300 bg-white/5 hover:bg-purple-500/15 border border-white/10 hover:border-purple-500/40 px-2.5 py-1 rounded-full transition-all duration-200 flex items-center gap-1 shrink-0"
-                  title="Abrir estudo de caso de INNOVCORE TI">
-                  <span>Estudo de Caso</span>
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- Item 4: PROJETOS INNOV -->
-            <div
-              class="split-project-item block group py-3 border-l-2 pl-4 lg:pl-5 transition-all duration-300 opacity-40 border-transparent cursor-pointer rounded-r-xl hover:opacity-80 hover:bg-white/[0.02]"
-              data-project-idx="4">
-              <div class="flex items-center justify-between gap-2 mb-1">
-                <div class="flex items-center gap-2">
-                  <span class="text-white/40 text-[11px] font-mono tracking-wider">2023</span>
-                  <div class="w-2 h-2 rounded-full animate-pulse" style="background-color: rgb(236, 72, 153);"></div>
-                  <span class="text-white/40 text-[11px] uppercase tracking-wider font-mono">Core Engineering</span>
-                </div>
-                <span class="text-white/30 text-xs font-mono font-bold">05</span>
-              </div>
-              <div class="flex items-center justify-between gap-3">
-                <h3
-                  class="text-sm lg:text-base font-bold text-white tracking-wide leading-snug transform transition-transform duration-300 group-hover:translate-x-1.5">
-                  PROJETOS INNOV</h3>
-                <a href="projetos-innov.html"
-                  class="direct-case-study-link text-[11px] font-space text-white/60 hover:text-pink-300 bg-white/5 hover:bg-pink-500/15 border border-white/10 hover:border-pink-500/40 px-2.5 py-1 rounded-full transition-all duration-200 flex items-center gap-1 shrink-0"
-                  title="Abrir estudo de caso de PROJETOS INNOV">
-                  <span>Estudo de Caso</span>
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
+                <a href="https://github.com/RONALDJORDAN/Inno-RPA" target="_blank" class="p-2 rounded-full border border-white/20 hover:bg-white/10 text-white shrink-0">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
                 </a>
               </div>
             </div>
           </div>
         </div>
-        <div class="split-preview space-y-12 lg:space-y-20">
-          
-          <!-- Card 01: INNOVRPA -->
-          <div id="project-01" class="project-preview-item transition-opacity duration-500 opacity-100">
-            <div class="relative h-[65vh] min-h-[500px] lg:h-[75vh] rounded-3xl overflow-hidden bg-black shadow-2xl group/card border border-white/10 hover:border-emerald-500/40 transition-all duration-500 hover:shadow-[0_0_50px_rgba(16,185,129,0.15)]" style="transform-style: preserve-3d; perspective: 1000px;">
-              <a href="innovrpa.html" class="absolute inset-0 z-0 block cursor-pointer" title="Ver estudo de caso de INNOVRPA">
-                <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover/card:scale-105" style="background-image: url('assets/projects/innovrpa.jpg');"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-[#090b10] via-[#090b10]/60 to-transparent pointer-events-none"></div>
-                <div class="absolute top-0 right-0 w-48 h-48 blur-[100px] opacity-30 pointer-events-none" style="background-color: rgb(16, 185, 129);"></div>
-              </a>
-              <div class="absolute top-6 right-6 lg:top-8 lg:right-8 opacity-15 z-10 pointer-events-none">
-                <span class="text-[70px] lg:text-[100px] font-bold font-mono text-white leading-none">01</span>
+
+        <!-- CARD 2: Vision7 OpenCV (Quadrado Perfeito 1:1) -->
+        <div data-category="robotics" class="bento-flip-card group [perspective:1000px] col-span-12 sm:col-span-6 lg:col-span-4 h-[340px] aspect-square">
+          <div class="bento-flip-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] rounded-none shadow-2xl">
+            <!-- Front -->
+            <div class="bento-flip-front absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] border border-white/10 bg-[#090b10]">
+              <img src="assets/projects/innovrpa-ui.jpg" alt="Vision7 OpenCV UI" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute top-3 right-3 z-10">
+                <span class="px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/15 text-emerald-400 font-mono text-[10px] flex items-center gap-1 shadow-lg">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  <span>Girar 3D</span>
+                </span>
               </div>
-              <div class="absolute bottom-0 left-0 right-0 p-6 lg:p-8 z-20 pointer-events-auto bg-[#090b10]/90 backdrop-blur-xl border-t border-white/10 rounded-b-3xl">
-                <div class="flex items-center gap-3 mb-2">
-                  <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-mono text-[10px] uppercase font-bold tracking-wider">01 • ROBOTICS &amp; VISION</span>
-                  <span class="text-white/30 text-xs">•</span>
-                  <span class="text-white/40 text-xs font-mono">2025</span>
+            </div>
+            <!-- Back -->
+            <div class="bento-flip-back absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] [transform:rotateY(180deg)] border border-emerald-500/40 bg-[#0c1017]/95 backdrop-blur-2xl p-6 flex flex-col justify-between shadow-[0_0_40px_rgba(16,185,129,0.2)]">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-mono text-[10px] font-bold uppercase">Vision7 OpenCV</span>
+                  <span class="text-white/40 font-mono text-xs">2025</span>
                 </div>
-                <p class="text-white/90 text-sm lg:text-base mb-4 max-w-xl leading-relaxed font-inter">
-                  Motor robótico híbrido combinando a eficiência de memória do C puro com C# WPF .NET 8 e visão computacional Vision7 para automação em milissegundos sem vazamentos.
+                <h4 class="text-lg font-bold text-white mb-2 font-syne">Mapeamento de Coordenadas</h4>
+                <p class="text-white/80 text-xs leading-relaxed mb-3 font-inter">
+                  Módulo de inteligência visual para mapeamento de telas gráficas legadas com latência de 12ms.
                 </p>
-                <div class="flex flex-wrap items-center gap-2 mb-5">
-                  <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 font-mono text-[11px]">Pure C</span>
-                  <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/80 font-mono text-[11px]">C# .NET 8</span>
-                  <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/80 font-mono text-[11px]">WPF MVVM</span>
-                  <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/80 font-mono text-[11px]">Vision7 OpenCV</span>
-                  <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/80 font-mono text-[11px]">Zero-Leak Memory</span>
-                </div>
-                <div class="flex flex-wrap items-center gap-3">
-                  <a class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-emerald-400 text-black font-space text-xs font-bold tracking-wide hover:brightness-110 transition-all duration-300 group cursor-pointer shadow-[0_0_25px_rgba(16,185,129,0.3)]" href="innovrpa.html">
-                    <span>Ver Estudo de Caso</span>
-                    <div class="w-5 h-5 rounded-full bg-black/15 flex items-center justify-center transform transition-transform duration-300 group-hover:translate-x-1">
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </div>
-                  </a>
-                  <a class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-white/20 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group cursor-pointer" href="https://github.com/RONALDJORDAN/Inno-RPA" target="_blank" title="Repositório GitHub">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
-                    </svg>
-                    <span class="text-white text-xs font-mono">GitHub</span>
-                  </a>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 font-mono text-[10px]">OpenCV</span>
+                  <span class="px-2 py-0.5 rounded-full bg-white/5 text-white/80 font-mono text-[10px]">C++ Engine</span>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <!-- Card 02: INNOVSTOCK -->
-          <div id="project-02" class="project-preview-item transition-opacity duration-500 opacity-60 lg:opacity-100">
-            <div class="relative h-[65vh] min-h-[500px] lg:h-[75vh] rounded-3xl overflow-hidden bg-black shadow-2xl group/card border border-white/10 hover:border-sky-500/40 transition-all duration-500 hover:shadow-[0_0_50px_rgba(56,189,248,0.15)]" style="transform-style: preserve-3d; perspective: 1000px;">
-              <a href="innovstock.html" class="absolute inset-0 z-0 block cursor-pointer" title="Ver estudo de caso de INNOVSTOCK">
-                <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover/card:scale-105" style="background-image: url('assets/projects/innovstock.jpg');"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-[#090b10] via-[#090b10]/60 to-transparent pointer-events-none"></div>
-                <div class="absolute top-0 right-0 w-48 h-48 blur-[100px] opacity-30 pointer-events-none" style="background-color: rgb(56, 189, 248);"></div>
+              <a href="innovrpa.html" class="inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-full bg-emerald-400 text-black font-space text-xs font-bold hover:brightness-110 transition-all">
+                <span>Ver Módulo</span>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
-              <div class="absolute top-6 right-6 lg:top-8 lg:right-8 opacity-15 z-10 pointer-events-none">
-                <span class="text-[70px] lg:text-[100px] font-bold font-mono text-white leading-none">02</span>
-              </div>
-              <div class="absolute bottom-0 left-0 right-0 p-6 lg:p-8 z-20 pointer-events-auto bg-[#090b10]/90 backdrop-blur-xl border-t border-white/10 rounded-b-3xl">
-                <div class="flex items-center gap-3 mb-2">
-                  <span class="px-2.5 py-0.5 rounded-full bg-sky-500/20 border border-sky-500/40 text-sky-300 font-mono text-[10px] uppercase font-bold tracking-wider">02 • CLOUD SAAS PLATFORM</span>
-                  <span class="text-white/30 text-xs">•</span>
-                  <span class="text-white/40 text-xs font-mono">2024</span>
-                </div>
-                <p class="text-white/90 text-sm lg:text-base mb-4 max-w-xl leading-relaxed font-inter">
-                  Plataforma PWA Cloud &amp; Mobile com sincronização em tempo real via Firebase Realtime Database, leitor de QR Code integrado e termos jurídicos automatizados.
-                </p>
-                <div class="flex flex-wrap items-center gap-2 mb-5">
-                  <span class="px-2.5 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-300 font-mono text-[11px]">React 18</span>
-                  <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/80 font-mono text-[11px]">TypeScript</span>
-                  <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/80 font-mono text-[11px]">Firebase RTDB</span>
-                  <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/80 font-mono text-[11px]">Camera QR Barcode</span>
-                  <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/80 font-mono text-[11px]">Mobile PWA</span>
-                </div>
-                <div class="flex flex-wrap items-center gap-3">
-                  <a class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-sky-400 text-black font-space text-xs font-bold tracking-wide hover:brightness-110 transition-all duration-300 group cursor-pointer shadow-[0_0_25px_rgba(56,189,248,0.3)]" href="innovstock.html">
-                    <span>Ver Estudo de Caso</span>
-                    <div class="w-5 h-5 rounded-full bg-black/15 flex items-center justify-center transform transition-transform duration-300 group-hover:translate-x-1">
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </div>
-                  </a>
-                  <a class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-white/20 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group cursor-pointer" href="https://github.com/RONALDJORDAN/InnovStock" target="_blank" title="Repositório GitHub">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
-                    </svg>
-                    <span class="text-white text-xs font-mono">GitHub</span>
-                  </a>
-                </div>
-              </div>
             </div>
-          </div>
-
-          <!-- Card 03: LAGOINHA SMC -->
-          <div id="project-03" class="project-preview-item transition-opacity duration-500 opacity-60 lg:opacity-100">
-            <div class="relative h-[65vh] min-h-[500px] lg:h-[75vh] rounded-3xl overflow-hidden bg-black shadow-2xl group/card border border-white/10 hover:border-indigo-500/40 transition-all duration-500 hover:shadow-[0_0_50px_rgba(99,102,241,0.15)]" style="transform-style: preserve-3d; perspective: 1000px;">
-              <a href="lagoinha-smc.html" class="absolute inset-0 z-0 block cursor-pointer" title="Ver estudo de caso de LAGOINHA SMC">
-                <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover/card:scale-105" style="background-image: url('assets/projects/lagoinha.jpg');"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-[#090b10] via-[#090b10]/60 to-transparent pointer-events-none"></div>
-                <div class="absolute top-0 right-0 w-48 h-48 blur-[100px] opacity-30 pointer-events-none" style="background-color: rgb(99, 102, 241);"></div>
-              </a>
-              <div class="absolute top-6 right-6 lg:top-8 lg:right-8 opacity-15 z-10 pointer-events-none">
-                <span class="text-[70px] lg:text-[100px] font-bold font-mono text-white leading-none">03</span>
-              </div>
-              <div class="absolute bottom-0 left-0 right-0 p-6 lg:p-8 z-20 pointer-events-auto bg-[#090b10]/90 backdrop-blur-xl border-t border-white/10 rounded-b-3xl">
-                <div class="flex items-center gap-3 mb-2">
-                  <span class="px-2.5 py-0.5 rounded-full bg-indigo-500/20 border border-indigo-500/40 text-indigo-300 font-mono text-[10px] uppercase font-bold tracking-wider">03 • WEB PLATFORM &amp; CRM</span>
-                  <span class="text-white/30 text-xs">•</span>
-                  <span class="text-white/40 text-xs font-mono">2024</span>
-                </div>
-                <p class="text-white/90 text-sm lg:text-base mb-4 max-w-xl leading-relaxed font-inter">
-                  Ecossistema web escalável de gestão comunitária e membros, com controle financeiro multi-departamento, relatórios automatizados e orquestração de eventos.
-                </p>
-                <div class="flex flex-wrap items-center gap-2 mb-5">
-                  <span class="px-2.5 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 font-mono text-[11px]">Next.js 14</span>
-                  <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/80 font-mono text-[11px]">TypeScript</span>
-                  <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/80 font-mono text-[11px]">PostgreSQL Prisma</span>
-                  <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/80 font-mono text-[11px]">PDFKit Engine</span>
-                  <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/80 font-mono text-[11px]">RBAC Auth</span>
-                </div>
-                <div class="flex flex-wrap items-center gap-3">
-                  <a class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-indigo-400 text-black font-space text-xs font-bold tracking-wide hover:brightness-110 transition-all duration-300 group cursor-pointer shadow-[0_0_25px_rgba(99,102,241,0.3)]" href="lagoinha-smc.html">
-                    <span>Ver Estudo de Caso</span>
-                    <div class="w-5 h-5 rounded-full bg-black/15 flex items-center justify-center transform transition-transform duration-300 group-hover:translate-x-1">
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </div>
-                  </a>
-                  <a class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-white/20 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group cursor-pointer" href="https://github.com/RONALDJORDAN/Lagoinha-SMC" target="_blank" title="Repositório GitHub">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
-                    </svg>
-                    <span class="text-white text-xs font-mono">GitHub</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 04: INNOVCORE TI -->
-          <div id="project-04" class="project-preview-item transition-opacity duration-500 opacity-60 lg:opacity-100">
-            <div class="relative h-[65vh] min-h-[500px] lg:h-[75vh] rounded-3xl overflow-hidden bg-black shadow-2xl group/card border border-white/10 hover:border-purple-500/40 transition-all duration-500 hover:shadow-[0_0_50px_rgba(139,92,246,0.15)]" style="transform-style: preserve-3d; perspective: 1000px;">
-              <a href="innovcore-ti.html" class="absolute inset-0 z-0 block cursor-pointer" title="Ver estudo de caso de INNOVCORE TI">
-                <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover/card:scale-105" style="background-image: url('assets/projects/innovcore.jpg');"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-[#090b10] via-[#090b10]/60 to-transparent pointer-events-none"></div>
-                <div class="absolute top-0 right-0 w-48 h-48 blur-[100px] opacity-30 pointer-events-none" style="background-color: rgb(139, 92, 246);"></div>
-              </a>
-              <div class="absolute top-6 right-6 lg:top-8 lg:right-8 opacity-15 z-10 pointer-events-none">
-                <span class="text-[70px] lg:text-[100px] font-bold font-mono text-white leading-none">04</span>
-              </div>
-              <div class="absolute bottom-0 left-0 right-0 p-6 lg:p-8 z-20 pointer-events-auto bg-[#090b10]/90 backdrop-blur-xl border-t border-white/10 rounded-b-3xl">
-                <div class="flex items-center gap-3 mb-2">
-                  <span class="px-2.5 py-0.5 rounded-full bg-purple-500/20 border border-purple-500/40 text-purple-300 font-mono text-[10px] uppercase font-bold tracking-wider">04 • ENTERPRISE SYSTEM</span>
-                  <span class="text-white/30 text-xs">•</span>
-                  <span class="text-white/40 text-xs font-mono">2023</span>
-                </div>
-                <p class="text-white/90 text-sm lg:text-base mb-4 max-w-xl leading-relaxed font-inter">
-                  Suíte corporativa unificada de governança de TI com rastreamento de ciclo de vida de ativos de hardware, telemetria em tempo real e auditoria operacional.
-                </p>
-                <div class="flex flex-wrap items-center gap-2 mb-5">
-                  <span class="px-2.5 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-300 font-mono text-[11px]">C# .NET 8</span>
-                  <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/80 font-mono text-[11px]">WMI Telemetry</span>
-                  <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/80 font-mono text-[11px]">Hardware Sensors</span>
-                  <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/80 font-mono text-[11px]">Asset Lifecycle</span>
-                  <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/80 font-mono text-[11px]">SQL Server</span>
-                </div>
-                <div class="flex flex-wrap items-center gap-3">
-                  <a class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-purple-400 text-black font-space text-xs font-bold tracking-wide hover:brightness-110 transition-all duration-300 group cursor-pointer shadow-[0_0_25px_rgba(139,92,246,0.3)]" href="innovcore-ti.html">
-                    <span>Ver Estudo de Caso</span>
-                    <div class="w-5 h-5 rounded-full bg-black/15 flex items-center justify-center transform transition-transform duration-300 group-hover:translate-x-1">
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </div>
-                  </a>
-                  <a class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-white/20 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group cursor-pointer" href="https://github.com/RONALDJORDAN/InnovCore-TI" target="_blank" title="Repositório GitHub">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
-                    </svg>
-                    <span class="text-white text-xs font-mono">GitHub</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 05: PROJETOS INNOV -->
-          <div id="project-05" class="project-preview-item transition-opacity duration-500 opacity-60 lg:opacity-100">
-            <div class="relative h-[65vh] min-h-[500px] lg:h-[75vh] rounded-3xl overflow-hidden bg-black shadow-2xl group/card border border-white/10 hover:border-pink-500/40 transition-all duration-500 hover:shadow-[0_0_50px_rgba(236,72,153,0.15)]" style="transform-style: preserve-3d; perspective: 1000px;">
-              <a href="projetos-innov.html" class="absolute inset-0 z-0 block cursor-pointer" title="Ver estudo de caso de PROJETOS INNOV">
-                <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover/card:scale-105" style="background-image: url('assets/projects/projetos.jpg');"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-[#090b10] via-[#090b10]/60 to-transparent pointer-events-none"></div>
-                <div class="absolute top-0 right-0 w-48 h-48 blur-[100px] opacity-30 pointer-events-none" style="background-color: rgb(236, 72, 153);"></div>
-              </a>
-              <div class="absolute top-6 right-6 lg:top-8 lg:right-8 opacity-15 z-10 pointer-events-none">
-                <span class="text-[70px] lg:text-[100px] font-bold font-mono text-white leading-none">05</span>
-              </div>
-              <div class="absolute bottom-0 left-0 right-0 p-6 lg:p-8 z-20 pointer-events-auto bg-[#090b10]/90 backdrop-blur-xl border-t border-white/10 rounded-b-3xl">
-                <div class="flex items-center gap-3 mb-2">
-                  <span class="px-2.5 py-0.5 rounded-full bg-pink-500/20 border border-pink-500/40 text-pink-300 font-mono text-[10px] uppercase font-bold tracking-wider">05 • CORE ENGINEERING</span>
-                  <span class="text-white/30 text-xs">•</span>
-                  <span class="text-white/40 text-xs font-mono">2023</span>
-                </div>
-                <p class="text-white/90 text-sm lg:text-base mb-4 max-w-xl leading-relaxed font-inter">
-                  Monorepo central de engenharia governando arquitetura de microsserviços, contratos de UI compartilhados, esteiras CI/CD e gateways de API distribuídos.
-                </p>
-                <div class="flex flex-wrap items-center gap-2 mb-5">
-                  <span class="px-2.5 py-1 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-300 font-mono text-[11px]">Turborepo</span>
-                  <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/80 font-mono text-[11px]">TypeScript Monorepo</span>
-                  <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/80 font-mono text-[11px]">GitHub Actions CI/CD</span>
-                  <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/80 font-mono text-[11px]">Shared Design System</span>
-                  <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/80 font-mono text-[11px]">OpenAPI SDKs</span>
-                </div>
-                <div class="flex flex-wrap items-center gap-3">
-                  <a class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-pink-400 text-black font-space text-xs font-bold tracking-wide hover:brightness-110 transition-all duration-300 group cursor-pointer shadow-[0_0_25px_rgba(236,72,153,0.3)]" href="projetos-innov.html">
-                    <span>Ver Estudo de Caso</span>
-                    <div class="w-5 h-5 rounded-full bg-black/15 flex items-center justify-center transform transition-transform duration-300 group-hover:translate-x-1">
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </div>
-                  </a>
-                  <a class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-white/20 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group cursor-pointer" href="https://github.com/RONALDJORDAN/Projetos-Innov" target="_blank" title="Repositório GitHub">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
-                    </svg>
-                    <span class="text-white text-xs font-mono">GitHub</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-    <!-- Section Separator -->
-    <div class="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 pt-28 lg:pt-40 pb-12 lg:pb-16 relative z-20">
-      <div class="relative flex items-center justify-center">
-        <div class="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-        <div class="absolute px-4 bg-[#090b10] border border-white/10 rounded-full flex items-center gap-2 py-1 text-white/50 text-xs font-mono tracking-widest uppercase shadow-xl backdrop-blur-md">
-          <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
-          <span>RODAPÉ &amp; CONTATO</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <footer
-      class="site-bento-footer w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 pb-16 lg:pb-24 relative z-20">
-      <div
-        class="footer-connected-wrapper rounded-3xl border border-white/[0.08] bg-[#0a0c11] overflow-hidden shadow-2xl">
-        <div
-          class="p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-space text-white/50">
-          <div class="flex items-center gap-3">
-            <div
-              class="personal-emblem-wrap flex items-center justify-center group cursor-pointer transition-transform duration-300 hover:scale-105"
-              title="Jordan Ronald - Minimal Emblem (Amarelo, Vermelho, Branco)">
-              <img src="assets/icons/personal-emblem.svg" alt="Jordan Ronald - Minimal Emblem"
-                class="h-6 w-auto object-contain transition-transform group-hover:scale-110 drop-shadow-[0_0_8px_rgba(251,191,36,0.3)]">
-            </div>
-            <span class="text-white/80 font-medium">Jordan Ronald</span>
-            <span class="text-white/30">•</span>
-            <span>Engenheiro de Software &amp; Full Stack</span>
-            <span class="text-white/30 hidden sm:inline">•</span>
-            <span class="hidden sm:inline-flex items-center gap-1.5 text-emerald-400">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>Disponível</span>
-            </span>
-          </div>
-
-          <div class="flex flex-wrap items-center justify-center gap-6 text-white/60">
-            <a href="curriculo.html" class="hover:text-white transition-colors">Currículo Web</a>
-            <a href="assets/curriculo.pdf" download="Curriculo-Jordan-Ronald.pdf"
-              class="hover:text-white transition-colors">Download PDF</a>
-            <a href="https://github.com/RONALDJORDAN" target="_blank"
-              class="hover:text-white transition-colors">GitHub</a>
-            <a href="https://linkedin.com/in/ronald-jordan-dev" target="_blank"
-              class="hover:text-white transition-colors">LinkedIn</a>
-            <button type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
-              class="inline-flex items-center gap-1.5 hover:text-white transition-colors text-emerald-400 pl-2 cursor-pointer">
-              <span>Voltar ao Topo</span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <line x1="12" y1="19" x2="12" y2="5"></line>
-                <polyline points="5 12 12 5 19 12"></polyline>
-              </svg>
-            </button>
           </div>
         </div>
+
+        <!-- CARD 3: Pure C Terminal (Retângulo Vertical Alto 3:4) -->
+        <div data-category="robotics" class="bento-flip-card group [perspective:1000px] col-span-12 sm:col-span-6 lg:col-span-4 h-[480px]">
+          <div class="bento-flip-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] rounded-none shadow-2xl">
+            <!-- Front -->
+            <div class="bento-flip-front absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] border border-white/10 bg-[#090b10]">
+              <img src="assets/projects/innovrpa-terminal.jpg" alt="Pure C Terminal Engine" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute top-3 right-3 z-10">
+                <span class="px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/15 text-emerald-400 font-mono text-[10px] flex items-center gap-1 shadow-lg">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  <span>Girar 3D</span>
+                </span>
+              </div>
+            </div>
+            <!-- Back -->
+            <div class="bento-flip-back absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] [transform:rotateY(180deg)] border border-emerald-500/40 bg-[#0c1017]/95 backdrop-blur-2xl p-6 flex flex-col justify-between shadow-[0_0_40px_rgba(16,185,129,0.2)]">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-mono text-[10px] font-bold uppercase">Terminal Engine</span>
+                  <span class="text-white/40 font-mono text-xs">2025</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2 font-syne">Núcleo em Pure C</h4>
+                <p class="text-white/80 text-xs leading-relaxed mb-3 font-inter">
+                  Gerenciamento de memória raw pointers e alocação dinâmica com consumo menor que 14MB de RAM.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 font-mono text-[10px]">Pure C</span>
+                  <span class="px-2 py-0.5 rounded-full bg-white/5 text-white/80 font-mono text-[10px]">Pointers</span>
+                </div>
+              </div>
+              <a href="innovrpa.html" class="inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-full bg-emerald-400 text-black font-space text-xs font-bold hover:brightness-110 transition-all">
+                <span>Ver Core</span>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4: INNOVSTOCK Cloud (Retângulo Horizontal Largo) -->
+        <div data-category="cloud" class="bento-flip-card group [perspective:1000px] col-span-12 lg:col-span-8 h-[340px]">
+          <div class="bento-flip-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] rounded-none shadow-2xl">
+            <!-- Front -->
+            <div class="bento-flip-front absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] border border-white/10 bg-[#090b10]">
+              <img src="assets/projects/innovstock.jpg" alt="INNOVSTOCK Cloud SaaS" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute top-3 right-3 z-10">
+                <span class="px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/15 text-sky-400 font-mono text-[10px] flex items-center gap-1 shadow-lg">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  <span>Girar 3D</span>
+                </span>
+              </div>
+            </div>
+            <!-- Back -->
+            <div class="bento-flip-back absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] [transform:rotateY(180deg)] border border-sky-500/40 bg-[#0c121c]/95 backdrop-blur-2xl p-6 flex flex-col justify-between shadow-[0_0_40px_rgba(56,189,248,0.25)]">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="px-2.5 py-0.5 rounded-full bg-sky-500/20 text-sky-300 font-mono text-[10px] font-bold uppercase">INNOVSTOCK</span>
+                  <span class="text-white/40 font-mono text-xs">2024</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2 font-syne">Plataforma PWA Cloud</h4>
+                <p class="text-white/80 text-xs leading-relaxed mb-3 font-inter">
+                  Sistema de controle de estoque com sincronização Firebase e leitor de QR Code.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 font-mono text-[10px]">React 18</span>
+                  <span class="px-2 py-0.5 rounded-full bg-white/5 text-white/80 font-mono text-[10px]">TypeScript</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2 pt-3 border-t border-white/10">
+                <a href="innovstock.html" class="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-full bg-sky-400 text-black font-space text-xs font-bold hover:brightness-110 transition-all">
+                  <span>Estudo de Caso</span>
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+                <a href="https://github.com/RONALDJORDAN/InnovStock" target="_blank" class="p-2 rounded-full border border-white/20 hover:bg-white/10 text-white shrink-0">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 5: INNOVSTOCK Mobile (Quadrado Perfeito 1:1) -->
+        <div data-category="cloud" class="bento-flip-card group [perspective:1000px] col-span-12 sm:col-span-6 lg:col-span-4 h-[340px] aspect-square">
+          <div class="bento-flip-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] rounded-none shadow-2xl">
+            <!-- Front -->
+            <div class="bento-flip-front absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] border border-white/10 bg-[#090b10]">
+              <img src="assets/projects/innovstock-mobile.jpg" alt="INNOVSTOCK Mobile PWA" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute top-3 right-3 z-10">
+                <span class="px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/15 text-sky-400 font-mono text-[10px] flex items-center gap-1 shadow-lg">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  <span>Girar 3D</span>
+                </span>
+              </div>
+            </div>
+            <!-- Back -->
+            <div class="bento-flip-back absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] [transform:rotateY(180deg)] border border-sky-500/40 bg-[#0c121c]/95 backdrop-blur-2xl p-6 flex flex-col justify-between shadow-[0_0_40px_rgba(56,189,248,0.2)]">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="px-2.5 py-0.5 rounded-full bg-sky-500/20 text-sky-300 font-mono text-[10px] font-bold uppercase">PWA Mobile</span>
+                  <span class="text-white/40 font-mono text-xs">2024</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2 font-syne">Leitor QR via Câmera</h4>
+                <p class="text-white/80 text-xs leading-relaxed mb-3 font-inter">
+                  Digitalização instantânea de patrimônio e geração de termos de responsabilidade.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 font-mono text-[10px]">PWA</span>
+                  <span class="px-2 py-0.5 rounded-full bg-white/5 text-white/80 font-mono text-[10px]">QR Scanner</span>
+                </div>
+              </div>
+              <a href="innovstock.html" class="inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-full bg-sky-400 text-black font-space text-xs font-bold hover:brightness-110 transition-all">
+                <span>Ver App</span>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 6: INNOVSTOCK Realtime (Retângulo Horizontal Médio) -->
+        <div data-category="cloud" class="bento-flip-card group [perspective:1000px] col-span-12 sm:col-span-6 lg:col-span-6 h-[320px]">
+          <div class="bento-flip-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] rounded-none shadow-2xl">
+            <!-- Front -->
+            <div class="bento-flip-front absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] border border-white/10 bg-[#090b10]">
+              <img src="assets/projects/innovstock-realtime.jpg" alt="INNOVSTOCK Realtime" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute top-3 right-3 z-10">
+                <span class="px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/15 text-sky-400 font-mono text-[10px] flex items-center gap-1 shadow-lg">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  <span>Girar 3D</span>
+                </span>
+              </div>
+            </div>
+            <!-- Back -->
+            <div class="bento-flip-back absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] [transform:rotateY(180deg)] border border-sky-500/40 bg-[#0c121c]/95 backdrop-blur-2xl p-6 flex flex-col justify-between shadow-[0_0_40px_rgba(56,189,248,0.2)]">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="px-2.5 py-0.5 rounded-full bg-sky-500/20 text-sky-300 font-mono text-[10px] font-bold uppercase">Realtime Sync</span>
+                  <span class="text-white/40 font-mono text-xs">2024</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2 font-syne">Sincronização em Tempo Real</h4>
+                <p class="text-white/80 text-xs leading-relaxed mb-3 font-inter">
+                  Atualizações instantâneas de saldo de estoque via Firebase WebSocket.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-300 font-mono text-[10px]">Firebase</span>
+                  <span class="px-2 py-0.5 rounded-full bg-white/5 text-white/80 font-mono text-[10px]">WebSockets</span>
+                </div>
+              </div>
+              <a href="innovstock.html" class="inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-full bg-sky-400 text-black font-space text-xs font-bold hover:brightness-110 transition-all">
+                <span>Ver Módulo</span>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 7: LAGOINHA SMC (Retângulo Vertical Alto 3:4) -->
+        <div data-category="web" class="bento-flip-card group [perspective:1000px] col-span-12 sm:col-span-6 lg:col-span-4 h-[480px]">
+          <div class="bento-flip-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] rounded-none shadow-2xl">
+            <!-- Front -->
+            <div class="bento-flip-front absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] border border-white/10 bg-[#090b10]">
+              <img src="assets/projects/lagoinha.jpg" alt="LAGOINHA SMC" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute top-3 right-3 z-10">
+                <span class="px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/15 text-indigo-400 font-mono text-[10px] flex items-center gap-1 shadow-lg">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  <span>Girar 3D</span>
+                </span>
+              </div>
+            </div>
+            <!-- Back -->
+            <div class="bento-flip-back absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] [transform:rotateY(180deg)] border border-indigo-500/40 bg-[#0e111d]/95 backdrop-blur-2xl p-6 flex flex-col justify-between shadow-[0_0_40px_rgba(99,102,241,0.25)]">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 font-mono text-[10px] font-bold uppercase">LAGOINHA SMC</span>
+                  <span class="text-white/40 font-mono text-xs">2024</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2 font-syne">Ecossistema Web CRM</h4>
+                <p class="text-white/80 text-xs leading-relaxed mb-3 font-inter">
+                  Plataforma web escalável em Next.js 14 para gestão de membros e controle financeiro.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded-full bg-indigo-500/15 text-indigo-300 font-mono text-[10px]">Next.js 14</span>
+                  <span class="px-2 py-0.5 rounded-full bg-white/5 text-white/80 font-mono text-[10px]">Prisma</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2 pt-3 border-t border-white/10">
+                <a href="lagoinha-smc.html" class="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-full bg-indigo-400 text-black font-space text-xs font-bold hover:brightness-110 transition-all">
+                  <span>Estudo de Caso</span>
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+                <a href="https://github.com/RONALDJORDAN/Lagoinha-SMC" target="_blank" class="p-2 rounded-full border border-white/20 hover:bg-white/10 text-white shrink-0">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 8: LAGOINHA CRM -->
+        <div data-category="web" class="bento-flip-card group [perspective:1000px] h-[300px] sm:h-[340px] lg:h-[360px]">
+          <div class="bento-flip-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] rounded-none shadow-2xl">
+            <!-- Front -->
+            <div class="bento-flip-front absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] border border-white/10 bg-[#090b10]">
+              <img src="assets/projects/lagoinha-crm.jpg" alt="LAGOINHA CRM" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute top-3 right-3 z-10">
+                <span class="px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/15 text-indigo-400 font-mono text-[10px] flex items-center gap-1 shadow-lg">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  <span>Girar 3D</span>
+                </span>
+              </div>
+            </div>
+            <!-- Back -->
+            <div class="bento-flip-back absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] [transform:rotateY(180deg)] border border-indigo-500/40 bg-[#0e111d]/95 backdrop-blur-2xl p-6 flex flex-col justify-between shadow-[0_0_40px_rgba(99,102,241,0.2)]">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 font-mono text-[10px] font-bold uppercase">Gestão de Membros</span>
+                  <span class="text-white/40 font-mono text-xs">2024</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2 font-syne">Painel de Membros &amp; RBAC</h4>
+                <p class="text-white/80 text-xs leading-relaxed mb-3 font-inter">
+                  Controle de acesso baseado em funções e métricas de engajamento de líderes.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded-full bg-indigo-500/15 text-indigo-300 font-mono text-[10px]">TypeScript</span>
+                  <span class="px-2 py-0.5 rounded-full bg-white/5 text-white/80 font-mono text-[10px]">RBAC</span>
+                </div>
+              </div>
+              <a href="lagoinha-smc.html" class="inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-full bg-indigo-400 text-black font-space text-xs font-bold hover:brightness-110 transition-all">
+                <span>Ver CRM</span>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 9: LAGOINHA Finance -->
+        <div data-category="web" class="bento-flip-card group [perspective:1000px] h-[300px] sm:h-[340px] lg:h-[360px]">
+          <div class="bento-flip-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] rounded-none shadow-2xl">
+            <!-- Front -->
+            <div class="bento-flip-front absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] border border-white/10 bg-[#090b10]">
+              <img src="assets/projects/lagoinha-finance.jpg" alt="LAGOINHA Finance" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute top-3 right-3 z-10">
+                <span class="px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/15 text-indigo-400 font-mono text-[10px] flex items-center gap-1 shadow-lg">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  <span>Girar 3D</span>
+                </span>
+              </div>
+            </div>
+            <!-- Back -->
+            <div class="bento-flip-back absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] [transform:rotateY(180deg)] border border-indigo-500/40 bg-[#0e111d]/95 backdrop-blur-2xl p-6 flex flex-col justify-between shadow-[0_0_40px_rgba(99,102,241,0.2)]">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 font-mono text-[10px] font-bold uppercase">Relatórios PDF</span>
+                  <span class="text-white/40 font-mono text-xs">2024</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2 font-syne">Emissão de PDFs Automatizada</h4>
+                <p class="text-white/80 text-xs leading-relaxed mb-3 font-inter">
+                  Geração dinâmica de balancetes e relatórios departamentais com PDFKit.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded-full bg-indigo-500/15 text-indigo-300 font-mono text-[10px]">PDFKit</span>
+                  <span class="px-2 py-0.5 rounded-full bg-white/5 text-white/80 font-mono text-[10px]">PostgreSQL</span>
+                </div>
+              </div>
+              <a href="lagoinha-smc.html" class="inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-full bg-indigo-400 text-black font-space text-xs font-bold hover:brightness-110 transition-all">
+                <span>Ver Módulo</span>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 10: INNOVCORE TI -->
+        <div data-category="enterprise" class="bento-flip-card group [perspective:1000px] h-[300px] sm:h-[340px] lg:h-[360px]">
+          <div class="bento-flip-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] rounded-none shadow-2xl">
+            <!-- Front -->
+            <div class="bento-flip-front absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] border border-white/10 bg-[#090b10]">
+              <img src="assets/projects/innovcore.jpg" alt="INNOVCORE TI" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute top-3 right-3 z-10">
+                <span class="px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/15 text-purple-400 font-mono text-[10px] flex items-center gap-1 shadow-lg">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  <span>Girar 3D</span>
+                </span>
+              </div>
+            </div>
+            <!-- Back -->
+            <div class="bento-flip-back absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] [transform:rotateY(180deg)] border border-purple-500/40 bg-[#120e1d]/95 backdrop-blur-2xl p-6 flex flex-col justify-between shadow-[0_0_40px_rgba(139,92,246,0.25)]">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="px-2.5 py-0.5 rounded-full bg-purple-500/20 text-purple-300 font-mono text-[10px] font-bold uppercase">INNOVCORE TI</span>
+                  <span class="text-white/40 font-mono text-xs">2023</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2 font-syne">Governança de TI Enterprise</h4>
+                <p class="text-white/80 text-xs leading-relaxed mb-3 font-inter">
+                  Monitoramento e auditoria em tempo real de ativos de TI com sensores WMI.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded-full bg-purple-500/15 text-purple-300 font-mono text-[10px]">C# .NET 8</span>
+                  <span class="px-2 py-0.5 rounded-full bg-white/5 text-white/80 font-mono text-[10px]">WMI Sensors</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2 pt-3 border-t border-white/10">
+                <a href="innovcore-ti.html" class="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-full bg-purple-400 text-black font-space text-xs font-bold hover:brightness-110 transition-all">
+                  <span>Estudo de Caso</span>
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+                <a href="https://github.com/RONALDJORDAN/InnovCore-TI" target="_blank" class="p-2 rounded-full border border-white/20 hover:bg-white/10 text-white shrink-0">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 11: INNOVCORE Telemetry Nodes -->
+        <div data-category="enterprise" class="bento-flip-card group [perspective:1000px] h-[300px] sm:h-[340px] lg:h-[360px]">
+          <div class="bento-flip-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] rounded-none shadow-2xl">
+            <!-- Front -->
+            <div class="bento-flip-front absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] border border-white/10 bg-[#090b10]">
+              <img src="assets/projects/innovcore-nodes.jpg" alt="Hardware Telemetry Nodes" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute top-3 right-3 z-10">
+                <span class="px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/15 text-purple-400 font-mono text-[10px] flex items-center gap-1 shadow-lg">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  <span>Girar 3D</span>
+                </span>
+              </div>
+            </div>
+            <!-- Back -->
+            <div class="bento-flip-back absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] [transform:rotateY(180deg)] border border-purple-500/40 bg-[#120e1d]/95 backdrop-blur-2xl p-6 flex flex-col justify-between shadow-[0_0_40px_rgba(139,92,246,0.2)]">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="px-2.5 py-0.5 rounded-full bg-purple-500/20 text-purple-300 font-mono text-[10px] font-bold uppercase">Telemetria Nodes</span>
+                  <span class="text-white/40 font-mono text-xs">2023</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2 font-syne">Nós de Telemetria de Hardware</h4>
+                <p class="text-white/80 text-xs leading-relaxed mb-3 font-inter">
+                  Monitoramento contínuo de temperatura, CPU, RAM e ciclo de vida de ativos.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded-full bg-purple-500/15 text-purple-300 font-mono text-[10px]">Sensors</span>
+                  <span class="px-2 py-0.5 rounded-full bg-white/5 text-white/80 font-mono text-[10px]">SQL Server</span>
+                </div>
+              </div>
+              <a href="innovcore-ti.html" class="inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-full bg-purple-400 text-black font-space text-xs font-bold hover:brightness-110 transition-all">
+                <span>Ver Nós</span>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 12: PROJETOS INNOV Monorepo -->
+        <div data-category="monorepo" class="bento-flip-card group [perspective:1000px] h-[300px] sm:h-[340px] lg:h-[360px]">
+          <div class="bento-flip-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] rounded-none shadow-2xl">
+            <!-- Front -->
+            <div class="bento-flip-front absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] border border-white/10 bg-[#090b10]">
+              <img src="assets/projects/projetos.jpg" alt="PROJETOS INNOV Monorepo" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute top-3 right-3 z-10">
+                <span class="px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/15 text-pink-400 font-mono text-[10px] flex items-center gap-1 shadow-lg">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  <span>Girar 3D</span>
+                </span>
+              </div>
+            </div>
+            <!-- Back -->
+            <div class="bento-flip-back absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] [transform:rotateY(180deg)] border border-pink-500/40 bg-[#1d0e17]/95 backdrop-blur-2xl p-6 flex flex-col justify-between shadow-[0_0_40px_rgba(236,72,153,0.25)]">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="px-2.5 py-0.5 rounded-full bg-pink-500/20 text-pink-300 font-mono text-[10px] font-bold uppercase">MONOREPO</span>
+                  <span class="text-white/40 font-mono text-xs">2023</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2 font-syne">PROJETOS INNOV</h4>
+                <p class="text-white/80 text-xs leading-relaxed mb-3 font-inter">
+                  Monorepo unificado orquestrando microsserviços, Design System e CI/CD.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded-full bg-pink-500/15 text-pink-300 font-mono text-[10px]">Turborepo</span>
+                  <span class="px-2 py-0.5 rounded-full bg-white/5 text-white/80 font-mono text-[10px]">GitHub Actions</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2 pt-3 border-t border-white/10">
+                <a href="projetos-innov.html" class="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-full bg-pink-400 text-black font-space text-xs font-bold hover:brightness-110 transition-all">
+                  <span>Estudo de Caso</span>
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+                <a href="https://github.com/RONALDJORDAN/Projetos-Innov" target="_blank" class="p-2 rounded-full border border-white/20 hover:bg-white/10 text-white shrink-0">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 8: LAGOINHA CRM (Retângulo Horizontal Largo) -->
+        <div data-category="web" class="bento-flip-card group [perspective:1000px] col-span-12 lg:col-span-8 h-[340px]">
+          <div class="bento-flip-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] rounded-none shadow-2xl">
+            <!-- Front -->
+            <div class="bento-flip-front absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] border border-white/10 bg-[#090b10]">
+              <img src="assets/projects/lagoinha-crm.jpg" alt="LAGOINHA CRM" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute top-3 right-3 z-10">
+                <span class="px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/15 text-indigo-400 font-mono text-[10px] flex items-center gap-1 shadow-lg">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  <span>Girar 3D</span>
+                </span>
+              </div>
+            </div>
+            <!-- Back -->
+            <div class="bento-flip-back absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] [transform:rotateY(180deg)] border border-indigo-500/40 bg-[#0e111d]/95 backdrop-blur-2xl p-6 flex flex-col justify-between shadow-[0_0_40px_rgba(99,102,241,0.2)]">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 font-mono text-[10px] font-bold uppercase">Gestão de Membros</span>
+                  <span class="text-white/40 font-mono text-xs">2024</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2 font-syne">Painel de Membros &amp; RBAC</h4>
+                <p class="text-white/80 text-xs leading-relaxed mb-3 font-inter">
+                  Controle de acesso baseado em funções e métricas de engajamento de líderes.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded-full bg-indigo-500/15 text-indigo-300 font-mono text-[10px]">TypeScript</span>
+                  <span class="px-2 py-0.5 rounded-full bg-white/5 text-white/80 font-mono text-[10px]">RBAC</span>
+                </div>
+              </div>
+              <a href="lagoinha-smc.html" class="inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-full bg-indigo-400 text-black font-space text-xs font-bold hover:brightness-110 transition-all">
+                <span>Ver CRM</span>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 9: LAGOINHA Finance (Quadrado Perfeito 1:1) -->
+        <div data-category="web" class="bento-flip-card group [perspective:1000px] col-span-12 sm:col-span-6 lg:col-span-4 h-[340px] aspect-square">
+          <div class="bento-flip-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] rounded-none shadow-2xl">
+            <!-- Front -->
+            <div class="bento-flip-front absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] border border-white/10 bg-[#090b10]">
+              <img src="assets/projects/lagoinha-finance.jpg" alt="LAGOINHA Finance" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute top-3 right-3 z-10">
+                <span class="px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/15 text-indigo-400 font-mono text-[10px] flex items-center gap-1 shadow-lg">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  <span>Girar 3D</span>
+                </span>
+              </div>
+            </div>
+            <!-- Back -->
+            <div class="bento-flip-back absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] [transform:rotateY(180deg)] border border-indigo-500/40 bg-[#0e111d]/95 backdrop-blur-2xl p-6 flex flex-col justify-between shadow-[0_0_40px_rgba(99,102,241,0.2)]">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 font-mono text-[10px] font-bold uppercase">Relatórios PDF</span>
+                  <span class="text-white/40 font-mono text-xs">2024</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2 font-syne">Emissão de PDFs Automatizada</h4>
+                <p class="text-white/80 text-xs leading-relaxed mb-3 font-inter">
+                  Geração dinâmica de balancetes e relatórios departamentais com PDFKit.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded-full bg-indigo-500/15 text-indigo-300 font-mono text-[10px]">PDFKit</span>
+                  <span class="px-2 py-0.5 rounded-full bg-white/5 text-white/80 font-mono text-[10px]">PostgreSQL</span>
+                </div>
+              </div>
+              <a href="lagoinha-smc.html" class="inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-full bg-indigo-400 text-black font-space text-xs font-bold hover:brightness-110 transition-all">
+                <span>Ver Módulo</span>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 10: INNOVCORE TI (Retângulo Horizontal Médio) -->
+        <div data-category="enterprise" class="bento-flip-card group [perspective:1000px] col-span-12 sm:col-span-6 lg:col-span-6 h-[320px]">
+          <div class="bento-flip-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] rounded-none shadow-2xl">
+            <!-- Front -->
+            <div class="bento-flip-front absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] border border-white/10 bg-[#090b10]">
+              <img src="assets/projects/innovcore.jpg" alt="INNOVCORE TI" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute top-3 right-3 z-10">
+                <span class="px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/15 text-purple-400 font-mono text-[10px] flex items-center gap-1 shadow-lg">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  <span>Girar 3D</span>
+                </span>
+              </div>
+            </div>
+            <!-- Back -->
+            <div class="bento-flip-back absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] [transform:rotateY(180deg)] border border-purple-500/40 bg-[#120e1d]/95 backdrop-blur-2xl p-6 flex flex-col justify-between shadow-[0_0_40px_rgba(139,92,246,0.25)]">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="px-2.5 py-0.5 rounded-full bg-purple-500/20 text-purple-300 font-mono text-[10px] font-bold uppercase">INNOVCORE TI</span>
+                  <span class="text-white/40 font-mono text-xs">2023</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2 font-syne">Governança de TI Enterprise</h4>
+                <p class="text-white/80 text-xs leading-relaxed mb-3 font-inter">
+                  Monitoramento e auditoria em tempo real de ativos de TI com sensores WMI.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded-full bg-purple-500/15 text-purple-300 font-mono text-[10px]">C# .NET 8</span>
+                  <span class="px-2 py-0.5 rounded-full bg-white/5 text-white/80 font-mono text-[10px]">WMI Sensors</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2 pt-3 border-t border-white/10">
+                <a href="innovcore-ti.html" class="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-full bg-purple-400 text-black font-space text-xs font-bold hover:brightness-110 transition-all">
+                  <span>Estudo de Caso</span>
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+                <a href="https://github.com/RONALDJORDAN/InnovCore-TI" target="_blank" class="p-2 rounded-full border border-white/20 hover:bg-white/10 text-white shrink-0">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 11: INNOVCORE Telemetry Nodes (Quadrado Perfeito 1:1) -->
+        <div data-category="enterprise" class="bento-flip-card group [perspective:1000px] col-span-12 sm:col-span-6 lg:col-span-4 h-[340px] aspect-square">
+          <div class="bento-flip-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] rounded-none shadow-2xl">
+            <!-- Front -->
+            <div class="bento-flip-front absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] border border-white/10 bg-[#090b10]">
+              <img src="assets/projects/innovcore-nodes.jpg" alt="Hardware Telemetry Nodes" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute top-3 right-3 z-10">
+                <span class="px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/15 text-purple-400 font-mono text-[10px] flex items-center gap-1 shadow-lg">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  <span>Girar 3D</span>
+                </span>
+              </div>
+            </div>
+            <!-- Back -->
+            <div class="bento-flip-back absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] [transform:rotateY(180deg)] border border-purple-500/40 bg-[#120e1d]/95 backdrop-blur-2xl p-6 flex flex-col justify-between shadow-[0_0_40px_rgba(139,92,246,0.2)]">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="px-2.5 py-0.5 rounded-full bg-purple-500/20 text-purple-300 font-mono text-[10px] font-bold uppercase">Telemetria Nodes</span>
+                  <span class="text-white/40 font-mono text-xs">2023</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2 font-syne">Nós de Telemetria de Hardware</h4>
+                <p class="text-white/80 text-xs leading-relaxed mb-3 font-inter">
+                  Monitoramento contínuo de temperatura, CPU, RAM e ciclo de vida de ativos.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded-full bg-purple-500/15 text-purple-300 font-mono text-[10px]">Sensors</span>
+                  <span class="px-2 py-0.5 rounded-full bg-white/5 text-white/80 font-mono text-[10px]">SQL Server</span>
+                </div>
+              </div>
+              <a href="innovcore-ti.html" class="inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-full bg-purple-400 text-black font-space text-xs font-bold hover:brightness-110 transition-all">
+                <span>Ver Nós</span>
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 12: PROJETOS INNOV Monorepo (Retângulo Banner Ultra-Wide) -->
+        <div data-category="monorepo" class="bento-flip-card group [perspective:1000px] col-span-12 h-[300px]">
+          <div class="bento-flip-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] rounded-none shadow-2xl">
+            <!-- Front -->
+            <div class="bento-flip-front absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] border border-white/10 bg-[#090b10]">
+              <img src="assets/projects/projetos.jpg" alt="PROJETOS INNOV Monorepo" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="lazy">
+              <div class="absolute top-3 right-3 z-10">
+                <span class="px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/15 text-pink-400 font-mono text-[10px] flex items-center gap-1 shadow-lg">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  <span>Girar 3D</span>
+                </span>
+              </div>
+            </div>
+            <!-- Back -->
+            <div class="bento-flip-back absolute inset-0 w-full h-full rounded-none overflow-hidden [backface-visibility:hidden] [transform:rotateY(180deg)] border border-pink-500/40 bg-[#1d0e17]/95 backdrop-blur-2xl p-6 flex flex-col justify-between shadow-[0_0_40px_rgba(236,72,153,0.25)]">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="px-2.5 py-0.5 rounded-full bg-pink-500/20 text-pink-300 font-mono text-[10px] font-bold uppercase">MONOREPO</span>
+                  <span class="text-white/40 font-mono text-xs">2023</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2 font-syne">PROJETOS INNOV</h4>
+                <p class="text-white/80 text-xs leading-relaxed mb-3 font-inter">
+                  Monorepo unificado orquestrando microsserviços, Design System e CI/CD.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-2">
+                  <span class="px-2 py-0.5 rounded-full bg-pink-500/15 text-pink-300 font-mono text-[10px]">Turborepo</span>
+                  <span class="px-2 py-0.5 rounded-full bg-white/5 text-white/80 font-mono text-[10px]">GitHub Actions</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2 pt-3 border-t border-white/10">
+                <a href="projetos-innov.html" class="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-full bg-pink-400 text-black font-space text-xs font-bold hover:brightness-110 transition-all">
+                  <span>Estudo de Caso</span>
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+                <a href="https://github.com/RONALDJORDAN/Projetos-Innov" target="_blank" class="p-2 rounded-full border border-white/20 hover:bg-white/10 text-white shrink-0">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-    </footer>
+    </section>
   </main>
-
   <!-- Vendor Scripts -->
   <script src="./js/libs/three.min.js"></script>
   <script src="./js/libs/gsap.min.js"></script>

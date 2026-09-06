@@ -511,169 +511,120 @@
   // Projects Split Scroll
   // ==========================================================================
   function initProjectsSplit() {
-    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+    const flipCards = document.querySelectorAll('.bento-flip-card');
+    const filterBtns = document.querySelectorAll('.bento-filter-btn');
+    if (!flipCards.length) return;
 
-    const previewItems = document.querySelectorAll('.project-preview-item, .project-card');
-    const leftNavItems = document.querySelectorAll('.split-project-item, .split-project-link');
-    const counterNumber = document.querySelector('.project-number, .counter-active');
-    const progressBar = document.querySelector('.scroll-progress-fill, .projects-split .bg-gradient-to-r');
-    const total = previewItems.length || 5;
+    // 1. Reactive Spotlight & Mouse Tilt Physics
+    flipCards.forEach(card => {
+      let isTicking = false;
 
-    const projectThemes = [
-      { color: '#10b981', glow: 'rgba(16, 185, 129, 0.35)' },
-      { color: '#38bdf8', glow: 'rgba(56, 189, 248, 0.35)' },
-      { color: '#6366f1', glow: 'rgba(99, 102, 241, 0.35)' },
-      { color: '#8b5cf6', glow: 'rgba(139, 92, 246, 0.35)' },
-      { color: '#ec4899', glow: 'rgba(236, 72, 153, 0.35)' }
-    ];
+      card.addEventListener('mousemove', (e) => {
+        if (!isTicking) {
+          isTicking = true;
+          requestAnimationFrame(() => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            // Set CSS custom properties for radial spotlight
+            card.style.setProperty('--mouse-x', `${(x / rect.width) * 100}%`);
+            card.style.setProperty('--mouse-y', `${(y / rect.height) * 100}%`);
 
-    let activeIdx = 0;
+            // Subtle 3D tilt
+            const normX = (x / rect.width) - 0.5;
+            const normY = (y / rect.height) - 0.5;
+            const inner = card.querySelector('.bento-flip-inner');
+            if (inner && !card.classList.contains('flipped')) {
+              inner.style.transform = `perspective(1000px) rotateY(${normX * 12}deg) rotateX(${-normY * 12}deg)`;
+            }
+            isTicking = false;
+          });
+        }
+      }, { passive: true });
 
-    function setActive(idx) {
-      if (idx === activeIdx && leftNavItems[idx]?.classList.contains('active')) return;
-      activeIdx = idx;
-
-      const theme = projectThemes[idx] || { color: '#ffffff', glow: 'rgba(255, 255, 255, 0.3)' };
-
-      // 1. Counter animation with active project color
-      if (counterNumber) {
-        counterNumber.textContent = String(idx + 1).padStart(2, '0');
-        counterNumber.style.color = theme.color;
-        counterNumber.style.textShadow = `0 0 24px ${theme.glow}`;
-        gsap.fromTo(counterNumber, 
-          { scale: 0.75, opacity: 0 }, 
-          { scale: 1, opacity: 1, duration: 0.4, ease: 'back.out(1.7)' }
-        );
-      }
-
-      // 2. Left nav state with glowing theme border & active selection styling
-      leftNavItems.forEach((item, i) => {
-        if (i === idx) {
-          item.classList.add('active');
-          item.classList.remove('opacity-40', 'border-transparent');
-          item.classList.add('opacity-100');
-          item.style.opacity = '1';
-          item.style.borderLeftColor = theme.color;
-          item.style.boxShadow = `inset 4px 0 16px -2px ${theme.glow}`;
-          item.style.transform = 'translateX(4px)';
-          item.style.backgroundColor = 'rgba(255, 255, 255, 0.03)';
-        } else {
-          item.classList.remove('active');
-          item.classList.remove('opacity-100');
-          item.classList.add('opacity-40', 'border-transparent');
-          item.style.opacity = '0.4';
-          item.style.borderLeftColor = 'transparent';
-          item.style.boxShadow = 'none';
-          item.style.transform = 'none';
-          item.style.backgroundColor = 'transparent';
+      card.addEventListener('mouseleave', () => {
+        const inner = card.querySelector('.bento-flip-inner');
+        if (inner && !card.classList.contains('flipped')) {
+          inner.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg)';
         }
       });
 
-      // 3. Top Progress Bar
-      if (progressBar) {
-        const pct = ((idx + 1) / total) * 100;
-        progressBar.style.width = `${pct}%`;
-      }
-
-      // 4. Preview Cards opacity
-      previewItems.forEach((card, i) => {
-        if (i === idx) {
-          gsap.to(card, { opacity: 1, duration: 0.4 });
-        } else {
-          gsap.to(card, { opacity: window.innerWidth >= 1024 ? 0.6 : 1, duration: 0.4 });
+      // Mobile tap support: click toggles .flipped unless clicking a button/link inside back face
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('a') || e.target.closest('button')) {
+          return;
         }
+        card.classList.toggle('flipped');
+      });
+    });
+
+    // 2. Reactive Category Filtering
+    if (filterBtns.length > 0) {
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+          
+          // Update button active state
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          // Filter cards with fluid GSAP transition
+          flipCards.forEach((card, idx) => {
+            const category = card.getAttribute('data-category');
+            const isMatch = filter === 'all' || category === filter;
+
+            if (isMatch) {
+              card.classList.remove('hidden-card');
+              if (typeof gsap !== 'undefined') {
+                gsap.fromTo(card,
+                  { opacity: 0, scale: 0.85, y: 15 },
+                  { opacity: 1, scale: 1, y: 0, duration: 0.5, delay: idx * 0.04, ease: 'back.out(1.4)' }
+                );
+              } else {
+                card.style.opacity = '1';
+                card.style.transform = 'scale(1)';
+              }
+            } else {
+              if (typeof gsap !== 'undefined') {
+                gsap.to(card, {
+                  opacity: 0,
+                  scale: 0.85,
+                  duration: 0.3,
+                  ease: 'power2.in',
+                  onComplete: () => card.classList.add('hidden-card')
+                });
+              } else {
+                card.classList.add('hidden-card');
+              }
+            }
+          });
+
+          if (typeof ScrollTrigger !== 'undefined') {
+            setTimeout(() => ScrollTrigger.refresh(), 400);
+          }
+        });
       });
     }
 
-    // ScrollTrigger on preview cards (tracks which card is currently in view)
-    previewItems.forEach((card, index) => {
-      ScrollTrigger.create({
-        trigger: card,
-        start: 'top 50%',
-        end: 'bottom 50%',
-        onEnter: () => setActive(index),
-        onEnterBack: () => setActive(index)
-      });
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
 
-      // Card tilt
-      if (window.innerWidth >= 768) {
-        let cardTiltTicking = false;
-        card.addEventListener('mousemove', (e) => {
-          if (!cardTiltTicking) {
-            cardTiltTicking = true;
-            const normX = (e.offsetX / card.offsetWidth) - 0.5;
-            const normY = (e.offsetY / card.offsetHeight) - 0.5;
-            requestAnimationFrame(() => {
-              gsap.to(card, {
-                rotateY: normX * 10,
-                rotateX: -normY * 10,
-                duration: 0.3,
-                ease: 'power2.out',
-                transformPerspective: 1000,
-                overwrite: 'auto'
-              });
-              cardTiltTicking = false;
-            });
-          }
-        }, { passive: true });
-
-        card.addEventListener('mouseleave', () => {
-          gsap.to(card, {
-            rotateY: 0,
-            rotateX: 0,
-            duration: 0.6,
-            ease: 'elastic.out(1, 0.4)',
-            overwrite: 'auto'
-          });
-        });
+    // 3. Staggered reveal of Bento grid flip cards on initial scroll
+    gsap.fromTo(flipCards,
+      { y: 40, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        stagger: 0.08,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: '.bento-projects-grid',
+          start: 'top 90%',
+          once: true
+        }
       }
-    });
-
-    // Native CSS position: sticky handles left menu pinning inside .projects-split-grid
-
-    // Ensure first project is active when section enters
-    ScrollTrigger.create({
-      trigger: '.projects-split',
-      start: 'top 75%',
-      onEnter: () => setActive(0),
-      onEnterBack: () => setActive(0)
-    });
-
-    // Left navigation item click (Lenis smooth scroll aware)
-    leftNavItems.forEach((item, index) => {
-      item.addEventListener('click', (e) => {
-        if (e.target.closest('.direct-case-study-link')) {
-          return;
-        }
-        e.preventDefault();
-        if (previewItems[index]) {
-          if (window.lenis) {
-            window.lenis.scrollTo(previewItems[index], { offset: -80, duration: 1.1 });
-          } else {
-            previewItems[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-          setActive(index);
-        }
-      });
-    });
-
-    // Section entrance animations
-    gsap.fromTo('.split-title', 
-      { x: -100, opacity: 0 }, 
-      { x: 0, opacity: 1, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '.projects-split', start: 'top 80%' } }
     );
-
-    gsap.fromTo('.split-project-item', 
-      { x: -50, opacity: 0 }, 
-      { x: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: 'power2.out', scrollTrigger: { trigger: '.projects-split', start: 'top 70%' } }
-    );
-
-    gsap.fromTo('.split-preview', 
-      { scale: 0.9, opacity: 0 }, 
-      { scale: 1, opacity: 1, duration: 1.2, ease: 'power3.out', scrollTrigger: { trigger: '.projects-split', start: 'top 80%' } }
-    );
-
-    setActive(0);
   }
 
   // ==========================================================================
