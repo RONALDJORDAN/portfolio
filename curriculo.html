@@ -117,89 +117,77 @@
   <main class="relative z-10 cv-container">
 
     
-    <section class="cv-card p-6 sm:p-8 lg:p-12 mb-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+    <!-- Top Hero Section: Modern Profile Header (Small Left Photo + Flowing Info) -->
+    <section class="cv-card p-6 sm:p-8 lg:p-10 mb-8 border border-white/10 bg-gradient-to-b from-white/[0.04] to-white/[0.01] shadow-2xl">
+      <!-- Header Row: Small Avatar Left + Info Right -->
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 lg:gap-8 pb-8 border-b border-white/10">
         
-        
-        <div class="lg:col-span-4 flex flex-col items-center sm:items-start">
-          <div class="relative w-full max-w-[280px] sm:max-w-[320px] mx-auto sm:mx-0">
-            <div class="cv-photo-glow"></div>
-            <div class="cv-photo-frame aspect-square w-full">
-              <img src="assets/profile.jpg" alt="Jordan Ronald - Software Architect" loading="eager">
-            </div>
-            
-            
-            <div class="absolute bottom-4 left-4 right-4 bg-[#111111]/90 backdrop-blur-md border border-white/15 rounded-xl px-4 py-2.5 flex items-center justify-between">
-              <span class="font-space text-[10px] uppercase font-bold tracking-wider text-white/70">ARQUITETURA &amp; FULL-STACK</span>
-              <div class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></div>
-            </div>
+        <!-- Small Photo on Left (Modern UI Frame) -->
+        <div class="relative flex-shrink-0">
+          <div class="absolute -inset-2 bg-gradient-to-tr from-emerald-500/30 to-sky-500/20 rounded-3xl blur-md opacity-75"></div>
+          <div class="relative w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-2xl overflow-hidden border-2 border-emerald-500/40 bg-[#111111] shadow-xl group">
+            <img src="assets/profile.jpg" alt="Jordan Ronald - Software Architect" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" loading="eager">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
           </div>
-
-          
-          <div class="w-full max-w-[280px] sm:max-w-[320px] mt-5 pt-4 border-t border-white/10 flex flex-col gap-2.5">
-            <div class="flex items-center gap-2.5">
-              <span class="relative flex h-3 w-3">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
-              </span>
-              <span class="font-space text-xs uppercase font-bold text-emerald-400 tracking-wider">Disponível para Contratação</span>
-            </div>
-            <p class="font-inter text-xs text-white/60">
-              Aberto a oportunidades: <strong class="text-white">Remoto</strong> ou <strong class="text-white">Híbrido</strong> • Brasil / Internacional.
-            </p>
+          <!-- Pulse Online Dot -->
+          <div class="absolute -bottom-1 -right-1 flex items-center justify-center w-7 h-7 rounded-full bg-[#111111] border-2 border-[#111111]" title="Disponível para Contratação">
+            <span class="relative flex h-3.5 w-3.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500"></span>
+            </span>
           </div>
         </div>
 
-        
-        <div class="lg:col-span-8 flex flex-col justify-between">
-          <div>
-            
-            <div class="cv-section-tag mb-3">
-              <img src="assets/icons/asterisk.svg" alt="asterisk" class="w-4 h-4 animate-spin">
+        <!-- Flowing Information on Right -->
+        <div class="flex-1 min-w-0">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-2">
+            <div class="cv-section-tag mb-0">
+              <img src="assets/icons/asterisk.svg" alt="asterisk" class="w-3.5 h-3.5 animate-spin">
               <span>Currículo Profissional // Nível Pleno</span>
             </div>
-
-            
-            <h1 class="font-syne text-[36px] sm:text-[46px] lg:text-[54px] font-extrabold uppercase leading-[1.05] tracking-tight text-white mb-2">
-              Jordan Ronald
-            </h1>
-            <h2 class="font-space text-lg sm:text-xl font-medium text-emerald-400 uppercase tracking-wide mb-4">
-              Software Architect &amp; Full-Stack Engineer
-            </h2>
-
-            
-            <div class="flex flex-wrap gap-2 mb-6">
-              <span class="cv-pill active-pill">● 3 Anos de Experiência</span>
-              <span class="cv-pill">Baseado no Brasil</span>
-              <span class="cv-pill">Inglês Técnico Avançado</span>
-              <span class="cv-pill">InnovCore-TI</span>
-              <span class="cv-pill">Pure C &amp; .NET 8</span>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[11px] font-space text-emerald-400">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span class="uppercase tracking-wider font-bold">Disponível para Contratação</span>
             </div>
-
-            
-            <p class="font-inter text-sm sm:text-base text-white/80 leading-relaxed max-w-2xl mb-8">
-              Engenheiro de Software com sólida atuação no desenvolvimento de sistemas corporativos de alta fidelidade e automação inteligente. Especialista em unir <strong>controle cirúrgico de memória e ponteiros em Pure C</strong> com a robustez e concorrência assíncrona do <strong>C# .NET 8 (WPF/MVVM)</strong>, algoritmos de <strong>Visão Computacional (OpenCV / Vision7)</strong> e ecossistemas web reativos em <strong>React 18, Next.js e TypeScript</strong>. Foco em arquiteturas sem vazamentos de memória (<em>zero-leak</em>), tempos de resposta em milissegundos e código limpo desacoplado.
-            </p>
           </div>
 
-          
-          <div class="pt-6 border-t border-white/10 flex flex-wrap items-center gap-3">
-            
-            <button onclick="copyToClipboard('ronaldjordan.dev@gmail.com', 'E-mail copiado para a área de transferência!')" class="cv-btn-secondary text-xs" title="Clique para copiar o email">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <h1 class="font-syne text-[32px] sm:text-[42px] lg:text-[50px] font-extrabold uppercase leading-[1.05] tracking-tight text-white mb-2">
+            Jordan Ronald
+          </h1>
+
+          <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-4">
+            <h2 class="font-space text-base sm:text-lg lg:text-xl font-medium text-emerald-400 uppercase tracking-wide">
+              Software Architect &amp; Full-Stack Engineer
+            </h2>
+            <span class="text-white/30 hidden sm:inline">•</span>
+            <span class="font-space text-xs sm:text-sm text-white/60 uppercase tracking-wider">3+ Anos de Experiência</span>
+          </div>
+
+          <!-- Metadata Badges -->
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="cv-pill active-pill">● Pleno (Mid-Level)</span>
+            <span class="cv-pill">Brasil • Remoto / Híbrido</span>
+            <span class="cv-pill">Inglês Técnico Avançado</span>
+            <span class="cv-pill">Pure C &amp; .NET 8</span>
+            <span class="cv-pill">React 18 &amp; Next.js 14</span>
+          </div>
+
+          <!-- Quick Action & Contact Row -->
+          <div class="flex flex-wrap items-center gap-2.5 pt-2">
+            <button onclick="copyToClipboard('ronaldjordan.dev@gmail.com', 'E-mail copiado para a área de transferência!')" class="cv-btn-secondary text-xs py-2 px-4" title="Clique para copiar o email">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="4" width="20" height="16" rx="2"></rect>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
               </svg>
               <span>ronaldjordan.dev@gmail.com</span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="opacity-60">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="opacity-50 ml-1">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
               </svg>
             </button>
 
-            
-            <a href="https://linkedin.com/in/ronald-jordan-dev" target="_blank" class="cv-btn-secondary text-xs">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <a href="https://linkedin.com/in/ronald-jordan-dev" target="_blank" class="cv-btn-secondary text-xs py-2 px-4">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                 <rect x="2" y="9" width="4" height="12"></rect>
                 <circle cx="4" cy="4" r="2"></circle>
@@ -207,9 +195,8 @@
               <span>LinkedIn</span>
             </a>
 
-            
-            <a href="https://github.com/RONALDJORDAN" target="_blank" class="cv-btn-secondary text-xs">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <a href="https://github.com/RONALDJORDAN" target="_blank" class="cv-btn-secondary text-xs py-2 px-4">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
               </svg>
               <span>GitHub</span>
@@ -217,6 +204,13 @@
           </div>
         </div>
 
+      </div>
+
+      <!-- Information Flow: Executive Summary & Technical Narrative -->
+      <div class="pt-6">
+        <p class="font-inter text-sm sm:text-base text-white/85 leading-relaxed max-w-4xl">
+          Engenheiro de Software com sólida atuação no desenvolvimento de sistemas corporativos de alta fidelidade e automação inteligente. Especialista em unir <strong>controle cirúrgico de memória e ponteiros em Pure C</strong> com a robustez e concorrência assíncrona do <strong>C# .NET 8 (WPF/MVVM)</strong>, algoritmos de <strong>Visão Computacional (OpenCV / Vision7)</strong> e ecossistemas web reativos em <strong>React 18, Next.js e TypeScript</strong>. Foco contínuo em arquiteturas sem vazamentos de memória (<em>zero-leak</em>), tempos de resposta em milissegundos e código limpo desacoplado.
+        </p>
       </div>
     </section>
 
