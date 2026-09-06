@@ -546,22 +546,26 @@
         );
       }
 
-      // 2. Left nav state with glowing theme border
+      // 2. Left nav state with glowing theme border & active selection styling
       leftNavItems.forEach((item, i) => {
         if (i === idx) {
           item.classList.add('active');
-          item.classList.remove('opacity-50', 'border-transparent');
+          item.classList.remove('opacity-40', 'border-transparent');
           item.classList.add('opacity-100');
           item.style.opacity = '1';
           item.style.borderLeftColor = theme.color;
           item.style.boxShadow = `inset 4px 0 16px -2px ${theme.glow}`;
+          item.style.transform = 'translateX(4px)';
+          item.style.backgroundColor = 'rgba(255, 255, 255, 0.03)';
         } else {
           item.classList.remove('active');
           item.classList.remove('opacity-100');
-          item.classList.add('opacity-50', 'border-transparent');
-          item.style.opacity = '0.5';
+          item.classList.add('opacity-40', 'border-transparent');
+          item.style.opacity = '0.4';
           item.style.borderLeftColor = 'transparent';
           item.style.boxShadow = 'none';
+          item.style.transform = 'none';
+          item.style.backgroundColor = 'transparent';
         }
       });
 
