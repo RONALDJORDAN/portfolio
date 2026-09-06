@@ -625,19 +625,7 @@
       }
     });
 
-    // Pin the left sticky menu with ScrollTrigger on desktop so it stays fixed while cards scroll
-    const stickyCol = document.querySelector('.split-left-sticky, .split-left-col');
-    const splitGrid = document.querySelector('.projects-split-grid, .split-layout');
-    if (stickyCol && splitGrid && window.innerWidth >= 768) {
-      ScrollTrigger.create({
-        trigger: splitGrid,
-        start: 'top 85px',
-        end: 'bottom bottom',
-        pin: stickyCol,
-        pinSpacing: false,
-        invalidateOnRefresh: true
-      });
-    }
+    // Native CSS position: sticky handles left menu pinning inside .projects-split-grid
 
     // Ensure first project is active when section enters
     ScrollTrigger.create({
