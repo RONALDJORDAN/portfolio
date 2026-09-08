@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Currículo — Jordan Ronald | Software Architect & Full-Stack Engineer</title>
+  <meta name="title" content="Currículo — Jordan Ronald | Software Architect">
+  <meta name="description"
+    content="Currículo Profissional de Jordan Ronald - Engenheiro Full-Stack Pleno e Arquiteto de Software com 3 anos de experiência em Pure C, C# .NET 8, React, Next.js, RPA & UI/UX.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/personal-emblem.svg">
+
+  <!-- Tailwind CSS v3 with Plugins -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0F172A',
+              slate: '#334155',
+              muted: '#64748B',
+              bg: '#0B0F17',
+              sky: '#0284C7',
+              mint: '#16A34A',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+            display: ['Syne', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0B0F17;
+      color: #F8FAFC;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Elastic Cursor */
+    .cursor-dot {
+      position: fixed;
+      width: 7px;
+      height: 7px;
+      background: #0284C7;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 99999;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.2s ease;
+    }
+
+    .cursor-ring {
+      position: fixed;
+      width: 30px;
+      height: 30px;
+      border: 1.5px solid #0284C7;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 99998;
+      transform: translate(-50%, -50%);
+      opacity: 0.45;
+      transition: width 0.25s ease, height 0.25s ease, border-color 0.25s ease;
+    }
+
+    body.cursor-hover .cursor-ring {
+      width: 44px;
+      height: 44px;
+      border-color: #10B981;
+      background: rgba(16, 185, 129, 0.08);
+      opacity: 0.9;
+    }
+
+    @media (max-width: 900px) {
+      .cursor-dot,
+      .cursor-ring {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="selection:bg-sky-500/20 selection:text-sky-300">
+  <!-- Elastic Cursor Elements -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- BEGIN: MainContainer -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-10">
+
+    <!-- ====================================================================
+         BEGIN: TopNavigation
+         ==================================================================== -->
+    <header
+      class="w-full bg-slate-900 text-white rounded-3xl p-3 sm:px-5 shadow-xl border border-slate-800 flex items-center justify-between sticky top-4 z-50">
+      <!-- Geometric symbols: Triangle, Circle, Square -->
+      <div class="flex items-center gap-2">
+        <div class="flex items-center space-x-1.5 mr-2">
+          <!-- Triângulo Amarelo -->
+          <svg class="w-3 h-3 text-amber-400 drop-shadow-[0_0_4px_rgba(251,191,36,0.4)]" viewBox="0 0 12 12"
+            fill="currentColor" title="Triângulo Amarelo">
+            <polygon points="6,1 11.5,10.5 0.5,10.5" />
+          </svg>
+          <!-- Círculo Vermelho -->
+          <svg class="w-2.5 h-2.5 text-red-500 drop-shadow-[0_0_4px_rgba(239,68,68,0.4)]" viewBox="0 0 12 12"
+            fill="currentColor" title="Círculo Vermelho">
+            <circle cx="6" cy="6" r="5" />
+          </svg>
+          <!-- Quadrado Branco -->
+          <svg class="w-2.5 h-2.5 text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.4)]" viewBox="0 0 12 12"
+            fill="currentColor" title="Quadrado Branco">
+            <rect x="1" y="1" width="10" height="10" rx="1.5" />
+          </svg>
+        </div>
+        <a class="font-bold tracking-tight text-white flex items-center gap-2" href="index.html">
+          <span class="text-xs font-semibold tracking-wider uppercase">JORDANRONALD</span>
+        </a>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-6 text-[11px] font-medium tracking-wide uppercase text-slate-300">
+        <a class="hover:text-sky-300 transition-colors" href="projetos.html">Projetos</a>
+        <a class="hover:text-sky-300 transition-colors" href="sobre.html">Sobre</a>
+        <a class="hover:text-sky-300 transition-colors" href="competencias.html">Competências</a>
+        <a class="text-sky-400 font-bold border-b-2 border-sky-400 pb-0.5" href="curriculo.html">Currículo</a>
+        <a class="hover:text-sky-300 transition-colors" href="contato.html">Contato</a>
+      </nav>
+
+      <!-- Status Pill, Switcher & Download CTA -->
+      <div class="flex items-center gap-2.5">
+        <a class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-800/90 border border-slate-700/80 text-[11px] font-mono text-sky-300 hover:bg-slate-700/80 transition-all"
+          href="../modelo1/index.html" title="Alternar para o Modelo 1">
+          <span>⇄</span> Modelo 1
+        </a>
+
+        <a href="assets/curriculo.pdf" download
+          class="inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-[11px] tracking-tight transition-all duration-200 shadow-sm hover:shadow-emerald-500/20 gap-1.5">
+          <span>Baixar PDF</span>
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+        </a>
+      </div>
+    </header>
+    <!-- END: TopNavigation -->
+
+    <!-- ====================================================================
+         BEGIN: Header Bio Card
+         ==================================================================== -->
+    <section class="bg-slate-900 rounded-[2.5rem] p-7 sm:p-10 border border-slate-800 shadow-2xl relative overflow-hidden">
+      <div class="absolute -top-24 -right-24 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+        <img src="assets/profile.jpg" alt="Jordan Ronald"
+          class="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl object-cover border-2 border-slate-700 shadow-xl" />
+        <div class="space-y-2 text-center sm:text-left flex-1">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-950/60 border border-sky-500/30 text-[11px] font-mono text-sky-300">
+            <span>// MÓDULO 04</span>
+            <span class="text-slate-500">•</span>
+            <span>CURRÍCULO PROFISSIONAL COMPLETO</span>
+          </div>
+          <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">Jordan Ronald</h1>
+          <p class="text-xs sm:text-sm font-mono text-emerald-400">Software Architect &amp; Full-Stack Engineer Pleno • 3+ Anos</p>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-2xl pt-1">
+            Especialista em construir pontes sólidas entre o controle estrito de memória do Pure C e C# .NET 8 e a elegância visual de interfaces modernas em TypeScript, React e Anime.js.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         BEGIN: Professional Experience Section
+         ==================================================================== -->
+    <section class="bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-800 space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-emerald-400">// Experiência Profissional</h2>
+        <span class="text-xs font-mono text-slate-500">Histórico Consolidado</span>
+      </div>
+
+      <div class="space-y-6">
+        <!-- Experience Item 1 -->
+        <div class="p-5 bg-slate-950/60 rounded-2xl border border-slate-800 space-y-2.5">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+            <h3 class="text-sm sm:text-base font-bold text-white">Engenheiro de Software &amp; RPA Lead</h3>
+            <span class="text-[11px] font-mono text-emerald-400">2023 — Presente</span>
+          </div>
+          <p class="text-xs text-sky-400 font-mono">InnovCore-TI / INNOV Soluções Educativas</p>
+          <ul class="text-xs text-slate-300 space-y-1.5 pt-2 list-disc list-inside leading-relaxed">
+            <li>Arquitetura e desenvolvimento da engine de visão computacional e RPA (INNOVRPA) em Pure C e C# .NET 8 com zero vazamentos de memória.</li>
+            <li>Construção do PWA corporativo INNOVSTOCK para auditoria e triagem de mais de 10.000 equipamentos com suporte offline e scanner de código de barras.</li>
+            <li>Padronização de design tokens e contratos de API JWT sob monorepo centralizado com CI/CD automatizado via GitHub Actions.</li>
+          </ul>
+        </div>
+
+        <!-- Experience Item 2 -->
+        <div class="p-5 bg-slate-950/60 rounded-2xl border border-slate-800 space-y-2.5">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+            <h3 class="text-sm sm:text-base font-bold text-white">Desenvolvedor Full-Stack Pleno</h3>
+            <span class="text-[11px] font-mono text-sky-400">2022 — 2023</span>
+          </div>
+          <p class="text-xs text-sky-400 font-mono">Projetos Independentes &amp; Consultoria Corporativa</p>
+          <ul class="text-xs text-slate-300 space-y-1.5 pt-2 list-disc list-inside leading-relaxed">
+            <li>Desenvolvimento de sistemas de gestão web escaláveis (Lagoinha SMC) utilizando Next.js, TypeScript e PostgreSQL com mais de 1.000 cadastros ativos.</li>
+            <li>Implementação de rotinas assíncronas em C# para geração em massa de relatórios contábeis e auditorias financeiras.</li>
+            <li>Criação de dashboards em tempo real com métricas analíticas e controle de acesso baseado em papéis (RBAC).</li>
+          </ul>
+        </div>
+
+        <!-- Experience Item 3 -->
+        <div class="p-5 bg-slate-950/60 rounded-2xl border border-slate-800 space-y-2.5">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+            <h3 class="text-sm sm:text-base font-bold text-white">Engenheiro de Software &amp; Pesquisa em Sistemas</h3>
+            <span class="text-[11px] font-mono text-purple-400">2021 — 2022</span>
+          </div>
+          <p class="text-xs text-sky-400 font-mono">Pesquisa &amp; Desenvolvimento em Baixo Nível</p>
+          <ul class="text-xs text-slate-300 space-y-1.5 pt-2 list-disc list-inside leading-relaxed">
+            <li>Pesquisa de algoritmos de alocação de memória contígua e otimização de buffers em Pure C.</li>
+            <li>Implementação de drivers e hooks de captura de tela e eventos de teclado/mouse via Win32 API.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         BEGIN: Education & Certifications
+         ==================================================================== -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Education -->
+      <div class="bg-slate-900 rounded-3xl p-6 sm:p-7 border border-slate-800 space-y-4">
+        <h3 class="text-xs font-mono uppercase tracking-widest text-sky-400">// Formação Acadêmica</h3>
+        <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800/80 space-y-1.5">
+          <span class="text-xs font-mono text-emerald-400 font-semibold">Graduação Superior</span>
+          <h4 class="text-sm font-bold text-white">Análise e Desenvolvimento de Sistemas</h4>
+          <p class="text-xs text-slate-400">Foco em Arquitetura de Software, Estruturas de Dados e Bancos Relacionais.</p>
+        </div>
+      </div>
+
+      <!-- Languages & Skills -->
+      <div class="bg-slate-900 rounded-3xl p-6 sm:p-7 border border-slate-800 space-y-4">
+        <h3 class="text-xs font-mono uppercase tracking-widest text-emerald-400">// Idiomas &amp; Fluência</h3>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800/80 space-y-1">
+            <span class="text-xs font-bold text-white">Português</span>
+            <p class="text-[11px] font-mono text-emerald-400">Nativo / Fluente</p>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800/80 space-y-1">
+            <span class="text-xs font-bold text-white">Inglês</span>
+            <p class="text-[11px] font-mono text-sky-400">Técnico Avançado</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         BEGIN: Footer
+         ==================================================================== -->
+    <footer class="border-t border-slate-800 pt-8 pb-12 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <div class="flex items-center space-x-2">
+        <span class="font-bold text-slate-400">JORDANRONALD</span>
+        <span>—</span>
+        <span>Software Architect &amp; Full-Stack Pleno</span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <a href="https://github.com/RONALDJORDAN" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition-colors">GitHub</a>
+        <a href="https://linkedin.com/in/ronald-jordan-dev" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition-colors">LinkedIn</a>
+        <a href="projetos.html" class="hover:text-slate-300 transition-colors">Projetos</a>
+        <a href="contato.html" class="hover:text-slate-300 transition-colors">Contato</a>
+      </div>
+    </footer>
+
+  </div>
+  <!-- END: MainContainer -->
+
+  <!-- SCRIPTS -->
+  <script src="js/libs/anime.umd.min.js"></script>
+  <script src="js/data.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Custom Follower Cursor
+      const dot = document.querySelector('.cursor-dot');
+      const ring = document.querySelector('.cursor-ring');
+      if (dot && ring) {
+        let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+        let ringX = mouseX, ringY = mouseY;
+        window.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX; mouseY = e.clientY;
+          dot.style.left = `${mouseX}px`; dot.style.top = `${mouseY}px`;
+        });
+        const loop = () => {
+          ringX += (mouseX - ringX) * 0.18; ringY += (mouseY - ringY) * 0.18;
+          ring.style.left = `${ringX}px`; ring.style.top = `${ringY}px`;
+          requestAnimationFrame(loop);
+        };
+        requestAnimationFrame(loop);
+        document.querySelectorAll('a, button').forEach(el => {
+          el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+          el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+        });
+      }
+
+      // Entrance animation
+      if (window.anime && window.anime.animate) {
+        window.anime.animate('header, section, footer', {
+          opacity: [0, 1],
+          translateY: [20, 0],
+          duration: 600,
+          delay: window.anime.stagger ? window.anime.stagger(90) : 90,
+          ease: 'out(3)'
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

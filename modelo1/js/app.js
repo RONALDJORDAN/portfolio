@@ -654,12 +654,18 @@
   }
 
   // ==========================================================================
-  // Preloader & Reveal
+  // Preloader & Reveal (Shapes translation + 360° rotation + 0% -> 100% counter)
   // ==========================================================================
   function initPreloader(onComplete) {
     const preloader = document.getElementById('preloader');
-    const number = document.querySelector('.preloader-number');
+    const number = document.querySelector('.preloader-number, .value');
+    const progressBar = document.querySelector('.preloader-progress-bar');
     const curtainBars = document.querySelectorAll('.curtain-bar, [style*="transform-origin: 50% 0%"]');
+    
+    const shapes = document.querySelectorAll('.shape');
+    const triangle = document.querySelector('.shape-triangle');
+    const square = document.querySelector('.shape-square');
+    const circle = document.querySelector('.shape-circle');
 
     if (!preloader || typeof gsap === 'undefined') {
       if (onComplete) onComplete();
@@ -668,19 +674,20 @@
     }
 
     const progress = { val: 0 };
-    gsap.to(progress, {
-      val: 100,
-      duration: 0.9,
-      ease: 'power2.inOut',
-      onUpdate: () => {
-        if (number) number.textContent = `${Math.floor(progress.val)}%`;
-      },
+    const travelX = window.innerWidth < 768 ? 45 : 75; // Translation distance (px)
+    const rotateDeg = 360;
+
+    // Set initial transform origin
+    gsap.set(shapes, { transformOrigin: 'center center' });
+
+    // Synchronized Timeline (2000ms duration)
+    const tl = gsap.timeline({
+      defaults: { duration: 2.0, ease: 'power2.inOut' },
       onComplete: () => {
-        const tl = gsap.timeline({
+        const exitTl = gsap.timeline({
           onComplete: () => {
             preloader.style.display = 'none';
             if (onComplete) onComplete();
-            // Refresh ScrollTrigger once DOM layout is fully stable
             setTimeout(() => {
               if (typeof ScrollTrigger !== 'undefined') {
                 ScrollTrigger.refresh();
@@ -689,18 +696,57 @@
           }
         });
 
-        tl.to(preloader, { opacity: 0, duration: 0.25, ease: 'power2.out' });
+        // Micro-glow scale pulse on 100%
+        exitTl.to(shapes, {
+          scale: 1.15,
+          opacity: 0.9,
+          duration: 0.25,
+          ease: 'power2.out'
+        });
+
+        exitTl.to(preloader, {
+          opacity: 0,
+          duration: 0.35,
+          ease: 'power2.out'
+        }, '+=0.05');
+
         if (curtainBars.length > 0) {
-          tl.to(curtainBars, {
+          exitTl.to(curtainBars, {
             scaleY: 0,
-            duration: 0.6,
+            duration: 0.65,
             stagger: 0.06,
             ease: 'power4.inOut',
             transformOrigin: 'top'
-          }, '-=0.1');
+          }, '-=0.2');
         }
       }
     });
+
+    // 1. Counter: 0% -> 100%
+    tl.to(progress, {
+      val: 100,
+      onUpdate: () => {
+        const current = Math.floor(progress.val);
+        if (number) number.textContent = `${current}%`;
+        if (progressBar) progressBar.style.width = `${progress.val}%`;
+      }
+    }, 0);
+
+    // 2. Shape Translations (.add($circle, { x }, 0), .add($triangle, { x }, 0), .add($square, { x }, 0))
+    if (circle) {
+      tl.to(circle, { x: travelX }, 0);
+    }
+    if (triangle) {
+      tl.to(triangle, { y: -8, scale: 1.05 }, 0);
+    }
+    if (square) {
+      tl.to(square, { x: -travelX }, 0);
+    }
+
+    // 3. Shape Rotations (.add(shapes, { rotate }, 0))
+    if (shapes.length > 0) {
+      tl.to(shapes, { rotation: rotateDeg }, 0);
+    }
   }
 
   // ==========================================================================

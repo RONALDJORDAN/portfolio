@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Competências — Jordan Ronald | Software Architect & Full-Stack Engineer</title>
+  <meta name="title" content="Competências — Jordan Ronald | Software Architect">
+  <meta name="description"
+    content="Matriz detalhada de competências e proficiências técnicas de Jordan Ronald: C# .NET 8, Pure C, React, Next.js, RPA, OpenCV, PostgreSQL e Arquitetura de Software.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/personal-emblem.svg">
+
+  <!-- Tailwind CSS v3 with Plugins -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0F172A',
+              slate: '#334155',
+              muted: '#64748B',
+              bg: '#0B0F17',
+              sky: '#0284C7',
+              mint: '#16A34A',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+            display: ['Syne', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0B0F17;
+      color: #F8FAFC;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Elastic Cursor */
+    .cursor-dot {
+      position: fixed;
+      width: 7px;
+      height: 7px;
+      background: #0284C7;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 99999;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.2s ease;
+    }
+
+    .cursor-ring {
+      position: fixed;
+      width: 30px;
+      height: 30px;
+      border: 1.5px solid #0284C7;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 99998;
+      transform: translate(-50%, -50%);
+      opacity: 0.45;
+      transition: width 0.25s ease, height 0.25s ease, border-color 0.25s ease;
+    }
+
+    body.cursor-hover .cursor-ring {
+      width: 44px;
+      height: 44px;
+      border-color: #10B981;
+      background: rgba(16, 185, 129, 0.08);
+      opacity: 0.9;
+    }
+
+    @media (max-width: 900px) {
+      .cursor-dot,
+      .cursor-ring {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="selection:bg-sky-500/20 selection:text-sky-300">
+  <!-- Elastic Cursor Elements -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- BEGIN: MainContainer -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-10">
+
+    <!-- ====================================================================
+         BEGIN: TopNavigation
+         ==================================================================== -->
+    <header
+      class="w-full bg-slate-900 text-white rounded-3xl p-3 sm:px-5 shadow-xl border border-slate-800 flex items-center justify-between sticky top-4 z-50">
+      <!-- Geometric symbols: Triangle, Circle, Square -->
+      <div class="flex items-center gap-2">
+        <div class="flex items-center space-x-1.5 mr-2">
+          <!-- Triângulo Amarelo -->
+          <svg class="w-3 h-3 text-amber-400 drop-shadow-[0_0_4px_rgba(251,191,36,0.4)]" viewBox="0 0 12 12"
+            fill="currentColor" title="Triângulo Amarelo">
+            <polygon points="6,1 11.5,10.5 0.5,10.5" />
+          </svg>
+          <!-- Círculo Vermelho -->
+          <svg class="w-2.5 h-2.5 text-red-500 drop-shadow-[0_0_4px_rgba(239,68,68,0.4)]" viewBox="0 0 12 12"
+            fill="currentColor" title="Círculo Vermelho">
+            <circle cx="6" cy="6" r="5" />
+          </svg>
+          <!-- Quadrado Branco -->
+          <svg class="w-2.5 h-2.5 text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.4)]" viewBox="0 0 12 12"
+            fill="currentColor" title="Quadrado Branco">
+            <rect x="1" y="1" width="10" height="10" rx="1.5" />
+          </svg>
+        </div>
+        <a class="font-bold tracking-tight text-white flex items-center gap-2" href="index.html">
+          <span class="text-xs font-semibold tracking-wider uppercase">JORDANRONALD</span>
+        </a>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-6 text-[11px] font-medium tracking-wide uppercase text-slate-300">
+        <a class="hover:text-sky-300 transition-colors" href="projetos.html">Projetos</a>
+        <a class="hover:text-sky-300 transition-colors" href="sobre.html">Sobre</a>
+        <a class="text-sky-400 font-bold border-b-2 border-sky-400 pb-0.5" href="competencias.html">Competências</a>
+        <a class="hover:text-sky-300 transition-colors" href="curriculo.html">Currículo</a>
+        <a class="hover:text-sky-300 transition-colors" href="contato.html">Contato</a>
+      </nav>
+
+      <!-- Status Pill, Switcher & Contact CTA -->
+      <div class="flex items-center gap-2.5">
+        <a class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-800/90 border border-slate-700/80 text-[11px] font-mono text-sky-300 hover:bg-slate-700/80 transition-all"
+          href="../modelo1/index.html" title="Alternar para o Modelo 1">
+          <span>⇄</span> Modelo 1
+        </a>
+
+        <div
+          class="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-800/80 border border-slate-700/60 text-[10px] text-slate-300">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+          </span>
+          <span>Disponível</span>
+        </div>
+
+        <a class="inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-[11px] tracking-tight transition-all duration-200 shadow-sm hover:shadow-emerald-500/20"
+          href="contato.html">
+          Fale Comigo
+        </a>
+      </div>
+    </header>
+    <!-- END: TopNavigation -->
+
+    <!-- ====================================================================
+         BEGIN: Module Header
+         ==================================================================== -->
+    <section class="relative bg-slate-900 rounded-[2.5rem] p-7 sm:p-10 border border-slate-800 shadow-2xl overflow-hidden">
+      <div class="absolute -top-24 -right-24 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="space-y-4 max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-950/80 border border-sky-500/30 text-[11px] font-mono text-sky-300">
+          <span>// MÓDULO 03</span>
+          <span class="text-slate-500">•</span>
+          <span>MATRIZ DE HABILIDADES TÉCNICAS</span>
+        </div>
+        <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
+          Competências &amp; Arquitetura
+        </h1>
+        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+          Domínio prático comprovado em produção de linguagens compiladas de baixo nível, ecossistemas modernos de microsserviços, frameworks reativos de frontend e pipelines de automação robótica.
+        </p>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         BEGIN: Competency Categories Matrix
+         ==================================================================== -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- CATEGORY 1: Backend & Low-Level Systems -->
+      <div class="bg-slate-900 rounded-3xl p-6 sm:p-7 border border-slate-800 space-y-5 hover:border-emerald-500/40 transition-all">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-emerald-950 border border-emerald-500/40 text-emerald-400 flex items-center justify-center shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-white">Backend &amp; Sistemas Compilados</h3>
+            <p class="text-xs font-mono text-emerald-400">C# .NET 8 • Pure C • Win32</p>
+          </div>
+        </div>
+
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Construção de APIs assíncronas de alta vazão, arquitetura limpa em .NET 8 e controle manual estrito de alocação de memória (malloc/free, pointers, zero leaks) em Pure C.
+        </p>
+
+        <!-- Skill Bars -->
+        <div class="space-y-3.5 pt-2">
+          <div class="space-y-1.5">
+            <div class="flex justify-between text-xs font-mono">
+              <span class="text-slate-300">C# .NET 8 / ASP.NET Core</span>
+              <span class="text-emerald-400 font-bold">95%</span>
+            </div>
+            <div class="w-full bg-slate-950 h-2 rounded-full overflow-hidden border border-slate-800">
+              <div class="bg-emerald-500 h-full rounded-full transition-all duration-1000" style="width: 95%"></div>
+            </div>
+          </div>
+
+          <div class="space-y-1.5">
+            <div class="flex justify-between text-xs font-mono">
+              <span class="text-slate-300">Pure C (Pointers &amp; Memory Control)</span>
+              <span class="text-emerald-400 font-bold">90%</span>
+            </div>
+            <div class="w-full bg-slate-950 h-2 rounded-full overflow-hidden border border-slate-800">
+              <div class="bg-emerald-500 h-full rounded-full transition-all duration-1000" style="width: 90%"></div>
+            </div>
+          </div>
+
+          <div class="space-y-1.5">
+            <div class="flex justify-between text-xs font-mono">
+              <span class="text-slate-300">Node.js &amp; TypeScript APIs</span>
+              <span class="text-emerald-400 font-bold">88%</span>
+            </div>
+            <div class="w-full bg-slate-950 h-2 rounded-full overflow-hidden border border-slate-800">
+              <div class="bg-emerald-500 h-full rounded-full transition-all duration-1000" style="width: 88%"></div>
+            </div>
+          </div>
+
+          <div class="space-y-1.5">
+            <div class="flex justify-between text-xs font-mono">
+              <span class="text-slate-300">Python (FastAPI &amp; Automation)</span>
+              <span class="text-emerald-400 font-bold">85%</span>
+            </div>
+            <div class="w-full bg-slate-950 h-2 rounded-full overflow-hidden border border-slate-800">
+              <div class="bg-emerald-500 h-full rounded-full transition-all duration-1000" style="width: 85%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORY 2: Frontend & UI/UX Engineering -->
+      <div class="bg-slate-900 rounded-3xl p-6 sm:p-7 border border-slate-800 space-y-5 hover:border-sky-500/40 transition-all">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-sky-950 border border-sky-500/40 text-sky-400 flex items-center justify-center shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-white">Frontend &amp; UI/UX Creative</h3>
+            <p class="text-xs font-mono text-sky-400">React • Next.js • Anime.js • Tailwind</p>
+          </div>
+        </div>
+
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Criação de interfaces reativas com alta fidelidade visual, design system com tokens consistentes, micro-interações fluidas e tipografia ultra legível.
+        </p>
+
+        <!-- Skill Bars -->
+        <div class="space-y-3.5 pt-2">
+          <div class="space-y-1.5">
+            <div class="flex justify-between text-xs font-mono">
+              <span class="text-slate-300">Tailwind CSS &amp; Design Systems</span>
+              <span class="text-sky-400 font-bold">96%</span>
+            </div>
+            <div class="w-full bg-slate-950 h-2 rounded-full overflow-hidden border border-slate-800">
+              <div class="bg-sky-500 h-full rounded-full transition-all duration-1000" style="width: 96%"></div>
+            </div>
+          </div>
+
+          <div class="space-y-1.5">
+            <div class="flex justify-between text-xs font-mono">
+              <span class="text-slate-300">React &amp; Next.js (App Router)</span>
+              <span class="text-sky-400 font-bold">92%</span>
+            </div>
+            <div class="w-full bg-slate-950 h-2 rounded-full overflow-hidden border border-slate-800">
+              <div class="bg-sky-500 h-full rounded-full transition-all duration-1000" style="width: 92%"></div>
+            </div>
+          </div>
+
+          <div class="space-y-1.5">
+            <div class="flex justify-between text-xs font-mono">
+              <span class="text-slate-300">Anime.js &amp; Micro-Animations</span>
+              <span class="text-sky-400 font-bold">92%</span>
+            </div>
+            <div class="w-full bg-slate-950 h-2 rounded-full overflow-hidden border border-slate-800">
+              <div class="bg-sky-500 h-full rounded-full transition-all duration-1000" style="width: 92%"></div>
+            </div>
+          </div>
+
+          <div class="space-y-1.5">
+            <div class="flex justify-between text-xs font-mono">
+              <span class="text-slate-300">TypeScript (Strict &amp; Generics)</span>
+              <span class="text-sky-400 font-bold">90%</span>
+            </div>
+            <div class="w-full bg-slate-950 h-2 rounded-full overflow-hidden border border-slate-800">
+              <div class="bg-sky-500 h-full rounded-full transition-all duration-1000" style="width: 90%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORY 3: RPA, Computer Vision & Automation -->
+      <div class="bg-slate-900 rounded-3xl p-6 sm:p-7 border border-slate-800 space-y-5 hover:border-purple-500/40 transition-all">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-purple-950 border border-purple-500/40 text-purple-400 flex items-center justify-center shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-white">RPA &amp; Visão Computacional</h3>
+            <p class="text-xs font-mono text-purple-400">OpenCV • OCR • Windows Hooks</p>
+          </div>
+        </div>
+
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Automação robótica resiliente com pipelines de reconhecimento de padrões visuais, extração óptica de caracteres e integração direta com a API Win32.
+        </p>
+
+        <!-- Skill Bars -->
+        <div class="space-y-3.5 pt-2">
+          <div class="space-y-1.5">
+            <div class="flex justify-between text-xs font-mono">
+              <span class="text-slate-300">Robotic Process Automation (RPA)</span>
+              <span class="text-purple-400 font-bold">92%</span>
+            </div>
+            <div class="w-full bg-slate-950 h-2 rounded-full overflow-hidden border border-slate-800">
+              <div class="bg-purple-500 h-full rounded-full transition-all duration-1000" style="width: 92%"></div>
+            </div>
+          </div>
+
+          <div class="space-y-1.5">
+            <div class="flex justify-between text-xs font-mono">
+              <span class="text-slate-300">OpenCV &amp; Processamento de Imagem</span>
+              <span class="text-purple-400 font-bold">88%</span>
+            </div>
+            <div class="w-full bg-slate-950 h-2 rounded-full overflow-hidden border border-slate-800">
+              <div class="bg-purple-500 h-full rounded-full transition-all duration-1000" style="width: 88%"></div>
+            </div>
+          </div>
+
+          <div class="space-y-1.5">
+            <div class="flex justify-between text-xs font-mono">
+              <span class="text-slate-300">Tesseract OCR &amp; Extração de Dados</span>
+              <span class="text-purple-400 font-bold">85%</span>
+            </div>
+            <div class="w-full bg-slate-950 h-2 rounded-full overflow-hidden border border-slate-800">
+              <div class="bg-purple-500 h-full rounded-full transition-all duration-1000" style="width: 85%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORY 4: Databases, Cloud & Architecture -->
+      <div class="bg-slate-900 rounded-3xl p-6 sm:p-7 border border-slate-800 space-y-5 hover:border-amber-500/40 transition-all">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-amber-950 border border-amber-500/40 text-amber-400 flex items-center justify-center shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-white">Bancos de Dados &amp; Cloud DevOps</h3>
+            <p class="text-xs font-mono text-amber-400">PostgreSQL • Firebase • Docker • CI/CD</p>
+          </div>
+        </div>
+
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Modelagem de dados de alta performance, caching distribuído com Redis, bancos em tempo real e pipelines automatizados com Docker e GitHub Actions.
+        </p>
+
+        <!-- Skill Bars -->
+        <div class="space-y-3.5 pt-2">
+          <div class="space-y-1.5">
+            <div class="flex justify-between text-xs font-mono">
+              <span class="text-slate-300">Firebase RTDB &amp; Firestore</span>
+              <span class="text-amber-400 font-bold">92%</span>
+            </div>
+            <div class="w-full bg-slate-950 h-2 rounded-full overflow-hidden border border-slate-800">
+              <div class="bg-amber-500 h-full rounded-full transition-all duration-1000" style="width: 92%"></div>
+            </div>
+          </div>
+
+          <div class="space-y-1.5">
+            <div class="flex justify-between text-xs font-mono">
+              <span class="text-slate-300">PostgreSQL &amp; SQL Server</span>
+              <span class="text-amber-400 font-bold">90%</span>
+            </div>
+            <div class="w-full bg-slate-950 h-2 rounded-full overflow-hidden border border-slate-800">
+              <div class="bg-amber-500 h-full rounded-full transition-all duration-1000" style="width: 90%"></div>
+            </div>
+          </div>
+
+          <div class="space-y-1.5">
+            <div class="flex justify-between text-xs font-mono">
+              <span class="text-slate-300">Docker &amp; CI/CD Actions</span>
+              <span class="text-amber-400 font-bold">88%</span>
+            </div>
+            <div class="w-full bg-slate-950 h-2 rounded-full overflow-hidden border border-slate-800">
+              <div class="bg-amber-500 h-full rounded-full transition-all duration-1000" style="width: 88%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ====================================================================
+         BEGIN: Architecture & Software Engineering Patterns
+         ==================================================================== -->
+    <section class="bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-800 space-y-6">
+      <div>
+        <span class="text-xs font-mono uppercase tracking-widest text-sky-400">// Padrões &amp; Metodologias</span>
+        <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-white mt-0.5">Arquitetura de Software em Prática</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800/80 space-y-1.5">
+          <span class="text-xs font-mono text-emerald-400 font-semibold">01. Clean Arch</span>
+          <h4 class="text-xs font-bold text-white">Domínio Isolado</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">
+            Regras de negócio blindadas contra dependências externas e frameworks.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800/80 space-y-1.5">
+          <span class="text-xs font-mono text-sky-400 font-semibold">02. Design Patterns</span>
+          <h4 class="text-xs font-bold text-white">SOLID &amp; GoF</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">
+            Factory, Strategy, Repository e Observer aplicados com pragmatismo.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800/80 space-y-1.5">
+          <span class="text-xs font-mono text-purple-400 font-semibold">03. Monorepo</span>
+          <h4 class="text-xs font-bold text-white">Reuso de Código</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">
+            Compartilhamento de contratos, tipos TypeScript e bibliotecas C#.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800/80 space-y-1.5">
+          <span class="text-xs font-mono text-amber-400 font-semibold">04. Resiliência</span>
+          <h4 class="text-xs font-bold text-white">Offline &amp; Retry</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">
+            Circuit breaker, filas distribuídas e indexação local para tolerância a falhas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         BEGIN: Call to Action Banner
+         ==================================================================== -->
+    <section class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-7 sm:p-9 border border-slate-700 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
+      <div class="space-y-1 text-center sm:text-left">
+        <h3 class="text-base sm:text-lg font-bold text-white">Quer ver essas competências aplicadas em projetos reais?</h3>
+        <p class="text-xs text-slate-400">Acesse o catálogo completo com códigos, métricas e estudos de caso.</p>
+      </div>
+      <a href="projetos.html" class="px-5 py-2.5 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs whitespace-nowrap transition-all shadow-lg hover:shadow-emerald-500/20">
+        Ver Projetos em Produção →
+      </a>
+    </section>
+
+    <!-- ====================================================================
+         BEGIN: Footer
+         ==================================================================== -->
+    <footer class="border-t border-slate-800 pt-8 pb-12 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <div class="flex items-center space-x-2">
+        <span class="font-bold text-slate-400">JORDANRONALD</span>
+        <span>—</span>
+        <span>Software Architect &amp; Full-Stack Pleno</span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <a href="https://github.com/RONALDJORDAN" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition-colors">GitHub</a>
+        <a href="https://linkedin.com/in/ronald-jordan-dev" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition-colors">LinkedIn</a>
+        <a href="curriculo.html" class="hover:text-slate-300 transition-colors">Currículo</a>
+        <a href="contato.html" class="hover:text-slate-300 transition-colors">Contato</a>
+      </div>
+    </footer>
+
+  </div>
+  <!-- END: MainContainer -->
+
+  <!-- SCRIPTS -->
+  <script src="js/libs/anime.umd.min.js"></script>
+  <script src="js/data.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Custom Follower Cursor
+      const dot = document.querySelector('.cursor-dot');
+      const ring = document.querySelector('.cursor-ring');
+      if (dot && ring) {
+        let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+        let ringX = mouseX, ringY = mouseY;
+        window.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX; mouseY = e.clientY;
+          dot.style.left = `${mouseX}px`; dot.style.top = `${mouseY}px`;
+        });
+        const loop = () => {
+          ringX += (mouseX - ringX) * 0.18; ringY += (mouseY - ringY) * 0.18;
+          ring.style.left = `${ringX}px`; ring.style.top = `${ringY}px`;
+          requestAnimationFrame(loop);
+        };
+        requestAnimationFrame(loop);
+        document.querySelectorAll('a, button').forEach(el => {
+          el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+          el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+        });
+      }
+
+      // Entrance animation
+      if (window.anime && window.anime.animate) {
+        window.anime.animate('header, section, footer', {
+          opacity: [0, 1],
+          translateY: [20, 0],
+          duration: 600,
+          delay: window.anime.stagger ? window.anime.stagger(90) : 90,
+          ease: 'out(3)'
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

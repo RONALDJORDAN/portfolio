@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Jordan Ronald | Arquiteto de Software &amp; UI/UX Creative Engineer (Modelo 3)</title>
+  <meta name="title" content="Jordan Ronald - Arquiteto de Software &amp; UI/UX Creative Engineer">
+  <meta name="description"
+    content="Portfólio de Jordan Ronald - Engenheiro Full-Stack Pleno e Arquiteto de Software com experiência em Pure C, C# .NET 8, React, Next.js, RPA &amp; UI/UX Design com Anime.js v4.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/personal-emblem.svg">
+
+  <!-- Tailwind CSS v3 with Plugins -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0F172A',
+              slate: '#334155',
+              muted: '#64748B',
+              bg: '#F8FAFC',
+              sky: '#0284C7',
+              skySoft: '#E0F2FE',
+              skyBorder: '#BAE6FD',
+              mint: '#16A34A',
+              mintSoft: '#DCFCE7',
+              mintBorder: '#BBF7D0',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+            display: ['Syne', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Inter, JetBrains Mono, Syne -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <style data-purpose="base-enhancements">
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #FFFFFF;
+      color: #0F172A;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .custom-inner-shadow {
+      box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.04);
+    }
+
+    .cutout-tab {
+      clip-path: polygon(0 0, calc(50% - 70px) 0, calc(50% - 50px) 100%, calc(50% + 50px) 100%, calc(50% + 70px) 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    /* Elastic Cursor */
+    .cursor-dot {
+      position: fixed;
+      width: 7px;
+      height: 7px;
+      background: #0284C7;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 99999;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.2s ease;
+    }
+
+    .cursor-ring {
+      position: fixed;
+      width: 30px;
+      height: 30px;
+      border: 1.5px solid #0284C7;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 99998;
+      transform: translate(-50%, -50%);
+      opacity: 0.45;
+      transition: width 0.25s ease, height 0.25s ease, border-color 0.25s ease;
+    }
+
+    body.cursor-hover .cursor-ring {
+      width: 44px;
+      height: 44px;
+      border-color: #10B981;
+      background: rgba(16, 185, 129, 0.08);
+      opacity: 0.9;
+    }
+
+    @media (max-width: 900px) {
+
+      .cursor-dot,
+      .cursor-ring {
+        display: none !important;
+      }
+    }
+
+    /* Modal Animation */
+    .modal-backdrop-blur {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+
+<body class="bg-slate-100/70 text-slate-900 selection:bg-sky-100 selection:text-sky-900">
+  <!-- Elastic Cursor Elements -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- BEGIN: MainContainer -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-10">
+
+    <!-- ====================================================================
+         BEGIN: TopNavigation
+         ==================================================================== -->
+    <header
+      class="w-full bg-slate-900 text-white rounded-3xl p-3 sm:px-5 shadow-xl border border-slate-800 flex items-center justify-between transition-all">
+      <!-- Geometric symbols: Triangle, Circle, Square -->
+      <div class="flex items-center gap-2">
+        <div class="flex items-center space-x-1.5 mr-2">
+          <!-- Triângulo Amarelo -->
+          <svg class="w-3 h-3 text-amber-400 drop-shadow-[0_0_4px_rgba(251,191,36,0.4)]" viewBox="0 0 12 12"
+            fill="currentColor" title="Triângulo Amarelo">
+            <polygon points="6,1 11.5,10.5 0.5,10.5" />
+          </svg>
+          <!-- Círculo Vermelho -->
+          <svg class="w-2.5 h-2.5 text-red-500 drop-shadow-[0_0_4px_rgba(239,68,68,0.4)]" viewBox="0 0 12 12"
+            fill="currentColor" title="Círculo Vermelho">
+            <circle cx="6" cy="6" r="5" />
+          </svg>
+          <!-- Quadrado Branco -->
+          <svg class="w-2.5 h-2.5 text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.4)]" viewBox="0 0 12 12"
+            fill="currentColor" title="Quadrado Branco">
+            <rect x="1" y="1" width="10" height="10" rx="1.5" />
+          </svg>
+        </div>
+        <a class="font-bold tracking-tight text-white flex items-center gap-2" href="#inicio">
+          <span class="text-xs font-semibold tracking-wider uppercase">JORDANRONALD</span>
+        </a>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-6 text-[11px] font-medium tracking-wide uppercase text-slate-300">
+        <a class="hover:text-sky-300 transition-colors" href="projetos.html">Projetos</a>
+        <a class="hover:text-sky-300 transition-colors" href="sobre.html">Sobre</a>
+        <a class="hover:text-sky-300 transition-colors" href="competencias.html">Competências</a>
+        <a class="hover:text-sky-300 transition-colors" href="curriculo.html">Currículo</a>
+        <a class="hover:text-sky-300 transition-colors" href="contato.html">Contato</a>
+      </nav>
+
+      <!-- Status Pill, Switcher & Contact CTA -->
+      <div class="flex items-center gap-2.5">
+        <!-- Switcher to Modelo 1 -->
+        <a class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-800/90 border border-slate-700/80 text-[11px] font-mono text-sky-300 hover:bg-slate-700/80 transition-all"
+          href="../modelo1/index.html" title="Alternar para o Modelo 1">
+          <span>⇄</span> Modelo 1
+        </a>
+
+        <div
+          class="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-800/80 border border-slate-700/60 text-[10px] text-slate-300">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+          </span>
+          <span>Disponível</span>
+        </div>
+
+        <a class="inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-[11px] tracking-tight transition-all duration-200 shadow-sm hover:shadow-emerald-500/20"
+          href="#contato">
+          Fale Comigo
+        </a>
+      </div>
+    </header>
+    <!-- END: TopNavigation -->
+
+    <!-- ====================================================================
+         BEGIN: HeroSection
+         ==================================================================== -->
+    <section
+      class="relative bg-slate-900 rounded-[2.5rem] text-white p-7 sm:p-10 lg:p-12 border border-slate-800 shadow-2xl overflow-hidden"
+      id="inicio">
+      <!-- Background subtle atmospheric gradients -->
+      <div class="absolute -top-24 -right-24 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none">
+      </div>
+
+      <!-- Main Hero Content -->
+      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-8 space-y-5">
+          <!-- Role pill -->
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/90 border border-slate-700/80 text-[11px] text-sky-300 font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+            Engenheiro Full-Stack Pleno &amp; Arquiteto de Software
+          </div>
+
+          <!-- Bold Hero Headline (Properly scaled for readability) -->
+          <h1 class="text-2xl sm:text-4xl lg:text-[2.75rem] font-extrabold tracking-tight text-white leading-[1.18]">
+            Transformando sistemas complexos e código de baixo nível em experiências elegantes e fluidas.
+          </h1>
+
+          <!-- Body Description -->
+          <p class="text-slate-400 text-sm sm:text-[15px] max-w-2xl leading-relaxed font-normal">
+            Mais de 3 anos de experiência unindo a precisão e controle de memória do <strong>Pure C &amp; .NET 8
+              WPF</strong> à reatividade e design de interfaces modernas em <strong>TypeScript, React &amp;
+              Anime.js</strong>.
+          </p>
+
+          <!-- CTAs -->
+          <div class="pt-2 flex flex-wrap items-center gap-3">
+            <a class="px-5 py-2.5 rounded-xl bg-white text-slate-900 font-semibold text-xs sm:text-sm hover:bg-slate-100 transition-all shadow-md"
+              href="#projetos">
+              Explorar Trabalhos Recentes
+            </a>
+            <a class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700/80 border border-slate-700 text-slate-200 font-medium text-xs sm:text-sm transition-all flex items-center gap-1.5"
+              href="assets/curriculo.pdf" download>
+              <span>Baixar Currículo (PDF)</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="2" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Floating interactive status pills on the right side -->
+        <div class="lg:col-span-4 flex flex-col space-y-3 lg:items-end justify-center pt-2 lg:pt-0">
+          <div
+            class="w-full sm:w-64 p-3 rounded-2xl bg-slate-800/70 backdrop-blur-md border border-slate-700/60 flex items-center justify-between shadow-lg">
+            <div class="flex items-center space-x-2.5">
+              <span
+                class="w-7 h-7 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-[11px]">UX</span>
+              <div>
+                <p class="text-xs font-semibold text-white">60 FPS Interface</p>
+                <p class="text-[10px] text-slate-400">Zero-Leak &amp; Pure C Vision</p>
+              </div>
+            </div>
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          </div>
+
+          <div
+            class="w-full sm:w-64 p-3 rounded-2xl bg-slate-800/70 backdrop-blur-md border border-slate-700/60 flex items-center justify-between shadow-lg">
+            <div class="flex items-center space-x-2.5">
+              <span
+                class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-[11px]">DS</span>
+              <div>
+                <p class="text-xs font-semibold text-white">Design Tokenizado</p>
+                <p class="text-[10px] text-slate-400">Anime.js v4 Spring Physics</p>
+              </div>
+            </div>
+            <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+          </div>
+
+          <div
+            class="w-full sm:w-64 p-3 rounded-2xl bg-slate-800/70 backdrop-blur-md border border-slate-700/60 flex items-center justify-between shadow-lg">
+            <div class="flex items-center space-x-2.5">
+              <span
+                class="w-7 h-7 rounded-lg bg-purple-500/20 text-purple-300 flex items-center justify-center font-bold text-[11px]">C#</span>
+              <div>
+                <p class="text-xs font-semibold text-white">.NET 8 &amp; WPF MVVM</p>
+                <p class="text-[10px] text-slate-400">100% Async &amp; Reativo</p>
+              </div>
+            </div>
+            <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Segmented pill toggle on the bottom edge -->
+      <div class="mt-8 pt-5 border-t border-slate-800 flex justify-center">
+        <div class="inline-flex items-center p-1 rounded-full bg-slate-950/80 border border-slate-800 shadow-inner"
+          id="hero-segmented-pills">
+          <a href="#projetos"
+            class="px-3.5 py-1 rounded-full bg-slate-800 text-[11px] font-medium text-white shadow-sm">Visão Geral</a>
+          <a href="#servicos"
+            class="px-3.5 py-1 rounded-full text-[11px] font-medium text-slate-400 hover:text-slate-200">Arquitetura
+            UI</a>
+          <a href="#sobre"
+            class="px-3.5 py-1 rounded-full text-[11px] font-medium text-slate-400 hover:text-slate-200">Pesquisa &amp;
+            Core</a>
+        </div>
+      </div>
+    </section>
+    <!-- END: HeroSection -->
+
+    <!-- ====================================================================
+         BEGIN: FeaturedCaseStudy (INNOVRPA)
+         ==================================================================== -->
+    <section class="bg-white border border-slate-200/90 rounded-[2.5rem] p-7 sm:p-10 shadow-sm transition-all"
+      id="projetos">
+      <div class="flex items-center justify-between mb-6">
+        <div class="flex items-center gap-2.5">
+          <span class="h-2.5 w-6 bg-sky-500 rounded-full inline-block"></span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">Estudo de Caso em Destaque</h2>
+        </div>
+        <span
+          class="px-2.5 py-0.5 rounded-full bg-slate-100 border border-slate-200 text-[11px] font-semibold text-slate-600">2025</span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <!-- Left Side: Copy and metrics -->
+        <div class="lg:col-span-6 space-y-4">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="px-2.5 py-0.5 bg-emerald-100 text-emerald-800 text-[11px] font-semibold rounded-full">Robótica
+              &amp; RPA</span>
+            <span class="px-2.5 py-0.5 bg-sky-100 text-sky-800 text-[11px] font-semibold rounded-full">Pure C + .NET 8
+              WPF</span>
+          </div>
+
+          <h3 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
+            INNOVRPA: Engine Híbrida de Automação e Visão Computacional
+          </h3>
+
+          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+            Desenvolvimento de motor de automação com zero vazamentos de memória (Zero-Leak), combinando rotinas de
+            ponteiros e OpenCV em Pure C com interface corporativa em C# WPF .NET 8.
+          </p>
+
+          <!-- Key Metrics Pills -->
+          <div class="grid grid-cols-3 gap-2.5 pt-1">
+            <div class="p-3 rounded-2xl bg-slate-50 border border-slate-200/90 shadow-sm text-center">
+              <p class="text-lg sm:text-xl font-bold text-emerald-600">0 Leaks</p>
+              <p class="text-[10px] text-slate-500 font-medium">Memory Safe</p>
+            </div>
+            <div class="p-3 rounded-2xl bg-slate-50 border border-slate-200/90 shadow-sm text-center">
+              <p class="text-lg sm:text-xl font-bold text-sky-600">-75%</p>
+              <p class="text-[10px] text-slate-500 font-medium">Tempo/Tarefa</p>
+            </div>
+            <div class="p-3 rounded-2xl bg-slate-50 border border-slate-200/90 shadow-sm text-center">
+              <p class="text-lg sm:text-xl font-bold text-slate-800">60 FPS</p>
+              <p class="text-[10px] text-slate-500 font-medium">OCR Scan</p>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <button
+              class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-sky-600 hover:text-sky-700 group btn-open-modal"
+              data-project="innovrpa">
+              <span>Ler o estudo de caso detalhado</span>
+              <svg class="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                </path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Side: Dark high-fidelity preview box -->
+        <div
+          class="lg:col-span-6 bg-slate-900 rounded-3xl p-5 text-white border border-slate-800 shadow-xl relative min-h-[300px] flex flex-col justify-between">
+          <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+            <div class="flex items-center space-x-1.5">
+              <!-- Triângulo Amarelo -->
+              <svg class="w-2.5 h-2.5 text-amber-400" viewBox="0 0 12 12" fill="currentColor">
+                <polygon points="6,1 11.5,10.5 0.5,10.5" />
+              </svg>
+              <!-- Círculo Vermelho -->
+              <svg class="w-2 h-2 text-red-500" viewBox="0 0 12 12" fill="currentColor">
+                <circle cx="6" cy="6" r="5" />
+              </svg>
+              <!-- Quadrado Branco -->
+              <svg class="w-2 h-2 text-slate-300" viewBox="0 0 12 12" fill="currentColor">
+                <rect x="1" y="1" width="10" height="10" rx="1.5" />
+              </svg>
+              <span class="text-[11px] text-slate-400 font-mono pl-1">innovrpa.engine.core</span>
+            </div>
+            <span class="text-[9px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono">Pipeline
+              Ativo</span>
+          </div>
+
+          <!-- Mock UI / Terminal Preview -->
+          <div class="my-4 space-y-3 font-mono text-xs">
+            <div class="p-3 bg-slate-950/80 rounded-xl border border-slate-800 text-slate-300 space-y-1.5">
+              <div class="flex justify-between text-[10px] text-slate-400">
+                <span>[VISION] OCR Confidence: 99.4%</span>
+                <span class="text-emerald-400">CONNECTED</span>
+              </div>
+              <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-emerald-500 w-[92%]"></div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2 text-[11px]">
+              <div class="p-2.5 bg-slate-800/80 rounded-xl border border-slate-700">
+                <span class="text-[10px] text-slate-400">C# Memory Buffer</span>
+                <p class="font-bold text-sky-400">0.0 MB Leak</p>
+              </div>
+              <div class="p-2.5 bg-slate-800/80 rounded-xl border border-slate-700">
+                <span class="text-[10px] text-slate-400">Loop Interval</span>
+                <p class="font-bold text-emerald-400">16.6ms (60fps)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2 flex items-center justify-between text-[11px] text-slate-400">
+            <span>Pure C • C# .NET 8 • OpenCV</span>
+            <a href="https://github.com/RONALDJORDAN/Inno-RPA" target="_blank" rel="noopener noreferrer"
+              class="text-sky-400 font-medium hover:underline">
+              Ver no GitHub →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: FeaturedCaseStudy -->
+
+    <!-- ====================================================================
+         BEGIN: ProjectGridSection (BENTO GRID: 1 LARGE + 4 QUAD)
+         ==================================================================== -->
+    <section class="space-y-5">
+      <div class="flex items-center justify-between">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-widest text-emerald-600">Portfólio Selecionado</span>
+          <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight mt-0.5">Trabalhos em Destaque</h2>
+        </div>
+        <div class="hidden sm:flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span>
+          <span class="text-xs font-semibold text-slate-600">5 Projetos Enterprise</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+        <!-- Big Card on the Left (lg:col-span-5) -->
+        <article
+          class="lg:col-span-5 bg-slate-900 rounded-3xl p-6 text-white border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition-all group shadow-xl">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-0.5 rounded-full bg-sky-500/20 text-sky-300 text-[11px] font-semibold">Cloud SaaS
+                &amp; PWA</span>
+              <span class="text-[11px] text-slate-400">2024</span>
+            </div>
+            <h3
+              class="text-lg sm:text-xl font-bold text-white tracking-tight group-hover:text-sky-300 transition-colors">
+              InnovStock: Plataforma de Inventário &amp; Gestão em Tempo Real
+            </h3>
+            <p class="text-slate-400 text-xs sm:text-sm mt-2.5 leading-relaxed">
+              PWA corporativo com Firebase Realtime Database, leitor óptico com debounce para código de barras e emissão
+              automática de termos ABNT2.
+            </p>
+          </div>
+
+          <div class="mt-6 pt-5 border-t border-slate-800/80">
+            <!-- Graphical mock representation -->
+            <div class="bg-slate-950 rounded-2xl p-3.5 border border-slate-800 mb-3 space-y-2 text-[11px] font-mono">
+              <div class="flex items-center justify-between text-slate-400">
+                <span>Sync Latency: &lt; 50ms</span>
+                <span class="text-emerald-400">ONLINE</span>
+              </div>
+              <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-sky-400 w-4/5"></div>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-1.5 text-[11px] text-slate-400">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span>React • TypeScript • Firebase</span>
+              </div>
+              <button
+                class="text-xs font-semibold text-white group-hover:underline flex items-center gap-1 btn-open-modal"
+                data-project="innovstock">
+                Ver Case Study →
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Stacked 2x2 Grid on the Right (lg:col-span-7) -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Secondary Card 1: Lagoinha SMC -->
+          <article
+            class="bg-slate-900 rounded-3xl p-5 text-white border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between group shadow-md">
+            <div>
+              <div class="flex items-center justify-between mb-2.5">
+                <span class="text-[10px] font-semibold text-purple-300 bg-purple-950/60 px-2 py-0.5 rounded-full">CRM
+                  &amp; Web App</span>
+                <span class="text-[10px] text-slate-400">2024</span>
+              </div>
+              <h4 class="text-sm sm:text-base font-bold text-white group-hover:text-purple-300 transition-colors">
+                Lagoinha SMC
+              </h4>
+              <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
+                Sistema integrado de gestão de membros, dízimos, eventos e relatórios contábeis automatizados.
+              </p>
+            </div>
+            <div
+              class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+              <span class="text-[11px]">Next.js • PostgreSQL</span>
+              <button class="text-white font-medium hover:text-sky-300 btn-open-modal"
+                data-project="lagoinha">→</button>
+            </div>
+          </article>
+
+          <!-- Secondary Card 2: InnovCore TI -->
+          <article
+            class="bg-slate-900 rounded-3xl p-5 text-white border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between group shadow-md">
+            <div>
+              <div class="flex items-center justify-between mb-2.5">
+                <span class="text-[10px] font-semibold text-sky-300 bg-sky-950/60 px-2 py-0.5 rounded-full">Enterprise
+                  System</span>
+                <span class="text-[10px] text-slate-400">2023</span>
+              </div>
+              <h4 class="text-sm sm:text-base font-bold text-white group-hover:text-sky-300 transition-colors">
+                InnovCore TI
+              </h4>
+              <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
+                Plataforma de governança, telemetria de hardware em tempo real e auditoria de inventário.
+              </p>
+            </div>
+            <div
+              class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+              <span class="text-[11px]">C# .NET • SQL Server</span>
+              <button class="text-white font-medium hover:text-sky-300 btn-open-modal"
+                data-project="innovcore">→</button>
+            </div>
+          </article>
+
+          <!-- Secondary Card 3: Projetos Innov -->
+          <article
+            class="bg-slate-900 rounded-3xl p-5 text-white border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between group shadow-md">
+            <div>
+              <div class="flex items-center justify-between mb-2.5">
+                <span class="text-[10px] font-semibold text-emerald-300 bg-emerald-950/60 px-2 py-0.5 rounded-full">Core
+                  Architecture</span>
+                <span class="text-[10px] text-slate-400">2023</span>
+              </div>
+              <h4 class="text-sm sm:text-base font-bold text-white group-hover:text-emerald-300 transition-colors">
+                Projetos Innov (Monorepo)
+              </h4>
+              <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
+                Monorepo governando microserviços, design tokens centralizados e gateways de autenticação JWT.
+              </p>
+            </div>
+            <div
+              class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+              <span class="text-[11px]">Docker • CI/CD Tokens</span>
+              <button class="text-white font-medium hover:text-sky-300 btn-open-modal"
+                data-project="projetos-innov">→</button>
+            </div>
+          </article>
+
+          <!-- Secondary Card 4: InnoBot OTA -->
+          <article
+            class="bg-slate-900 rounded-3xl p-5 text-white border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between group shadow-md">
+            <div>
+              <div class="flex items-center justify-between mb-2.5">
+                <span class="text-[10px] font-semibold text-amber-300 bg-amber-950/60 px-2 py-0.5 rounded-full">Fleet
+                  OTA</span>
+                <span class="text-[10px] text-slate-400">2024</span>
+              </div>
+              <h4 class="text-sm sm:text-base font-bold text-white group-hover:text-amber-300 transition-colors">
+                InnoBot OTA &amp; Fleet
+              </h4>
+              <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
+                Central de distribuição de firmware over-the-air e conformidade remota de frotas de tablets.
+              </p>
+            </div>
+            <div
+              class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+              <span class="text-[11px]">OTA Engine • WebSockets</span>
+              <button class="text-white font-medium hover:text-sky-300 btn-open-modal"
+                data-project="innovrpa">→</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- END: ProjectGridSection -->
+
+    <!-- ====================================================================
+         BEGIN: ServicesAndSkillsSection
+         ==================================================================== -->
+    <section class="bg-white border border-slate-200 rounded-[2.5rem] p-7 sm:p-10 shadow-sm" id="servicos">
+      <div class="max-w-2xl mb-8">
+        <span class="text-[11px] font-bold uppercase tracking-widest text-sky-600">Competências</span>
+        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight mt-0.5">Como posso agregar valor ao
+          seu projeto</h2>
+        <p class="text-slate-600 text-xs sm:text-sm mt-1.5">
+          Atuo desde a arquitetura de baixo nível em Pure C e C# até o desenvolvimento de interfaces reativas com 60
+          FPS.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <!-- Skill 1 -->
+        <div class="p-5 rounded-2xl bg-sky-50/60 border border-sky-100 hover:border-sky-200 transition-all">
+          <div
+            class="w-9 h-9 rounded-xl bg-sky-500 text-white flex items-center justify-center font-bold text-base mb-3 shadow-sm">
+            ✦
+          </div>
+          <h3 class="font-bold text-slate-900 text-sm mb-1.5">UI/UX &amp; Micro-Interações</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Layouts responsivos, física de animação elástica com Anime.js v4 e design systems consistentes.
+          </p>
+          <ul class="mt-3 space-y-1 text-xs text-slate-700 font-medium">
+            <li class="flex items-center gap-1.5"><span class="text-sky-500">•</span> Anime.js v4 &amp; Tailwind</li>
+            <li class="flex items-center gap-1.5"><span class="text-sky-500">•</span> 60 FPS Glassmorphism</li>
+          </ul>
+        </div>
+
+        <!-- Skill 2 -->
+        <div class="p-5 rounded-2xl bg-emerald-50/60 border border-emerald-100 hover:border-emerald-200 transition-all">
+          <div
+            class="w-9 h-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold text-base mb-3 shadow-sm">
+            ❖
+          </div>
+          <h3 class="font-bold text-slate-900 text-sm mb-1.5">C# .NET 8 / Desktop</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Sistemas corporativos assíncronos, padrão MVVM, WPF e alta performance desktop.
+          </p>
+          <ul class="mt-3 space-y-1 text-xs text-slate-700 font-medium">
+            <li class="flex items-center gap-1.5"><span class="text-emerald-500">•</span> 100% Async / Await</li>
+            <li class="flex items-center gap-1.5"><span class="text-emerald-500">•</span> Dependency Injection</li>
+          </ul>
+        </div>
+
+        <!-- Skill 3 -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all">
+          <div
+            class="w-9 h-9 rounded-xl bg-slate-800 text-white flex items-center justify-center font-bold text-base mb-3 shadow-sm">
+            ◎
+          </div>
+          <h3 class="font-bold text-slate-900 text-sm mb-1.5">Pure C &amp; Visão</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Manipulação estrita de ponteiros de memória, zero vazamentos e automações robóticas.
+          </p>
+          <ul class="mt-3 space-y-1 text-xs text-slate-700 font-medium">
+            <li class="flex items-center gap-1.5"><span class="text-slate-400">•</span> Zero-Leak Memory Buffers</li>
+            <li class="flex items-center gap-1.5"><span class="text-slate-400">•</span> OpenCV &amp; Vision OCR</li>
+          </ul>
+        </div>
+
+        <!-- Skill 4 -->
+        <div class="p-5 rounded-2xl bg-sky-50/40 border border-sky-100 hover:border-sky-200 transition-all">
+          <div
+            class="w-9 h-9 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-base mb-3 shadow-sm font-mono">
+            &lt;/&gt;
+          </div>
+          <h3 class="font-bold text-slate-900 text-sm mb-1.5">Full-Stack &amp; Cloud</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Desenvolvimento web reativo com Next.js, React, Node.js, Firebase e bancos relacionais.
+          </p>
+          <ul class="mt-3 space-y-1 text-xs text-slate-700 font-medium">
+            <li class="flex items-center gap-1.5"><span class="text-sky-500">•</span> React, TypeScript &amp; Next.js
+            </li>
+            <li class="flex items-center gap-1.5"><span class="text-sky-500">•</span> Firebase RTDB &amp; SQL</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- END: ServicesAndSkillsSection -->
+
+    <!-- ====================================================================
+         BEGIN: SocialProofAndMetrics
+         ==================================================================== -->
+    <section class="bg-slate-900 text-white rounded-[2.5rem] p-7 sm:p-10 border border-slate-800" id="sobre">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-3">
+          <span
+            class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[11px] font-semibold">Manifesto de
+            Engenharia</span>
+          <p class="text-lg sm:text-xl font-medium text-slate-100 leading-relaxed italic">
+            "A verdadeira excelência em software nasce da união entre uma engenharia de baixo nível rigorosa e uma
+            interface limpa, onde cada interação do usuário é tratada com precisão de 60 frames por segundo."
+          </p>
+          <div class="pt-1">
+            <p class="font-bold text-sm text-white">Jordan Ronald</p>
+            <p class="text-xs text-slate-400">Arquiteto de Software &amp; Full-Stack Pleno • InnovCore-TI</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 grid grid-cols-2 gap-3.5">
+          <div class="bg-slate-800/70 p-4 rounded-2xl border border-slate-700/60">
+            <p class="text-2xl sm:text-3xl font-black text-sky-400">3+</p>
+            <p class="text-xs text-slate-300 mt-0.5 font-medium">Anos de experiência</p>
+          </div>
+          <div class="bg-slate-800/70 p-4 rounded-2xl border border-slate-700/60">
+            <p class="text-2xl sm:text-3xl font-black text-emerald-400">100%</p>
+            <p class="text-xs text-slate-300 mt-0.5 font-medium">Zero-Leak Memory</p>
+          </div>
+          <div class="bg-slate-800/70 p-4 rounded-2xl border border-slate-700/60">
+            <p class="text-2xl sm:text-3xl font-black text-white">5+</p>
+            <p class="text-xs text-slate-300 mt-0.5 font-medium">Projetos entregues</p>
+          </div>
+          <div class="bg-slate-800/70 p-4 rounded-2xl border border-slate-700/60">
+            <p class="text-2xl sm:text-3xl font-black text-purple-400">100%</p>
+            <p class="text-xs text-slate-300 mt-0.5 font-medium">Async .NET 8</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: SocialProofAndMetrics -->
+
+    <!-- ====================================================================
+         BEGIN: FooterContactSection
+         ==================================================================== -->
+    <footer
+      class="relative bg-slate-950 text-white rounded-[2.5rem] p-7 sm:p-12 border border-slate-800 overflow-hidden shadow-2xl"
+      id="contato">
+      <!-- Top notch indicator pill mimicking the tab cutout in the wireframe footer -->
+      <div class="flex justify-center -mt-7 sm:-mt-12 mb-7">
+        <div
+          class="px-5 py-1 bg-slate-800 text-slate-300 text-[11px] font-medium rounded-b-2xl border-x border-b border-slate-700/80 shadow-md">
+          ✦ Conectar • Colaborar • Construir
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Left call to action -->
+        <div class="lg:col-span-7 space-y-4">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+            Tem um novo projeto ou desafio técnico em mente?
+          </h2>
+          <p class="text-slate-400 text-xs sm:text-sm max-w-lg leading-relaxed">
+            Seja para desenhar uma nova arquitetura desktop de alta performance, implementar automações RPA com visão
+            computacional ou criar interfaces com Anime.js, estou à disposição para conversar.
+          </p>
+
+          <div class="pt-1 flex flex-col sm:flex-row gap-3">
+            <a class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs sm:text-sm transition-all shadow-lg shadow-emerald-500/10"
+              href="mailto:ronaldjordan.dev@gmail.com" id="btn-copy-email">
+              <span>Copiar Email Direto</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+            </a>
+            <a class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 font-semibold text-xs sm:text-sm transition-all"
+              href="https://linkedin.com/in/ronald-jordan-dev" target="_blank" rel="noopener noreferrer">
+              <span>Conectar no LinkedIn</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right info & quick links -->
+        <div class="lg:col-span-5 flex flex-col justify-between space-y-6 lg:pl-6">
+          <div>
+            <h4 class="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-3">Canais de Contato</h4>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-300">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+                <span>Email: <a href="mailto:ronaldjordan.dev@gmail.com"
+                    class="text-sky-400 hover:underline">ronaldjordan.dev@gmail.com</a></span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span>Localização: Brasil • Disponível Remoto Global</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+                <span>GitHub: <a href="https://github.com/RONALDJORDAN" target="_blank" rel="noopener noreferrer"
+                    class="hover:underline">@RONALDJORDAN</a></span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social Links -->
+          <div
+            class="pt-3 border-t border-slate-800/80 flex flex-wrap items-center gap-3 text-[11px] font-medium text-slate-400">
+            <a class="hover:text-white transition-colors" href="https://github.com/RONALDJORDAN" target="_blank"
+              rel="noopener noreferrer">GitHub</a>
+            <span>•</span>
+            <a class="hover:text-white transition-colors" href="https://linkedin.com/in/ronald-jordan-dev"
+              target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <span>•</span>
+            <a class="hover:text-white transition-colors" href="assets/curriculo.pdf" download>Currículo PDF</a>
+            <span>•</span>
+            <a class="text-sky-400 hover:underline" href="../modelo1/index.html">Ver Modelo 1</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright Bar -->
+      <div
+        class="mt-8 pt-5 border-t border-slate-900 text-center text-[11px] text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p>© 2026 Jordan Ronald (InnovCore-TI). Todos os direitos reservados.</p>
+        <p class="text-slate-500 flex items-center gap-1.5">
+          <span>Desenvolvido com Tailwind CSS, Padrão Semântico &amp; Anime.js v4</span>
+        </p>
+      </div>
+    </footer>
+    <!-- END: FooterContactSection -->
+
+  </div>
+  <!-- END: MainContainer -->
+
+  <!-- ====================================================================
+       CASE STUDY DETAIL MODAL OVERLAY
+       ==================================================================== -->
+  <div class="fixed inset-0 bg-slate-950/85 modal-backdrop-blur z-50 hidden items-center justify-center p-4 sm:p-6"
+    id="project-modal" aria-hidden="true">
+    <div
+      class="bg-slate-900 border border-slate-700/80 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto text-white p-6 sm:p-8 relative shadow-2xl space-y-4">
+      <button
+        class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center text-sm font-bold transition-all"
+        id="modal-close-btn" aria-label="Fechar Modal">
+        ✕
+      </button>
+
+      <img src="" alt="" id="modal-img"
+        class="w-full h-44 sm:h-52 object-cover rounded-2xl border border-slate-800 mb-2" />
+
+      <div>
+        <h3 id="modal-title" class="text-xl sm:text-2xl font-bold text-white tracking-tight"></h3>
+        <p id="modal-subtitle" class="text-xs sm:text-sm font-mono text-sky-400 mt-0.5"></p>
+      </div>
+
+      <div class="space-y-3 text-xs sm:text-sm text-slate-300">
+        <div>
+          <h4 class="font-bold text-xs uppercase tracking-wider text-slate-400">// O Desafio</h4>
+          <p id="modal-problem" class="text-slate-400 mt-1 leading-relaxed"></p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-xs uppercase tracking-wider text-slate-400">// Solução Arquitetural</h4>
+          <p id="modal-solution" class="text-slate-400 mt-1 leading-relaxed"></p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-xs uppercase tracking-wider text-slate-400">// Métricas &amp; Impacto</h4>
+          <ul id="modal-metrics-list" class="mt-1 space-y-1 text-emerald-400 font-mono text-xs"></ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-xs uppercase tracking-wider text-slate-400">// Stack</h4>
+          <div id="modal-stack-tags" class="flex flex-wrap gap-1.5 mt-1.5"></div>
+        </div>
+      </div>
+
+      <div class="pt-3 border-t border-slate-800 flex justify-end">
+        <a href="#" target="_blank" rel="noopener noreferrer" id="modal-github-link"
+          class="px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-xs transition-all flex items-center gap-1">
+          <span>Ver Repositório no GitHub</span>
+          <span>↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Feedback -->
+  <div
+    class="fixed bottom-6 right-6 px-4 py-2.5 rounded-2xl bg-slate-900 border border-emerald-500 text-emerald-400 text-xs font-mono shadow-2xl transform translate-y-24 opacity-0 transition-all duration-300 z-50 pointer-events-none"
+    id="toast-notice"></div>
+
+  <!-- ====================================================================
+       SCRIPTS (Anime.js v4 + Data + Master Controller)
+       ==================================================================== -->
+  <script src="js/libs/anime.umd.min.js"></script>
+  <script src="js/data.js"></script>
+  <script>
+    // Master controller logic for the integrated layout
+    document.addEventListener('DOMContentLoaded', () => {
+      const data = window.portfolioData || {};
+      const projects = data.projects || [];
+
+      // Custom Follower Cursor
+      const dot = document.querySelector('.cursor-dot');
+      const ring = document.querySelector('.cursor-ring');
+      if (dot && ring) {
+        let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+        let ringX = mouseX, ringY = mouseY;
+        window.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX; mouseY = e.clientY;
+          dot.style.left = `${mouseX}px`; dot.style.top = `${mouseY}px`;
+        });
+        const loop = () => {
+          ringX += (mouseX - ringX) * 0.18; ringY += (mouseY - ringY) * 0.18;
+          ring.style.left = `${ringX}px`; ring.style.top = `${ringY}px`;
+          requestAnimationFrame(loop);
+        };
+        requestAnimationFrame(loop);
+        document.querySelectorAll('a, button').forEach(el => {
+          el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+          el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+        });
+      }
+
+      // Modal Triggers
+      const modal = document.getElementById('project-modal');
+      const closeBtn = document.getElementById('modal-close-btn');
+      const modalImg = document.getElementById('modal-img');
+      const modalTitle = document.getElementById('modal-title');
+      const modalSubtitle = document.getElementById('modal-subtitle');
+      const modalProblem = document.getElementById('modal-problem');
+      const modalSolution = document.getElementById('modal-solution');
+      const modalMetrics = document.getElementById('modal-metrics-list');
+      const modalStack = document.getElementById('modal-stack-tags');
+      const modalGithub = document.getElementById('modal-github-link');
+
+      document.querySelectorAll('.btn-open-modal').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const pid = btn.dataset.project;
+          const p = projects.find(item => item.id === pid) || projects[0];
+          if (!p || !modal) return;
+
+          modalImg.src = p.image;
+          modalTitle.textContent = p.title;
+          modalSubtitle.textContent = p.subtitle;
+          modalProblem.textContent = p.problem;
+          modalSolution.textContent = p.solution;
+          modalGithub.href = p.repo;
+          modalMetrics.innerHTML = (p.metrics || []).map(m => `<li>✓ ${m}</li>`).join('');
+          modalStack.innerHTML = (p.stack || []).map(s => `<span class="px-2 py-0.5 rounded-md bg-slate-800 border border-slate-700 text-[11px] text-slate-300 font-mono">${s}</span>`).join('');
+
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+
+          if (window.anime && window.anime.animate) {
+            window.anime.animate(modal.firstElementChild, {
+              scale: [0.93, 1],
+              opacity: [0, 1],
+              duration: 300,
+              ease: 'out(3)'
+            });
+          }
+        });
+      });
+
+      if (closeBtn && modal) {
+        closeBtn.addEventListener('click', () => {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        });
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+          }
+        });
+        window.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+          }
+        });
+      }
+
+      // Copy Email Toast
+      const copyBtn = document.getElementById('btn-copy-email');
+      const toast = document.getElementById('toast-notice');
+      if (copyBtn && toast) {
+        copyBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          navigator.clipboard.writeText('ronaldjordan.dev@gmail.com').then(() => {
+            toast.textContent = '✓ Email copiado: ronaldjordan.dev@gmail.com';
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+            setTimeout(() => {
+              toast.classList.add('translate-y-24', 'opacity-0');
+              toast.classList.remove('translate-y-0', 'opacity-100');
+            }, 3000);
+          });
+        });
+      }
+
+      // Anime.js Entrance Animations
+      if (window.anime && window.anime.animate) {
+        window.anime.animate('header, #inicio, #projetos, #servicos, #sobre, footer', {
+          opacity: [0, 1],
+          translateY: [25, 0],
+          duration: 700,
+          delay: window.anime.stagger ? window.anime.stagger(120) : 100,
+          ease: 'out(3)'
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
