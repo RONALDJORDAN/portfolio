@@ -1277,4 +1277,46 @@ html.lenis {
   border-radius: 0 !important;
 }
 
+/* Bento Category Filter Controls */
+.bento-filters-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
 
+.bento-filter-btn {
+  padding: 0.45rem 1rem;
+  border-radius: 9999px;
+  font-family: 'Space Grotesk', monospace, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  outline: none;
+}
+
+.bento-filter-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.bento-filter-btn.active {
+  color: #000000;
+  background: #10b981;
+  border-color: #10b981;
+  font-weight: 700;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.35);
+}
+
+.hidden-card {
+  display: none !important;
+}

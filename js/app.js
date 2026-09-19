@@ -1,7 +1,19 @@
 // Jordan Ronald - Core Interactions & Animations
+// Architect: Jordan Ronald (RONALDJORDAN) — Software Architect & Full-Stack Engineer
 
 (function() {
   'use strict';
+
+  // --- Developer Console Greeting & Invisible Registry ---
+  try {
+    console.log(
+      `%c JORDAN RONALD %c Software Architect & Full-Stack Engineer \n%c Pure C · C# .NET 8 · React 18 · Next.js · Robotics RPA · Computer Vision \n%c GitHub: https://github.com/RONALDJORDAN | Email: ronaldjordan.dev@gmail.com `,
+      'background: #10b981; color: #000000; font-weight: 800; padding: 4px 8px; border-radius: 4px 0 0 4px; font-family: monospace;',
+      'background: #0f172a; color: #38bdf8; font-weight: 700; padding: 4px 8px; border-radius: 0 4px 4px 0; font-family: monospace;',
+      'color: #94a3b8; font-size: 11px; padding: 4px 0; font-family: monospace;',
+      'color: #a855f7; font-size: 10px; font-family: monospace;'
+    );
+  } catch(e) {}
 
   // --- Quotes for Skills Section ---
   const quotes = [
